@@ -69,7 +69,7 @@
     .botao.claro:hover { background: var(--acento-claro); }
   }
 
-  /* Topo: texto de um lado, foto em arco do outro, com anéis que acompanham o mouse e a plantinha nascendo da base. */
+  /* Topo: texto de um lado, foto quadrada do outro, com anéis que acompanham o mouse e a plantinha nascendo da base. */
   .heroi { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px, 7vw, 112px); align-items: center; padding: clamp(40px, 6vw, 88px) 0 clamp(72px, 9vw, 128px); }
   .sobrelinha { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--acento); font-weight: 600; margin-bottom: 22px; }
   .heroi h1 { font-size: calc(clamp(42px, 4.7vw, 68px) * var(--escala)); line-height: 1.02; max-width: 15ch; }
@@ -84,13 +84,12 @@
   .heroi.invertido { grid-template-columns: .95fr 1.05fr; }
   .heroi.empilhado { grid-template-columns: 1fr; gap: 56px; }
   .heroi.empilhado h1 { max-width: 20ch; }
-  .heroi.empilhado .retrato { width: min(100% - 220px, 820px); }
+  .heroi.empilhado .retrato { width: min(100% - 220px, 560px); }
   .heroi.empilhado .aneis { width: 104%; top: 40%; }
   .heroi.empilhado .planta { width: 210px; left: -150px; }
   .heroi.empilhado .dica { left: -150px; }
-  .heroi.empilhado .foto { aspect-ratio: 16 / 9; border-radius: 50% 50% var(--raio) var(--raio) / 50% 50% var(--raio) var(--raio); }
 
-  /* O arco encosta no lado de fora e deixa espaço livre entre ele e o texto para a planta ficar de pé. */
+  /* A foto encosta no lado de fora e deixa espaço livre entre ele e o texto para a planta ficar de pé. */
   .retrato { position: relative; isolation: isolate; width: min(100% - 130px, 420px); justify-self: end; }
   .heroi.invertido .retrato { justify-self: start; }
   .heroi.empilhado .retrato { justify-self: center; }
@@ -101,10 +100,11 @@
   .aneis { position: absolute; z-index: -1; left: 50%; top: 36%; width: 128%; translate: -50% -50%; overflow: visible; pointer-events: none; }
   .aneis circle { fill: none; stroke: var(--acento); stroke-width: .35; opacity: calc(.42 - var(--k) * .07);
     transform: translate(calc(var(--mx, 0) * var(--k) * 2.2px), calc(var(--my, 0) * var(--k) * 2.2px)); transition: transform 1.2s cubic-bezier(.2,.8,.2,1); }
-  .foto { position: relative; aspect-ratio: 4 / 5; border-radius: 50% 50% var(--raio) var(--raio) / 40% 40% var(--raio) var(--raio); overflow: hidden; box-shadow: var(--sombra);
+  /* Foto quadrada (1x1), com os cantos do resto da página. */
+  .foto { position: relative; aspect-ratio: 1; border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra);
     background: radial-gradient(120% 70% at 50% 0%, var(--brilho), transparent 60%), linear-gradient(175deg, var(--acento-claro), color-mix(in srgb, var(--acento-claro) 55%, var(--fundo))); display: grid; place-items: center; }
-  .foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  /* Sem foto, o arco é um bloco cheio na cor do consultório (como nos sites feitos à mão), com as iniciais gravadas. */
+  .foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+  /* Sem foto, o quadrado é um bloco cheio na cor do consultório (como nos sites feitos à mão), com as iniciais gravadas. */
   .foto.vazia { background: radial-gradient(90% 60% at 30% 10%, rgb(255 255 255 / .16), transparent 60%), linear-gradient(170deg, var(--acento), var(--acento-escuro)); }
   .foto.vazia .monograma { color: #fff; opacity: .22; }
   .foto.vazia .aviso-foto { background: rgb(255 255 255 / .9); color: var(--tinta); }
@@ -563,8 +563,7 @@
     .e1 { left: 85%; } .e3 { left: 16%; }
     .heroi { padding-top: 20px; }
     .heroi.invertido > :first-child { order: 0; }
-    .heroi.empilhado .foto { aspect-ratio: 4 / 5; }
-    /* No celular o arco encosta à esquerda e a planta fica de pé ao lado dele, fora da foto. */
+    /* No celular a foto encosta à esquerda e a planta fica de pé ao lado dele, fora da foto. */
     .retrato { width: min(100% - 96px, 340px); justify-self: start; margin-bottom: 40px; }
     .selo, .heroi.invertido .selo { left: -12px; right: auto; bottom: 24%; }
     .heroi.empilhado .retrato { width: min(100% - 96px, 340px); }
