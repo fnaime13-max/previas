@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f6f2ec">
+<title>Aline Alves - Nutricionista | Nutricionista em Taubaté/SP</title>
+<meta name="description" content="Nutricionista em Taubaté/SP. Cuidar da alimentação pode ser leve, com alguém do seu lado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+  :root {
+    --fundo: #f6f2ec; --superficie: #ffffff; --tinta: #2a241c; --suave: #6a5f50; --linha: #e6ddd0;
+    --acento: #7a5a2e; --acento-escuro: #5f4522; --acento-claro: #efe5d6; --brilho: #e6d6bd; --passo: #d8bd92;
+    --raio: 28px; --raio-botao: 999px; --peso-titulo: 500; --tracking-titulo: -0.02em; --escala: 1;
+    --fonte-titulo: "Fraunces", ui-serif, Georgia, serif; --fonte-texto: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+    --sombra: 0 1px 1px rgb(122 90 46 / .04), 0 2px 6px -2px rgb(122 90 46 / .08), 0 24px 48px -32px rgb(122 90 46 / .35);
+    --fio: color-mix(in srgb, var(--tinta) 10%, transparent);
+    --fundo-escuro: var(--tinta);
+    /* Curvas da skill de animação (Emil Kowalski). */
+    --saida: cubic-bezier(0.23, 1, 0.32, 1);
+    color-scheme: light;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { overflow-x: clip; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scrollbar-color: var(--linha) var(--fundo); interpolate-size: allow-keywords; }
+  body { margin: 0; font-family: var(--fonte-texto); font-size: 17px; line-height: 1.65; color: var(--tinta); background: var(--fundo); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: clip; }
+  ::selection { background: var(--acento); color: #fff; }
+  a { color: inherit; text-underline-offset: .22em; text-decoration-thickness: 1px; }
+  :focus-visible { outline: 1.5px solid var(--acento); outline-offset: 3px; border-radius: 6px; }
+  h1, h2, h3 { font-family: var(--fonte-titulo); font-weight: var(--peso-titulo); letter-spacing: var(--tracking-titulo); line-height: 1.06; text-wrap: balance; margin: 0; }
+  p { margin: 0; text-wrap: pretty; }
+  ul, ol { margin: 0; padding: 0; list-style: none; }
+  .largura { width: min(1160px, 100% - 48px); margin-inline: auto; }
+  .ic { width: 1.15em; height: 1.15em; flex: none; }
+  .destaque > span { color: var(--acento); }
+  .estilo-elegante .destaque > span { font-style: italic; color: inherit; }
+  .estilo-alegre .destaque > span { color: inherit; }
+  .estilo-alegre .destaque { background: linear-gradient(transparent 62%, var(--brilho) 62%, var(--brilho) 90%, transparent 90%) no-repeat 0 0 / 100% 100%; }
+  .estilo-acolhedor .destaque { background: linear-gradient(var(--brilho), var(--brilho)) no-repeat 0 92% / 100% .12em; }
+  .rotulo { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--acento); font-weight: 500; }
+
+  .previa { background: var(--tinta); color: color-mix(in srgb, #fff 78%, var(--tinta)); font-size: 12.5px; text-align: center; padding: 8px 16px; letter-spacing: .01em; }
+
+  /* Menu fixo que ganha fundo de vidro quando a página rola. */
+  .topo-fixo { position: sticky; top: 0; z-index: 20; }
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 72px; }
+  .topo-fixo::before { content: ""; position: absolute; inset: 0; z-index: -1; background: color-mix(in srgb, var(--fundo) 80%, transparent);
+    backdrop-filter: blur(16px) saturate(1.3); -webkit-backdrop-filter: blur(16px) saturate(1.3); border-bottom: 1px solid var(--fio); opacity: 0; }
+  /* Fio na cor do consultório que mostra quanto da página já foi lida. */
+  .progresso { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--acento); transform-origin: 0 50%; transform: scaleX(0); opacity: 0; }
+  .marca { display: inline-flex; align-items: center; gap: 12px; font-family: var(--fonte-titulo); font-weight: var(--peso-titulo); font-size: 19px; letter-spacing: -0.01em; text-decoration: none; }
+  .marca i { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--acento-claro); color: var(--acento); font-style: normal; font-family: var(--fonte-texto); font-size: 12px; font-weight: 600; letter-spacing: .02em; overflow: hidden; box-shadow: inset 0 0 0 1px var(--fio); }
+  .marca i img { width: 100%; height: 100%; object-fit: cover; }
+
+  .botao { display: inline-flex; align-items: center; gap: 10px; min-height: 50px; padding: 0 26px; border-radius: var(--raio-botao); font-weight: 500; font-size: 15.5px; letter-spacing: .005em; text-decoration: none; white-space: nowrap;
+    background: var(--acento); color: #fff; box-shadow: 0 1px 1px rgb(122 90 46 / .2), 0 8px 20px -10px rgb(122 90 46 / .6), inset 0 1px 0 rgb(255 255 255 / .14);
+    transition: transform 160ms var(--saida), background-color 200ms ease, box-shadow 200ms ease; }
+  .botao:active { transform: scale(0.97); }
+  .botao .seta { transition: transform 220ms var(--saida); }
+  .botao.leve { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 1px var(--linha); }
+  .botao.claro { background: #fff; color: var(--acento-escuro); box-shadow: 0 8px 24px -12px rgb(0 0 0 / .35); }
+  .nav .botao { min-height: 42px; padding: 0 20px; font-size: 14.5px; }
+  @media (hover: hover) and (pointer: fine) {
+    .botao:hover { background: var(--acento-escuro); }
+    .botao:hover .seta { transform: translateX(4px); }
+    .botao.leve:hover { background: var(--superficie); box-shadow: inset 0 0 0 1px var(--fio); }
+    .botao.claro:hover { background: var(--acento-claro); }
+  }
+
+  /* Topo: texto de um lado, foto em arco do outro, com anéis que acompanham o mouse e a plantinha nascendo da base. */
+  .heroi { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(40px, 7vw, 112px); align-items: center; padding: clamp(40px, 6vw, 88px) 0 clamp(72px, 9vw, 128px); }
+  .sobrelinha { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--acento); font-weight: 600; margin-bottom: 22px; }
+  .heroi h1 { font-size: calc(clamp(42px, 4.7vw, 68px) * var(--escala)); line-height: 1.02; max-width: 15ch; }
+  .palavra { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .14em; margin-bottom: -.14em; }
+  .palavra > span { display: inline-block; }
+  .heroi .sub { margin-top: 26px; font-size: 18.5px; color: var(--suave); max-width: 42ch; }
+  .acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 38px; }
+  .link-seta { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; font-size: 15.5px; text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--linha); }
+  .link-seta .seta { transition: transform 220ms var(--saida); }
+  @media (hover: hover) and (pointer: fine) { .link-seta:hover { border-color: var(--acento); } .link-seta:hover .seta { transform: translateX(4px); } }
+  .heroi.invertido > :first-child { order: 2; }
+  .heroi.invertido { grid-template-columns: .95fr 1.05fr; }
+  .heroi.empilhado { grid-template-columns: 1fr; gap: 56px; }
+  .heroi.empilhado h1 { max-width: 20ch; }
+  .heroi.empilhado .retrato { width: min(100% - 220px, 820px); }
+  .heroi.empilhado .aneis { width: 104%; top: 40%; }
+  .heroi.empilhado .planta { width: 210px; left: -150px; }
+  .heroi.empilhado .dica { left: -150px; }
+  .heroi.empilhado .foto { aspect-ratio: 16 / 9; border-radius: 50% 50% var(--raio) var(--raio) / 50% 50% var(--raio) var(--raio); }
+
+  /* O arco encosta no lado de fora e deixa espaço livre entre ele e o texto para a planta ficar de pé. */
+  .retrato { position: relative; isolation: isolate; width: min(100% - 130px, 420px); justify-self: end; }
+  .heroi.invertido .retrato { justify-self: start; }
+  .heroi.empilhado .retrato { justify-self: center; }
+  /* Aura de cor que respira atrás da foto. */
+  .aura { position: absolute; inset: -12% -14%; z-index: -2; filter: blur(64px); opacity: .7;
+    background: radial-gradient(40% 45% at 30% 30%, var(--brilho), transparent 70%), radial-gradient(35% 40% at 75% 70%, var(--acento-claro), transparent 70%); }
+  /* Anéis finos atrás do arco (como ondas na água); o script os desloca de leve na direção do mouse. */
+  .aneis { position: absolute; z-index: -1; left: 50%; top: 36%; width: 128%; translate: -50% -50%; overflow: visible; pointer-events: none; }
+  .aneis circle { fill: none; stroke: var(--acento); stroke-width: .35; opacity: calc(.42 - var(--k) * .07);
+    transform: translate(calc(var(--mx, 0) * var(--k) * 2.2px), calc(var(--my, 0) * var(--k) * 2.2px)); transition: transform 1.2s cubic-bezier(.2,.8,.2,1); }
+  .foto { position: relative; aspect-ratio: 4 / 5; border-radius: 50% 50% var(--raio) var(--raio) / 40% 40% var(--raio) var(--raio); overflow: hidden; box-shadow: var(--sombra);
+    background: radial-gradient(120% 70% at 50% 0%, var(--brilho), transparent 60%), linear-gradient(175deg, var(--acento-claro), color-mix(in srgb, var(--acento-claro) 55%, var(--fundo))); display: grid; place-items: center; }
+  .foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  /* Sem foto, o arco é um bloco cheio na cor do consultório (como nos sites feitos à mão), com as iniciais gravadas. */
+  .foto.vazia { background: radial-gradient(90% 60% at 30% 10%, rgb(255 255 255 / .16), transparent 60%), linear-gradient(170deg, var(--acento), var(--acento-escuro)); }
+  .foto.vazia .monograma { color: #fff; opacity: .22; }
+  .foto.vazia .aviso-foto { background: rgb(255 255 255 / .9); color: var(--tinta); }
+  .cor-suave .foto.vazia { background: radial-gradient(120% 70% at 50% 0%, var(--brilho), transparent 60%), linear-gradient(175deg, var(--acento-claro), color-mix(in srgb, var(--acento-claro) 55%, var(--fundo))); }
+  .cor-suave .foto.vazia .monograma { color: var(--acento); opacity: .32; }
+  /* Cortina na cor do consultório que abre de baixo para cima e descobre a foto. */
+  .cortina { position: absolute; inset: 0; z-index: 2; background: var(--acento); clip-path: inset(0 0 100% 0); pointer-events: none; }
+  .foto::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgb(255 255 255 / .3); pointer-events: none; }
+  .monograma { font-family: var(--fonte-titulo); font-style: italic; font-size: clamp(96px, 12vw, 168px); font-weight: var(--peso-titulo); letter-spacing: -0.04em; line-height: 1; color: var(--acento); opacity: .32; padding-bottom: .1em; }
+  .aviso-foto { position: absolute; bottom: 22px; left: 50%; translate: -50% 0; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; font-size: 12.5px; color: var(--suave); background: rgb(255 255 255 / .78); padding: 7px 14px; border-radius: 999px; }
+  /* Nota do Google presa no alto do arco. */
+  .selo { position: absolute; bottom: 17%; right: clamp(-48px, -3.4vw, -16px); display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px;
+    background: rgb(255 255 255 / .9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: var(--sombra); font-size: 13.5px; color: var(--suave); white-space: nowrap; }
+  .selo strong { color: var(--tinta); font-weight: 600; }
+  .selo .estrela { color: #c98a0b; }
+  .ponto { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: .5; }
+  .heroi.invertido .selo { right: auto; left: clamp(-48px, -3.4vw, -16px); }
+  .heroi.invertido .planta { left: auto; right: -34%; }
+  .heroi.invertido .dica { left: auto; right: -30%; }
+
+
+  section { padding: clamp(80px, 11vw, 144px) 0; }
+  h2 { font-size: calc(clamp(32px, 3.8vw, 50px) * var(--escala)); max-width: 18ch; }
+  .intro { color: var(--suave); font-size: 18px; margin-top: 18px; max-width: 48ch; }
+  .cabeca { display: grid; gap: 14px; }
+
+  /* Ícone de traço fino num círculo com fio. */
+  .icone { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; color: var(--acento); background: var(--acento-claro); box-shadow: inset 0 0 0 1px var(--fio); }
+  .icone .ic { width: 24px; height: 24px; }
+
+  /* Serviços em mosaico: um destaque grande e dois menores. */
+  .mosaico { display: grid; grid-template-columns: 1.15fr 1fr; grid-auto-rows: minmax(220px, auto); gap: 16px; margin-top: 56px; }
+  .bloco { position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 36px; padding: clamp(26px, 3vw, 40px); border-radius: var(--raio);
+    background: var(--superficie); box-shadow: var(--sombra); overflow: hidden; transition: transform 400ms var(--saida), box-shadow 400ms var(--saida); }
+  .bloco:first-child { grid-row: span 2; background: linear-gradient(160deg, var(--acento), var(--acento-escuro)); color: #fff; }
+  .bloco:first-child p { color: rgb(255 255 255 / .8); }
+  /* O ícone do serviço principal, enorme e quase apagado, ocupa o canto do cartão. */
+  .marca-dagua { display: none; }
+  .servicos-mosaico .bloco:first-child .marca-dagua { display: block; position: absolute; top: -12%; right: -14%; width: 72%; color: rgb(255 255 255 / .09); pointer-events: none; }
+  .marca-dagua .ic { width: 100%; height: auto; aspect-ratio: 1; }
+  .cor-suave.servicos-mosaico .bloco:first-child .marca-dagua { color: color-mix(in srgb, var(--acento) 10%, transparent); }
+  .bloco:first-child .icone { background: rgb(255 255 255 / .12); color: #fff; box-shadow: inset 0 0 0 1px rgb(255 255 255 / .2); width: 64px; height: 64px; }
+  .bloco:first-child .icone .ic { width: 30px; height: 30px; }
+  .bloco:nth-child(3) { background: var(--acento-claro); }
+  .bloco:nth-child(3) .icone { background: var(--superficie); }
+  .bloco h3 { font-size: calc(clamp(22px, 2.1vw, 27px) * var(--escala)); }
+  .bloco:first-child h3 { font-size: calc(clamp(28px, 3vw, 40px) * var(--escala)); }
+  .bloco p { margin-top: 10px; color: var(--suave); max-width: 40ch; }
+  @media (hover: hover) and (pointer: fine) {
+    .bloco:hover { transform: translateY(-3px); box-shadow: 0 1px 1px rgb(122 90 46 / .04), 0 4px 10px -4px rgb(122 90 46 / .1), 0 32px 64px -32px rgb(122 90 46 / .45); }
+  }
+  /* Serviços em lista (estilo direto): linhas largas, sem cartões. */
+  .servicos-lista .mosaico { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 0; border-top: 1px solid var(--fio); }
+  .servicos-lista .bloco, .servicos-lista .bloco:first-child, .servicos-lista .bloco:nth-child(3) { display: grid; grid-template-columns: 52px 1fr; align-items: center; gap: 28px; grid-row: auto;
+    padding: 34px 0; background: transparent; color: inherit; box-shadow: none; border-radius: 0; border-bottom: 1px solid var(--fio); overflow: visible; }
+  .servicos-lista .bloco:first-child p { color: var(--suave); }
+  .servicos-lista .bloco .icone, .servicos-lista .bloco:first-child .icone { width: 52px; height: 52px; background: var(--acento-claro); color: var(--acento); box-shadow: inset 0 0 0 1px var(--fio); }
+  .servicos-lista .bloco h3, .servicos-lista .bloco:first-child h3 { font-size: calc(clamp(22px, 2.3vw, 28px) * var(--escala)); }
+  /* Serviços em colunas (estilo elegante): três colunas separadas por fios. */
+  .servicos-colunas .mosaico { grid-template-columns: repeat(3, 1fr); grid-auto-rows: auto; gap: 0; }
+  .servicos-colunas .bloco, .servicos-colunas .bloco:first-child, .servicos-colunas .bloco:nth-child(3) { grid-row: auto; justify-content: flex-start; gap: 44px; padding: 8px clamp(20px, 2.6vw, 40px);
+    background: transparent; color: inherit; box-shadow: none; border-radius: 0; border-left: 1px solid var(--fio); overflow: visible; }
+  .servicos-colunas .bloco:first-child p { color: var(--suave); }
+  .servicos-colunas .bloco .icone, .servicos-colunas .bloco:first-child .icone { width: 52px; height: 52px; background: transparent; color: var(--acento); box-shadow: inset 0 0 0 1px var(--linha); }
+  .servicos-colunas .bloco h3, .servicos-colunas .bloco:first-child h3 { font-size: calc(clamp(24px, 2.3vw, 30px) * var(--escala)); }
+  @media (hover: hover) and (pointer: fine) {
+    .servicos-lista .bloco:hover, .servicos-colunas .bloco:hover { transform: none; box-shadow: none; }
+    .servicos-lista .bloco:hover h3 { color: var(--acento); }
+  }
+
+  /* Manifesto: faixa escura com a frase firme e o itálico na cor de destaque; as palavras acendem conforme se rola. */
+  .manifesto { background: var(--fundo-escuro); color: #fff; padding: clamp(88px, 11vw, 150px) 0; }
+  .manifesto-texto { font-family: var(--fonte-titulo); font-weight: var(--peso-titulo); letter-spacing: var(--tracking-titulo); font-size: calc(clamp(32px, 4.3vw, 60px) * var(--escala)); line-height: 1.1; max-width: 24ch; text-wrap: balance; }
+  .manifesto-texto em { display: block; margin-top: .2em; font-style: italic; font-weight: 400; color: var(--passo); }
+  .manifesto-assina { display: flex; align-items: center; gap: 14px; margin-top: 36px; font-size: 15px; color: rgb(255 255 255 / .6); font-style: italic; }
+  .manifesto-assina::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+
+  /* O ciclo: quatro etapas numa pista oval; a escolhida acende e o texto dela aparece no meio. Funciona sem script. */
+  .ciclo-grade { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
+  .ciclo { position: relative; aspect-ratio: 1.3; width: 100%; max-width: 620px; justify-self: center; }
+  .ciclo input { position: absolute; opacity: 0; pointer-events: none; }
+  .pista { position: absolute; inset: 9% 6%; width: 88%; height: 82%; overflow: visible; }
+  .pista ellipse { fill: none; stroke-linecap: round; }
+  .pista .fundo-pista { stroke: var(--linha); stroke-width: 1; }
+  .pista .fluxo { stroke: var(--acento); stroke-width: 1.6; stroke-dasharray: 2 10; opacity: .7; }
+  .etapa { position: absolute; translate: -50% -50%; padding: 11px 22px; border-radius: 999px; background: var(--superficie); box-shadow: var(--sombra); font-weight: 600; font-size: 15.5px; cursor: pointer; white-space: nowrap;
+    transition: background-color 300ms ease, color 300ms ease, scale 400ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+  .etapa:active { scale: .96; }
+  .e0 { left: 50%; top: 9%; } .e1 { left: 94%; top: 50%; } .e2 { left: 50%; top: 91%; } .e3 { left: 6%; top: 50%; }
+  .centro { position: absolute; inset: 26% 22%; display: grid; place-items: center; text-align: center; }
+  .painel { grid-area: 1 / 1; opacity: 0; translate: 0 10px; transition: opacity 400ms ease, translate 500ms var(--saida); color: var(--suave); font-size: 15.5px; line-height: 1.5; }
+  .painel strong { display: block; margin-bottom: 8px; font-family: var(--fonte-titulo); font-weight: var(--peso-titulo); font-size: calc(clamp(26px, 2.6vw, 34px) * var(--escala)); color: var(--acento); letter-spacing: var(--tracking-titulo); line-height: 1.1; }
+  .ciclo:has(#ciclo-0:checked) .e0 { background: var(--acento); color: #fff; scale: 1.06; }
+  .ciclo:has(#ciclo-0:checked) .p0 { opacity: 1; translate: 0 0; }
+  .ciclo:has(#ciclo-0:focus-visible) .e0 { outline: 1.5px solid var(--acento); outline-offset: 3px; }
+  .ciclo:has(#ciclo-1:checked) .e1 { background: var(--acento); color: #fff; scale: 1.06; }
+  .ciclo:has(#ciclo-1:checked) .p1 { opacity: 1; translate: 0 0; }
+  .ciclo:has(#ciclo-1:focus-visible) .e1 { outline: 1.5px solid var(--acento); outline-offset: 3px; }
+  .ciclo:has(#ciclo-2:checked) .e2 { background: var(--acento); color: #fff; scale: 1.06; }
+  .ciclo:has(#ciclo-2:checked) .p2 { opacity: 1; translate: 0 0; }
+  .ciclo:has(#ciclo-2:focus-visible) .e2 { outline: 1.5px solid var(--acento); outline-offset: 3px; }
+  .ciclo:has(#ciclo-3:checked) .e3 { background: var(--acento); color: #fff; scale: 1.06; }
+  .ciclo:has(#ciclo-3:checked) .p3 { opacity: 1; translate: 0 0; }
+  .ciclo:has(#ciclo-3:focus-visible) .e3 { outline: 1.5px solid var(--acento); outline-offset: 3px; }
+  .saida { margin-top: clamp(40px, 5vw, 64px); padding: 24px 28px; border-radius: var(--raio); background: var(--superficie); box-shadow: var(--sombra); font-size: 16.5px; color: var(--suave); }
+  .saida strong { color: var(--tinta); }
+  .saida em { color: var(--acento); font-family: var(--fonte-titulo); font-size: 1.08em; }
+  /* Números dos serviços, em itálico na fonte dos títulos. */
+  .num { display: block; margin-bottom: 10px; font-family: var(--fonte-titulo); font-style: italic; font-size: calc(22px * var(--escala)); color: var(--acento); }
+  .servicos-mosaico .bloco:first-child .num { color: var(--passo); }
+  .cor-suave.servicos-mosaico .bloco:first-child .num { color: var(--acento); }
+
+  /* Por que confiar: números grandes separados por fios, e o resto em duas colunas sem cartões. */
+  .numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); margin: 56px 0 0; border-block: 1px solid var(--fio); }
+  .numeros > div { padding: 34px 28px 36px 0; }
+  .numeros > div + div { padding-left: 28px; border-left: 1px solid var(--fio); }
+  .numeros dt { font-family: var(--fonte-titulo); font-weight: var(--peso-titulo); font-size: calc(clamp(52px, 6vw, 84px) * var(--escala)); line-height: 1; letter-spacing: -0.035em; color: var(--tinta); }
+  .numeros > div:first-child dt { color: var(--acento); }
+  .numeros dd { margin: 14px 0 0; font-size: 14.5px; color: var(--suave); max-width: 22ch; }
+  .valor-real { display: inline-block; }
+  .provas { display: grid; grid-template-columns: 1fr 1fr; gap: 24px clamp(32px, 5vw, 72px); margin-top: 48px; }
+  .prova { display: grid; grid-template-columns: 52px 1fr; gap: 22px; align-items: start; }
+  .prova h3 { font-size: calc(clamp(21px, 1.9vw, 25px) * var(--escala)); }
+  .prova p { margin-top: 8px; color: var(--suave); max-width: 44ch; }
+  .registro { display: flex; align-items: center; gap: 10px; margin-top: 40px; font-size: 14px; color: var(--suave); }
+  .registro .ic { color: var(--acento); }
+
+  /* Pausa de um minuto: a bolha cresce e encolhe no ritmo da respiração (o script conduz; sem script fica a explicação). */
+  .pausa { background: color-mix(in srgb, var(--acento-claro) 70%, var(--fundo)); border-radius: clamp(28px, 4vw, 56px) clamp(28px, 4vw, 56px) 0 0; }
+  .pausa-grade { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 112px); align-items: center; }
+  .ritmo { margin-top: 36px; border-top: 1px solid var(--fio); max-width: 420px; }
+  .ritmo li { display: flex; align-items: baseline; gap: 22px; padding: 16px 0; border-bottom: 1px solid var(--fio); font-size: 16px; }
+  .ritmo span { min-width: 2.4em; font-family: var(--fonte-titulo); font-size: calc(22px * var(--escala)); color: var(--acento); }
+  .respiro { display: grid; justify-items: center; gap: 28px; }
+  .bolha { position: relative; display: grid; place-items: center; width: min(78vw, 360px); aspect-ratio: 1; border-radius: 50%; box-shadow: inset 0 0 0 1px var(--linha); }
+  .bolha::before { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: 50%; border: 1px dashed color-mix(in srgb, var(--acento) 35%, transparent); scale: .62; opacity: 0; transition: opacity 400ms ease; }
+  .respiro.rodando .bolha::before { opacity: 1; }
+  .bolha-botao { width: 62%; aspect-ratio: 1; border: 0; border-radius: 50%; cursor: pointer; display: grid; place-content: center; gap: 4px; font: inherit; color: var(--tinta);
+    background: radial-gradient(circle at 35% 30%, var(--superficie), var(--brilho) 55%, var(--passo)); box-shadow: 0 24px 60px -24px rgb(122 90 46 / .55), inset 0 1px 0 rgb(255 255 255 / .6);
+    transition: scale var(--dur, 600ms) cubic-bezier(.45,0,.55,1), box-shadow 400ms ease; }
+  .bolha-botao strong { font-family: var(--fonte-titulo); font-weight: var(--peso-titulo); font-size: calc(28px * var(--escala)); }
+  .bolha-botao small { font-size: 13px; color: var(--suave); }
+  .bolha-botao:active { scale: .97; }
+  .respiro.rodando .bolha-botao { cursor: default; }
+  .respiro-legenda { font-size: 14px; color: var(--suave); }
+
+  /* Como funciona: uma linha liga os passos e acende cada um na hora em que ele é lido. */
+  .escuro { background: var(--fundo-escuro); color: #eef0f5; }
+  .escuro .intro { color: color-mix(in srgb, #fff 62%, var(--fundo-escuro)); }
+  .passos-grade { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
+  .passos-cabeca { position: sticky; top: 128px; }
+  .passo { position: relative; display: grid; grid-template-columns: 52px 1fr; gap: 28px; align-items: start; padding-bottom: 64px; }
+  .passo:last-child { padding-bottom: 0; }
+  .passo:not(:last-child)::before, .passo:not(:last-child)::after { content: ""; position: absolute; left: 25.5px; top: 64px; bottom: 12px; width: 1px; background: rgb(255 255 255 / .14); }
+  .passo:not(:last-child)::after { background: var(--passo); transform-origin: 50% 0; }
+  .passo .icone { background: rgb(255 255 255 / .06); color: var(--passo); box-shadow: inset 0 0 0 1px rgb(255 255 255 / .12); }
+  .passo p { padding-top: 10px; font-family: var(--fonte-titulo); font-weight: var(--peso-titulo); letter-spacing: var(--tracking-titulo); font-size: calc(clamp(21px, 2vw, 26px) * var(--escala)); line-height: 1.3; color: #fff; max-width: 30ch; }
+
+  /* Valor: o que vem incluído no atendimento. */
+  .valor { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
+  .inclui { display: grid; border-top: 1px solid var(--fio); }
+  .inclui li { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; padding: 22px 0; border-bottom: 1px solid var(--fio); font-size: 17.5px; }
+  .inclui .ic { margin-top: .3em; color: var(--acento); }
+  .investimento { margin-top: 24px; padding: 22px 24px; border-radius: var(--raio); background: var(--acento-claro); color: var(--tinta); font-size: 15.5px; }
+  .investimento strong { display: block; font-family: var(--fonte-titulo); font-weight: var(--peso-titulo); font-size: calc(22px * var(--escala)); margin-bottom: 4px; }
+
+  /* Sobre: o nome do lead gigante, com a foto dele por dentro das letras; o texto vai acendendo enquanto se lê. */
+  .assinatura { margin: 18px 0 clamp(36px, 5vw, 64px); max-width: none; font-size: min(calc(17vw * var(--escala)), calc(150vw / var(--n))); line-height: .92; letter-spacing: -0.035em; white-space: nowrap; }
+  .estilo-elegante .assinatura { font-style: italic; letter-spacing: -0.02em; }
+  .assinatura span { display: inline-block; padding: .04em .04em .12em 0; color: transparent; -webkit-background-clip: text; background-clip: text;
+    background-image: linear-gradient(115deg, var(--acento) 20%, var(--acento-escuro) 60%, var(--acento) 100%); background-size: 200% 100%; background-position: 0 50%; }
+  .assinatura.com-foto span { background-image: linear-gradient(rgb(122 90 46 / .38), rgb(122 90 46 / .38)), var(--foto); background-size: cover, cover; background-position: center, center 30%; }
+  .sobre { margin-left: auto; max-width: 760px; }
+  .acende { font-family: var(--fonte-titulo); font-weight: var(--peso-titulo); font-size: calc(clamp(26px, 2.8vw, 38px) * var(--escala)); line-height: 1.25; letter-spacing: var(--tracking-titulo); max-width: 28ch; }
+  .diferencial { margin-top: 24px; font-size: 18px; color: var(--suave); max-width: 52ch; }
+  .sobre .nota { margin-top: 18px; font-size: 13.5px; color: var(--suave); }
+
+  .perguntas { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
+  details { border-bottom: 1px solid var(--fio); }
+  details:first-of-type { border-top: 1px solid var(--fio); }
+  summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 24px 0; cursor: pointer; list-style: none; font-weight: 500; font-size: 18px; }
+  summary::-webkit-details-marker { display: none; }
+  summary .ic { color: var(--acento); transition: transform 300ms var(--saida); }
+  details[open] summary .ic { transform: rotate(45deg); }
+  details::details-content { height: 0; overflow: clip; transition: height 300ms var(--saida), content-visibility 300ms allow-discrete; }
+  details[open]::details-content { height: auto; }
+  details p { padding: 0 0 24px; color: var(--suave); max-width: 60ch; }
+
+  /* Chamada final com a cor do consultório. */
+  .final { position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: 1.3fr .7fr; gap: 32px; align-items: end; padding: clamp(40px, 6vw, 80px); border-radius: calc(var(--raio) + 6px);
+    background: linear-gradient(150deg, var(--acento), var(--acento-escuro)); color: #fff; }
+  .final::before { content: ""; position: absolute; inset: -40%; z-index: -1;
+    background: radial-gradient(30% 35% at 20% 30%, rgb(255 255 255 / .16), transparent 70%), radial-gradient(28% 30% at 80% 75%, rgb(0 0 0 / .18), transparent 70%); }
+  .final h2 { font-size: calc(clamp(34px, 4.4vw, 58px) * var(--escala)); max-width: 15ch; }
+  .final .ficha { display: flex; flex-wrap: wrap; gap: 20px 40px; margin: 28px 0 0; }
+  .final .ficha dt { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: rgb(255 255 255 / .72); }
+  .final .ficha dd { margin: 4px 0 0; font-weight: 500; font-size: 15.5px; }
+  .final .ficha a { color: #fff; }
+  .final .acoes { margin-top: 0; justify-content: flex-end; }
+
+  footer { padding: 44px 0 60px; font-size: 13.5px; color: var(--suave); }
+  footer .largura { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; border-top: 1px solid var(--fio); padding-top: 28px; }
+  footer a { display: inline-flex; align-items: center; gap: 6px; }
+
+  .flutuante { display: none; }
+
+  /* ── Força da cor (quiz). Suave: tons apagados, a cor só nos detalhes. Marcante: a cor toma seções inteiras. ── */
+  .cor-suave {
+    --acento: color-mix(in oklab, #7a5a2e 72%, #6a5f50); --acento-escuro: color-mix(in oklab, #5f4522 72%, #6a5f50);
+    --acento-claro: color-mix(in oklab, #efe5d6 55%, #f6f2ec); --brilho: color-mix(in oklab, #e6d6bd 60%, #f6f2ec); --passo: color-mix(in oklab, #d8bd92 55%, #e8e8e4);
+  }
+  .cor-suave .aura { opacity: .35; }
+  .cor-suave.servicos-mosaico .bloco:first-child { background: var(--superficie); color: var(--tinta); }
+  .cor-suave.servicos-mosaico .bloco:first-child p { color: var(--suave); }
+  .cor-suave.servicos-mosaico .bloco:first-child .icone { background: var(--acento-claro); color: var(--acento); box-shadow: inset 0 0 0 1px var(--fio); }
+  .cor-suave .final { background: var(--superficie); color: var(--tinta); box-shadow: var(--sombra); }
+  .cor-suave .final::before { opacity: .5; background: radial-gradient(30% 35% at 18% 25%, var(--acento-claro), transparent 70%); }
+  .cor-suave .final .ficha dt { color: var(--suave); }
+  .cor-suave .final .ficha a { color: var(--tinta); }
+  .cor-suave .final .botao.claro { background: var(--acento); color: #fff; }
+  @supports (color: oklch(from red l c h)) {
+    .cor-marcante { --acento: oklch(from #7a5a2e calc(l * .98) calc(c * 1.22) h); --acento-escuro: oklch(from #5f4522 l calc(c * 1.2) h); --acento-claro: oklch(from #efe5d6 calc(l * .985) calc(c * 1.6) h); }
+  }
+  .cor-marcante { --fundo-escuro: var(--acento-escuro); }
+  /* Bloco de cor atrás da foto, saindo pelo alto. */
+  .cor-marcante .retrato::before { content: ""; position: absolute; z-index: -1; inset: 18% -9% -5% 30%; border-radius: var(--raio); background: var(--acento); }
+  .cor-marcante .heroi.invertido .retrato::before { inset: 18% 30% -5% -9%; }
+  .cor-marcante .aura { opacity: .9; }
+  .cor-marcante .numeros > div:first-child { background: var(--acento); }
+  .cor-marcante .numeros > div:first-child dt, .cor-marcante .numeros > div:first-child dd { color: #fff; padding-left: 28px; }
+
+
+
+  /* A planta fica de pé no mesmo chão do arco, na frente da borda dele (como o dente-de-leão do site da Wiliane):
+     grande o bastante para ser vista, com a flor na altura do meio da foto. O tamanho acompanha o arco. */
+  .planta { position: absolute; bottom: -1.5%; left: -34%; z-index: 3; width: 50%; cursor: pointer; touch-action: manipulation; }
+  .planta > svg { width: 100%; height: auto; aspect-ratio: 120 / 190; }
+  /* Sombra no "chão", para a planta parecer plantada e não flutuando. */
+  .planta::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 46%; height: 14px; translate: -50% 40%; border-radius: 50%; z-index: -1;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--tinta) 24%, transparent), transparent); }
+  /* Convite discreto embaixo da planta. */
+  .dica { position: absolute; left: -30%; bottom: -44px; font-size: 13px; font-style: italic; color: var(--suave); white-space: nowrap; }
+  .dica { display: inline-flex; align-items: center; gap: 6px; }
+  .dica .ic { width: 14px; height: 14px; color: var(--acento); rotate: -135deg; }
+  .heroi.invertido .dica .ic { rotate: -45deg; }
+  .dica .com-toque { display: none; }
+  @media (hover: none) { .dica .com-mouse { display: none; } .dica .com-toque { display: inline; } }
+  .planta svg { display: block; overflow: visible; transform-origin: 50% 100%; }
+  .planta .caule { fill: none; stroke: var(--acento-escuro); stroke-width: 2.4; stroke-linecap: round; }
+  .planta .folha { opacity: .85; }
+  .planta .solta { transition: opacity 600ms ease; }
+  .planta .solta.foi { opacity: 0; transition: none; }
+  .planta .semente line, .voa .semente line { stroke: var(--suave); stroke-width: .8; stroke-linecap: round; opacity: .55; }
+  .voa .semente line { stroke-width: 1.4; opacity: 1; }
+  .c-acento { fill: var(--acento); } .c-escuro { fill: var(--acento-escuro); } .c-passo { fill: var(--passo); }
+  .c-brilho { fill: var(--brilho); }
+  .planta .pufe { fill: var(--superficie, #fff); opacity: .55; }
+  .c-branco { fill: #fff; stroke: var(--linha); stroke-width: .8; }
+  .planta .caule.fino { stroke-width: 1.6; } .planta .galho { fill: none; stroke: var(--acento-escuro); stroke-width: 2; stroke-linecap: round; }
+  .planta .haste { stroke: var(--acento-escuro); stroke-width: 1.2; }
+  .planta .espiral, .planta .riscos line { fill: none; stroke: var(--acento-escuro); stroke-width: 1.1; stroke-linecap: round; }
+  .planta .espinho { fill: none; stroke: var(--passo); stroke-width: 1; stroke-dasharray: 1.5 5; stroke-linecap: round; }
+  .arista { stroke: var(--acento-escuro); stroke-width: .8; stroke-linecap: round; }
+  .voa { position: fixed; z-index: 60; width: 28px; height: 28px; margin: -14px 0 0 -14px; pointer-events: none; }
+  .voa svg { width: 100%; height: 100%; overflow: visible; }
+  @media (prefers-reduced-motion: no-preference) {
+    .planta > svg { animation: balanca 5.5s ease-in-out infinite alternate; }
+    .planta .cabeca { transition: transform 900ms cubic-bezier(.2,.8,.2,1); transform: rotate(var(--inclina, 0deg)); }
+  }
+  @keyframes balanca { from { transform: rotate(-3deg); } to { transform: rotate(3.5deg); } }
+  @media (max-width: 860px) { .planta, .heroi.invertido .planta { width: 50%; left: auto; right: -36%; } .dica, .heroi.invertido .dica { left: auto; right: -30%; bottom: -38px; } .dica .ic, .heroi.invertido .dica .ic { rotate: -45deg; } }
+
+  /* ── Movimento (quase todo em CSS; o script da página cuida da plantinha, dos anéis e da pausa). O ritmo vem do quiz; quem pede menos movimento no aparelho vê a página parada. ── */
+
+  @media (prefers-reduced-motion: no-preference) {
+    .entra { animation: entra 900ms var(--saida) both; animation-delay: calc(320ms + var(--i, 0) * 90ms); }
+    .selo { animation: entra 900ms var(--saida) 1000ms both; }
+    .dica { animation: entra 900ms var(--saida) 1600ms both; }
+    .aura { animation: respira 16s ease-in-out infinite alternate; }
+    /* A pista do ciclo corre devagar, no sentido das etapas. */
+    .pista .fluxo { animation: flui 2.4s linear infinite; }
+    @keyframes flui { to { stroke-dashoffset: -24; } }
+    .final::before { animation: respira 18s ease-in-out infinite alternate; }
+
+    /* Título do topo: equilibrado sobe palavra por palavra; vivo sobe girando de leve; sereno só aparece, desfocado para nítido. */
+    .palavra > span { animation: sobe 1000ms var(--saida) both; animation-delay: calc(120ms + var(--i) * 40ms); }
+    .vivaz .heroi .palavra > span { transform-origin: 0 100%; animation-name: sobe-girando; animation-duration: 1100ms; animation-delay: calc(100ms + var(--i) * 55ms); }
+    .mov-sereno .heroi .palavra > span { animation-duration: 1500ms; animation-delay: calc(150ms + var(--i) * 60ms); }
+
+    /* Foto: a cortina sobe e descobre a foto (equilibrado e vivo); no sereno a foto só clareia. */
+    .foto { animation: abre 900ms var(--saida) 150ms both; }
+    .cortina { animation: cortina 1000ms cubic-bezier(0.77, 0, 0.175, 1) 650ms both; }
+
+    @keyframes sobe { from { transform: translateY(108%); } }
+    @keyframes sobe-girando { from { transform: translateY(115%) rotate(7deg); } }
+    @keyframes nitido { from { opacity: 0; filter: blur(8px); } }
+    @keyframes aparece { from { opacity: 0; } }
+    @keyframes entra { from { opacity: 0; transform: translateY(14px); } }
+    @keyframes abre { from { clip-path: inset(100% 0 0 0 round var(--raio)); } to { clip-path: inset(0 0 0 0 round var(--raio)); } }
+    @keyframes cortina { from { clip-path: inset(0 0 0 0); } }
+    @keyframes respira { from { transform: translate(-3%, -2%) rotate(0deg) scale(1); } to { transform: translate(3%, 2%) rotate(10deg) scale(1.06); } }
+
+    /* ── Dinamismo (equilibrado e vivo): a página continua viva depois de carregar. ── */
+    /* Marca-texto que se desenha nas palavras de destaque depois que o título sobe. */
+    .estilo-alegre .heroi .destaque { background-size: 0% 100%; animation: risca 700ms var(--saida) 1150ms forwards; }
+    .estilo-acolhedor .heroi .destaque { background-size: 0% .12em; animation: risca-fina 800ms var(--saida) 1200ms forwards; }
+    .heroi .destaque + .destaque { animation-delay: 1500ms; }
+    /* Foto e ficha flutuam devagar, fora de compasso, como se respirassem. */
+    .vivaz .foto { animation: abre 900ms var(--saida) 150ms both, flutua 7s ease-in-out 1.8s infinite alternate; }
+    .vivaz .selo { animation: entra 900ms var(--saida) 1000ms both, flutua 6.5s ease-in-out 2s infinite alternate; }
+    /* Sem mouse (celular), os anéis respiram sozinhos. */
+    @media (hover: none) { .aneis circle { animation: onda 6s ease-in-out infinite alternate; animation-delay: calc(var(--k) * -1.2s); } }
+    @keyframes onda { to { transform: scale(1.04); } }
+    .mov-vivo .aura { animation-duration: 7s; }
+    .mov-vivo .final::before { animation-duration: 6s; }
+    /* Botão principal: a seta dá um empurrãozinho de tempos em tempos, chamando o clique. */
+    .mov-vivo .heroi .botao .seta, .mov-vivo .final .botao .seta { animation: cutuca 3.2s var(--saida) 2.5s infinite; }
+    @keyframes risca { to { background-size: 100% 100%; } }
+    @keyframes risca-fina { to { background-size: 100% .12em; } }
+    @keyframes flutua { from { translate: 0 0; } to { translate: 0 -12px; } }
+    @keyframes cutuca { 0%, 70%, 100% { transform: translateX(0); } 80% { transform: translateX(6px); } 90% { transform: translateX(-2px); } }
+    @media (hover: hover) and (pointer: fine) {
+      /* Cartões: sobem com uma mola, o ícone gira e um brilho atravessa o cartão. */
+      .vivaz .bloco, .vivaz .prova { transition: scale 500ms cubic-bezier(0.34, 1.56, 0.64, 1), rotate 500ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 400ms var(--saida); }
+      .vivaz.servicos-mosaico .bloco:hover, .vivaz .prova:hover { scale: 1.025; rotate: -0.6deg; }
+      .vivaz .bloco .icone, .vivaz .prova .icone { transition: transform 600ms cubic-bezier(0.34, 1.56, 0.64, 1); }
+      .vivaz .bloco:hover .icone, .vivaz .prova:hover .icone { transform: rotate(-12deg) scale(1.12); }
+      .vivaz.servicos-mosaico .bloco::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 35%, rgb(255 255 255 / .28) 50%, transparent 65%); translate: -120% 0; }
+      .vivaz.servicos-mosaico .bloco:hover::after { translate: 120% 0; transition: translate 900ms var(--saida); }
+      /* Botões: a cor escura entra de baixo para cima e a seta sai e volta. */
+      .vivaz .botao:not(.leve) { background-image: linear-gradient(var(--acento-escuro), var(--acento-escuro)); background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 0%; transition: transform 160ms var(--saida), background-size 380ms var(--saida), box-shadow 200ms ease; }
+      .vivaz .botao:not(.leve):hover { background-size: 100% 100%; }
+      .vivaz .botao.claro { background-image: linear-gradient(var(--acento-claro), var(--acento-claro)); }
+      .vivaz .botao:hover .seta { animation: seta-volta 520ms var(--saida); }
+      @keyframes seta-volta { 45% { transform: translateX(14px); opacity: 0; } 46% { transform: translateX(-14px); opacity: 0; } }
+    }
+    @keyframes gira { to { --giro: 360deg; } }
+
+    /* Animações presas à rolagem (Chrome, Edge e Safari recentes; nos outros a página só fica parada). */
+    @supports (animation-timeline: view()) {
+      .topo-fixo::before { animation: vidro linear both; animation-timeline: scroll(root); animation-range: 0 120px; }
+      .progresso { opacity: 1; animation: progresso linear both; animation-timeline: scroll(root); }
+      .revela { animation: revela var(--saida) both; animation-timeline: view(); animation-range: entry 0% cover 30%; }
+      .revela:nth-child(2) { animation-range: entry 8% cover 34%; }
+      .revela:nth-child(3) { animation-range: entry 16% cover 38%; }
+      .vivaz .revela { animation-name: revela-3d; }
+
+      /* Manifesto: cada palavra acende na sua vez enquanto a faixa passa pela tela. */
+      .manifesto { view-timeline-name: --manifesto; }
+      .manifesto .w { animation: acende-palavra linear both; animation-timeline: --manifesto; animation-range: cover calc(12% + var(--p) * 30%) cover calc(18% + var(--p) * 30%); }
+      @keyframes acende-palavra { from { opacity: .18; } }
+
+      /* Títulos de seção: cada palavra sobe da sua máscara conforme o título entra na tela. */
+      .kin { view-timeline-name: --titulo; }
+      .kin .palavra > span { animation: sobe var(--saida) both; animation-delay: 0s; animation-timeline: --titulo; animation-range: entry calc(var(--i) * 7%) cover calc(28% + var(--i) * 4%); }
+      .vivaz .kin .palavra > span { transform-origin: 0 100%; animation-name: sobe-girando; }
+
+      /* Passos: a linha entre um passo e o próximo se desenha enquanto se lê, e o ícone acende ao chegar no meio da tela. */
+      .passo { view-timeline-name: --passo; }
+      .passo:not(:last-child)::after { animation: desenha linear both; animation-timeline: --passo; animation-range: cover calc(50vh + 30px) cover calc(100% - 50vh + 40px); }
+      .passo .icone { animation: acende-icone var(--saida) both; animation-timeline: --passo; animation-range: cover calc(50vh - 10px) cover calc(50vh + 50px); }
+      .passo p { animation: foco linear both; animation-timeline: --passo; animation-range: cover calc(50vh - 60px) cover calc(50vh + 40px); }
+
+      /* Nota do Google que conta de 0,0 até o valor real. */
+      @supports (width: round(down, 5px, 2px)) {
+        .contador { animation: conta cubic-bezier(0.16, 1, 0.3, 1) both; animation-timeline: view(); animation-range: entry 30% cover 55%; }
+        .contador .valor-real { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+        .contador::after { content: counter(inteiro) "," counter(decimo) / ""; counter-reset: inteiro round(down, calc(var(--nota) / 10), 1) decimo mod(var(--nota), 10); }
+      }
+
+      /* Nome gigante: a foto desliza por dentro das letras; no vivo o nome também se escreve da esquerda para a direita. */
+      .assinatura span { animation: desliza linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+      .assinatura:not(.com-foto) span { animation-name: desliza-cor; }
+      .assinatura { animation: escreve var(--saida) both; animation-timeline: view(); animation-range: entry 10% cover 45%; }
+      .mov-vivo .assinatura { animation-name: escreve-correndo; }
+
+      .acende { color: transparent; background: linear-gradient(90deg, var(--tinta) 50%, color-mix(in srgb, var(--tinta) 20%, transparent) 50%) 100% 0 / 200% 100% no-repeat; -webkit-background-clip: text; background-clip: text;
+        animation: acende linear both; animation-timeline: view(); animation-range: cover 15% cover 55%; }
+      .foto img { animation: aproxima linear both; animation-timeline: view(); animation-range: exit 0% exit 100%; }
+
+      /* Chamada final: no vivo nasce como um botão e cresce até virar a seção; no equilibrado sobe com uma máscara. */
+      .cresce { animation: mascara var(--saida) both; animation-timeline: view(); animation-range: entry 0% cover 35%; }
+      .vivaz .cresce { animation-name: cresce; animation-range: entry 10% cover 50%; }
+      .vivaz .cresce { view-timeline-name: --cresce; }
+      .vivaz .cresce > * { animation: aparece linear both; animation-timeline: --cresce; animation-range: cover 25% cover 42%; }
+
+      /* Vivo: a foto do topo se afasta mais rápido que o texto (profundidade). */
+      .vivaz .retrato { animation: afasta linear both; animation-timeline: scroll(root); animation-range: 0 90vh; }
+      .vivaz .heroi > div:first-child { animation: fica linear both; animation-timeline: scroll(root); animation-range: 0 90vh; }
+
+      /* Cartões de serviço em velocidades diferentes ao rolar (profundidade). */
+      .vivaz:not(.servicos-lista) .mosaico .bloco { animation: revela-3d var(--saida) both, paralaxe linear both; animation-timeline: view(), view(); animation-range: entry 0% cover 30%, cover 0% cover 100%; }
+      .vivaz:not(.servicos-lista) .mosaico .bloco:nth-child(1) { --p: 0px; }
+      .vivaz:not(.servicos-lista) .mosaico .bloco:nth-child(2) { --p: 36px; }
+      .vivaz:not(.servicos-lista) .mosaico .bloco:nth-child(3) { --p: 72px; }
+      .mov-vivo:not(.servicos-lista) .mosaico .bloco:nth-child(2) { --p: 60px; }
+      .mov-vivo:not(.servicos-lista) .mosaico .bloco:nth-child(3) { --p: 120px; }
+      /* A seção escura nasce como um sol subindo: um círculo que se abre até tomar a tela. */
+      .vivaz .escuro { animation: nasce var(--saida) both; animation-timeline: view(); animation-range: entry 0% entry 75%; }
+      /* Itens incluídos: o check aparece com um pulo. */
+      .inclui .ic { animation: pula cubic-bezier(0.34, 1.56, 0.64, 1) both; animation-timeline: view(); animation-range: entry 40% cover 30%; }
+      /* Perguntas entram uma a uma. */
+      .vivaz details { animation: revela var(--saida) both; animation-timeline: view(); animation-range: entry 0% cover 25%; }
+      @keyframes paralaxe { from { translate: 0 var(--p); } to { translate: 0 calc(var(--p) * -1); } }
+      @keyframes nasce { from { clip-path: circle(14% at 50% 0%); } to { clip-path: circle(150% at 50% 0%); } }
+      @keyframes pula { from { transform: scale(0) rotate(-30deg); } }
+      @keyframes vidro { to { opacity: 1; } }
+      @keyframes progresso { to { transform: scaleX(1); } }
+      @keyframes revela { from { opacity: 0; transform: translateY(32px); } }
+      @keyframes revela-3d { from { opacity: 0; transform: perspective(900px) translateY(56px) rotateX(16deg); } }
+      @keyframes desenha { from { transform: scaleY(0); } }
+      @keyframes acende-icone { to { background: var(--passo); color: var(--fundo-escuro); box-shadow: 0 0 0 6px rgb(255 255 255 / .06); } }
+      @keyframes foco { from { opacity: .38; } }
+      @keyframes conta { from { --nota: 0; } to { --nota: var(--alvo); } }
+      @keyframes desliza { from { background-position: center, center 0%; } to { background-position: center, center 100%; } }
+      @keyframes desliza-cor { to { background-position: 100% 50%; } }
+      @keyframes escreve { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+      @keyframes escreve-correndo { from { clip-path: inset(0 100% 0 0); transform: translateX(12%); } to { clip-path: inset(0 0 0 0); } }
+      @keyframes acende { to { background-position: 0 0; } }
+      @keyframes aproxima { to { transform: scale(1.06); } }
+      @keyframes mascara { from { clip-path: inset(22% 0 0 0 round calc(var(--raio) + 6px)); opacity: 0; } to { clip-path: inset(0 0 0 0 round calc(var(--raio) + 6px)); } }
+      @keyframes cresce { from { clip-path: inset(38% calc(50% - 120px) 38% calc(50% - 120px) round 999px); } to { clip-path: inset(0 0 0 0 round calc(var(--raio) + 6px)); } }
+      @keyframes afasta { to { transform: translateY(-9%) scale(.93); } }
+      @keyframes fica { to { transform: translateY(14%); opacity: .35; } }
+
+      /* Vivo, no computador: os passos correm de lado enquanto a página rola (a seção fica presa na tela). */
+      @media (min-width: 861px) {
+        .vivaz .escuro { view-timeline-name: --lado; height: calc(100vh + var(--n) * 55vh); padding: 0; }
+        .vivaz .pan-fixo { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; align-items: center; }
+        .vivaz .passos-grade { display: flex; align-items: stretch; gap: 20px; width: max-content; margin: 0; padding-inline: max(24px, (100vw - 1160px) / 2);
+          animation: lado linear both; animation-timeline: --lado; animation-range: contain 5% contain 95%; }
+        .vivaz .passos-cabeca { position: static; width: min(440px, 36vw); flex: none; align-self: center; margin-right: 60px; }
+        .vivaz .passos { display: flex; gap: 20px; }
+        .vivaz .passo { width: min(360px, 30vw); min-height: 340px; padding: 32px; grid-template-columns: 1fr; align-content: space-between; border-radius: var(--raio);
+          background: color-mix(in srgb, var(--fundo-escuro) 86%, #fff); border: 1px solid rgb(255 255 255 / .08); view-timeline-name: none; }
+        .vivaz .passo::before, .vivaz .passo::after { display: none; }
+        .vivaz .passo .icone, .vivaz .passo p { animation: none; }
+        .vivaz .passo:nth-child(2n) { translate: 0 28px; }
+        @keyframes lado { to { transform: translateX(calc(-100% + 100vw)); } }
+      }
+    }
+  }
+  @property --nota { syntax: "<integer>"; inherits: true; initial-value: 0; }
+  @property --giro { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+  @media (prefers-reduced-motion: reduce) {
+    .topo-fixo::before { opacity: 1; }
+  }
+
+  @media (max-width: 860px) {
+    .heroi, .heroi.invertido, .perguntas, .final, .passos-grade, .valor, .pausa-grade, .provas, .ciclo-grade { grid-template-columns: 1fr; }
+    /* No celular o texto da etapa sai de dentro da pista e fica logo abaixo dela, para não brigar com as etapas. */
+    .ciclo { margin-bottom: 150px; }
+    .centro { inset: calc(100% + 28px) 0 auto; }
+    .painel { font-size: 15px; max-width: 34ch; margin-inline: auto; }
+    .etapa { font-size: 12.5px; padding: 8px 12px; }
+    .e1 { left: 85%; } .e3 { left: 16%; }
+    .heroi { padding-top: 20px; }
+    .heroi.invertido > :first-child { order: 0; }
+    .heroi.empilhado .foto { aspect-ratio: 4 / 5; }
+    /* No celular o arco encosta à esquerda e a planta fica de pé ao lado dele, fora da foto. */
+    .retrato { width: min(100% - 96px, 340px); justify-self: start; margin-bottom: 40px; }
+    .selo, .heroi.invertido .selo { left: -12px; right: auto; bottom: 24%; }
+    .heroi.empilhado .retrato { width: min(100% - 96px, 340px); }
+    .heroi.empilhado .planta { width: 50%; left: auto; }
+    .heroi.empilhado .dica { left: auto; }
+    .numeros > div:nth-child(odd) { border-left: 0; padding-left: 0; }
+    .numeros > div:nth-child(n + 3) { border-top: 1px solid var(--fio); }
+    .mosaico, .servicos-colunas .mosaico { grid-template-columns: 1fr; }
+    .bloco:first-child { grid-row: auto; }
+    .servicos-colunas .bloco, .servicos-colunas .bloco:first-child, .servicos-colunas .bloco:nth-child(3) { border-left: 0; border-top: 1px solid var(--fio); padding: 28px 0; gap: 20px; }
+    .servicos-lista .bloco, .servicos-lista .bloco:first-child, .servicos-lista .bloco:nth-child(3) { grid-template-columns: 1fr; gap: 16px; padding-right: 40px; }
+    .passos-cabeca { position: static; }
+    .passo { gap: 20px; padding-bottom: 48px; }
+    .final .acoes { justify-content: flex-start; }
+    .nav .botao { display: none; }
+    .flutuante { display: inline-flex; position: fixed; right: 16px; bottom: 16px; z-index: 30; }
+    footer { padding-bottom: 104px; }
+  }
+  @media (max-width: 520px) {
+    body { font-size: 16px; }
+    .largura { width: calc(100% - 40px); }
+    .acoes .botao { flex: 1 1 100%; justify-content: center; }
+    .numeros { grid-template-columns: 1fr 1fr; }
+    .numeros > div { padding: 24px 16px 26px 0; }
+    .numeros > div + div { padding-left: 16px; }
+    /* No celular o nome quebra em duas linhas para continuar grande. */
+    .assinatura { white-space: normal; font-size: min(calc(19vw * var(--escala)), calc(150vw / var(--m))); line-height: .95; }
+    .passo { grid-template-columns: 44px 1fr; gap: 16px; }
+    .passo .icone { width: 44px; height: 44px; }
+    .passo:not(:last-child)::before, .passo:not(:last-child)::after { left: 21.5px; top: 56px; }
+  }
+</style>
+</head>
+<body class="estilo-acolhedor servicos-mosaico mov-equilibrado vivaz cor-equilibrada">
+<div class="previa">Prévia de demonstração criada para Aline Alves - Nutricionista. Não é o site oficial.</div>
+<div class="topo-fixo">
+  <header class="largura nav">
+    <a class="marca" href="#topo"><i aria-hidden="true"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLcr_UEhvnzhFlYpGa_9bi4gZmMK5vl6pax2sNLGwvNTJQBeeBGhJbGPyt1EFyD5rO4W5Fd7HmpTTKbqeKRst5HubVsn8nb_y77bMF685llzucIVeZJFt6m9U2_DKn-boBoUszoM=w408-h510-k-no" alt="Aline Alves - Nutricionista" referrerpolicy="no-referrer"></i>Aline Alves - Nutricionista</a>
+    <a class="botao" href="https://wa.me/551234247627?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.">Agendar consulta</a>
+  </header>
+  <div class="progresso" aria-hidden="true"></div>
+</div>
+<main id="topo">
+  <div class="largura heroi empilhado">
+    <div>
+      <p class="sobrelinha entra" style="--i:0">Nutricionista em Taubaté/SP</p>
+      <h1><span class="palavra"><span style="--i:0">Cuidar</span></span> <span class="palavra"><span style="--i:1">da</span></span> <span class="palavra"><span style="--i:2">alimentação</span></span> <span class="palavra"><span style="--i:3">pode</span></span> <span class="palavra"><span style="--i:4">ser</span></span> <span class="palavra"><span style="--i:5">leve,</span></span> <span class="palavra"><span style="--i:6">com</span></span> <span class="palavra"><span style="--i:7">alguém</span></span> <span class="palavra"><span style="--i:8">do</span></span> <span class="palavra destaque"><span style="--i:9">seu</span></span> <span class="palavra destaque"><span style="--i:10">lado.</span></span></h1>
+      <p class="sub entra" style="--i:2">Nutricionista em Taubaté/SP. Atendimento com um plano feito para a sua rotina, no consultório ou online.</p>
+      <div class="acoes entra" style="--i:3">
+        <a class="botao" href="https://wa.me/551234247627?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.">Agendar consulta <svg class="ic seta" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a>
+        <a class="link-seta" href="#como-funciona">Como funciona <svg class="ic seta" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a>
+      </div>
+    </div>
+    <div class="retrato">
+      <div class="aura" aria-hidden="true"></div>
+      <svg class="aneis" viewBox="-100 -100 200 200" aria-hidden="true"><circle r="96" style="--k:1"/><circle r="80" style="--k:2"/><circle r="64" style="--k:3"/><circle r="48" style="--k:4"/></svg>
+      <div class="foto"><span class="cortina" aria-hidden="true"></span><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLcr_UEhvnzhFlYpGa_9bi4gZmMK5vl6pax2sNLGwvNTJQBeeBGhJbGPyt1EFyD5rO4W5Fd7HmpTTKbqeKRst5HubVsn8nb_y77bMF685llzucIVeZJFt6m9U2_DKn-boBoUszoM=w408-h510-k-no" alt="Aline Alves - Nutricionista" referrerpolicy="no-referrer"></div>
+      <p class="selo"><svg class="ic estrela" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M237.28,97.87A14.18,14.18,0,0,0,224.76,88l-60.25-4.87-23.22-56.2a14.37,14.37,0,0,0-26.58,0L91.49,83.11,31.24,88a14.18,14.18,0,0,0-12.52,9.89A14.43,14.43,0,0,0,23,113.32L69,152.93l-14,59.25a14.4,14.4,0,0,0,5.59,15,14.1,14.1,0,0,0,15.91.6L128,196.12l51.58,31.71a14.1,14.1,0,0,0,15.91-.6,14.4,14.4,0,0,0,5.59-15l-14-59.25L233,113.32A14.43,14.43,0,0,0,237.28,97.87Zm-12.14,6.37-48.69,42a6,6,0,0,0-1.92,5.92l14.88,62.79a2.35,2.35,0,0,1-.95,2.57,2.24,2.24,0,0,1-2.6.1L131.14,184a6,6,0,0,0-6.28,0L70.14,217.61a2.24,2.24,0,0,1-2.6-.1,2.35,2.35,0,0,1-1-2.57l14.88-62.79a6,6,0,0,0-1.92-5.92l-48.69-42a2.37,2.37,0,0,1-.73-2.65,2.28,2.28,0,0,1,2.07-1.65l63.92-5.16a6,6,0,0,0,5.06-3.69l24.63-59.6a2.35,2.35,0,0,1,4.38,0l24.63,59.6a6,6,0,0,0,5.06,3.69l63.92,5.16a2.28,2.28,0,0,1,2.07,1.65A2.37,2.37,0,0,1,225.14,104.24Z"/></svg><strong>5,0</strong> no Google<span class="ponto" aria-hidden="true"></span>29 avaliações</p>
+      <div class="planta planta-margarida" data-voo="cai" data-inclina="14" aria-hidden="true"><svg viewBox="-60 -60 120 190" width="120" height="190">
+<path class="caule" d="M0 4 C 4 40, -6 80, 2 128"/><path class="c-acento folha" d="M1 96 C 14 86, 26 88, 32 78 C 22 80, 10 82, 1 92 Z"/><path class="c-escuro folha" d="M-1 70 C -14 62, -24 66, -32 56 C -20 56, -10 60, -1 66 Z"/>
+<g class="cabeca"><g class="solta" transform="rotate(0)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(20)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(40)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(60)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(80)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(100)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(120)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(140)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(160)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(180)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(200)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(220)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(240)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(260)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(280)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(300)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(320)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><g class="solta" transform="rotate(340)"><ellipse class="c-branco" cx="0" cy="-19" rx="4" ry="14"/></g><circle class="c-passo" r="8"/><circle class="c-acento" r="8" fill-opacity=".25"/></g>
+</svg><template><svg viewBox="-6 -16 12 32"><ellipse class="c-branco" rx="4" ry="14"/></svg></template></div>
+      <p class="dica" aria-hidden="true"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg><span class="com-mouse">passe o mouse na flor</span><span class="com-toque">toque na flor</span></p>
+    </div>
+  </div>
+
+
+  <section class="manifesto">
+    <div class="largura">
+      <p class="manifesto-texto"><span class="forte"><span class="w" style="--p:0.000">Você</span> <span class="w" style="--p:0.048">não</span> <span class="w" style="--p:0.095">precisa</span> <span class="w" style="--p:0.143">escolher</span> <span class="w" style="--p:0.190">entre</span> <span class="w" style="--p:0.238">cuidar</span> <span class="w" style="--p:0.286">da</span> <span class="w" style="--p:0.333">saúde</span> <span class="w" style="--p:0.381">e</span> <span class="w" style="--p:0.429">aproveitar</span> <span class="w" style="--p:0.476">a</span> <span class="w" style="--p:0.524">vida.</span></span> <em><span class="w" style="--p:0.571">Precisa</span> <span class="w" style="--p:0.619">de</span> <span class="w" style="--p:0.667">um</span> <span class="w" style="--p:0.714">plano</span> <span class="w" style="--p:0.762">que</span> <span class="w" style="--p:0.810">caiba</span> <span class="w" style="--p:0.857">na</span> <span class="w" style="--p:0.905">sua</span> <span class="w" style="--p:0.952">rotina.</span></em></p>
+      <p class="manifesto-assina">Aline Alves</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="largura">
+      <h2 class="kin"><span class="palavra"><span style="--i:0">Como</span></span> <span class="palavra"><span style="--i:1">posso</span></span> <span class="palavra"><span style="--i:2">te</span></span> <span class="palavra"><span style="--i:3">ajudar</span></span></h2>
+      <ul class="mosaico">
+        <li class="bloco revela"><span class="marca-dagua" aria-hidden="true"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224,106H213.77a86,86,0,0,0-171.54,0H32a6,6,0,0,0-6,6,102.35,102.35,0,0,0,56,91.06V208a14,14,0,0,0,14,14h64a14,14,0,0,0,14-14v-4.94A102.35,102.35,0,0,0,230,112,6,6,0,0,0,224,106ZM174.24,54.29a74.15,74.15,0,0,1,8.15,7.6A85.89,85.89,0,0,0,130.84,106H97.34A74.24,74.24,0,0,1,168,54C170.08,54,172.17,54.11,174.24,54.29ZM190.3,72.14A73.49,73.49,0,0,1,201.74,106H144.48A73.89,73.89,0,0,1,190.3,72.14ZM128,38a73.68,73.68,0,0,1,26.8,5,86.32,86.32,0,0,0-69.94,63H54.26A74.09,74.09,0,0,1,128,38Zm37.5,155.84a6,6,0,0,0-3.5,5.46V208a2,2,0,0,1-2,2H96a2,2,0,0,1-2-2v-8.7a6,6,0,0,0-3.5-5.46A90.35,90.35,0,0,1,38.2,118H217.8A90.35,90.35,0,0,1,165.5,193.84Z"/></svg></span><span class="icone"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224,106H213.77a86,86,0,0,0-171.54,0H32a6,6,0,0,0-6,6,102.35,102.35,0,0,0,56,91.06V208a14,14,0,0,0,14,14h64a14,14,0,0,0,14-14v-4.94A102.35,102.35,0,0,0,230,112,6,6,0,0,0,224,106ZM174.24,54.29a74.15,74.15,0,0,1,8.15,7.6A85.89,85.89,0,0,0,130.84,106H97.34A74.24,74.24,0,0,1,168,54C170.08,54,172.17,54.11,174.24,54.29ZM190.3,72.14A73.49,73.49,0,0,1,201.74,106H144.48A73.89,73.89,0,0,1,190.3,72.14ZM128,38a73.68,73.68,0,0,1,26.8,5,86.32,86.32,0,0,0-69.94,63H54.26A74.09,74.09,0,0,1,128,38Zm37.5,155.84a6,6,0,0,0-3.5,5.46V208a2,2,0,0,1-2,2H96a2,2,0,0,1-2-2v-8.7a6,6,0,0,0-3.5-5.46A90.35,90.35,0,0,1,38.2,118H217.8A90.35,90.35,0,0,1,165.5,193.84Z"/></svg></span><div><span class="num">01</span><h3>Consulta nutricional</h3><p>Avaliação completa dos seus hábitos, histórico e objetivos, com um plano alimentar feito para você.</p></div></li>
+        <li class="bloco revela"><span class="icone"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M250.83,74.71a6,6,0,0,0-6.16.3L206,100.79V72a14,14,0,0,0-14-14H32A14,14,0,0,0,18,72V184a14,14,0,0,0,14,14H192a14,14,0,0,0,14-14V155.21L244.67,181a6,6,0,0,0,9.33-5V80A6,6,0,0,0,250.83,74.71ZM194,184a2,2,0,0,1-2,2H32a2,2,0,0,1-2-2V72a2,2,0,0,1,2-2H192a2,2,0,0,1,2,2Zm48-19.21-36-24V115.21l36-24Z"/></svg></span><div><span class="num">02</span><h3>Atendimento online</h3><p>Consultas por vídeo para quem prefere a praticidade de ser atendido de casa.</p></div></li>
+        <li class="bloco revela"><span class="icone"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M230,208a6,6,0,0,1-6,6H32a6,6,0,0,1-6-6V48a6,6,0,0,1,12,0V161.52l53.76-53.76a6,6,0,0,1,8.48,0L128,135.51,185.52,78H160a6,6,0,0,1,0-12h40a6,6,0,0,1,6,6v40a6,6,0,0,1-12,0V86.48l-61.76,61.76a6,6,0,0,1-8.48,0L96,120.49l-58,58V202H224A6,6,0,0,1,230,208Z"/></svg></span><div><span class="num">03</span><h3>Acompanhamento</h3><p>Retornos para ajustar o plano conforme a sua rotina e as suas preferências.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec-ciclo">
+    <div class="largura ciclo-grade">
+      <div>
+        <p class="rotulo">O que costuma travar</p>
+        <h2 class="kin" style="margin-top:14px"><span class="palavra"><span style="--i:0">Uma</span></span> <span class="palavra"><span style="--i:1">roda</span></span> <span class="palavra"><span style="--i:2">que</span></span> <span class="palavra"><span style="--i:3">cansa</span></span> <span class="palavra"><span style="--i:4">e</span></span> <span class="palavra"><span style="--i:5">não</span></span> <span class="palavra"><span style="--i:6">sai</span></span> <span class="palavra"><span style="--i:7">do</span></span> <span class="palavra"><span style="--i:8">lugar</span></span></h2>
+        <p class="intro">Muita gente não desiste por falta de força de vontade, e sim porque entra neste ciclo. Toque em cada etapa.</p>
+      </div>
+      <div class="ciclo" data-ciclo>
+        <input type="radio" name="ciclo" id="ciclo-0" aria-label="Restrição" checked><input type="radio" name="ciclo" id="ciclo-1" aria-label="Exagero"><input type="radio" name="ciclo" id="ciclo-2" aria-label="Culpa"><input type="radio" name="ciclo" id="ciclo-3" aria-label="Compensação">
+        <svg class="pista" viewBox="0 0 200 140" preserveAspectRatio="none" aria-hidden="true"><ellipse class="fundo-pista" cx="100" cy="70" rx="99" ry="69" vector-effect="non-scaling-stroke"/><ellipse class="fluxo" cx="100" cy="70" rx="99" ry="69" vector-effect="non-scaling-stroke"/></svg>
+        <label class="etapa e0" for="ciclo-0">Restrição</label><label class="etapa e1" for="ciclo-1">Exagero</label><label class="etapa e2" for="ciclo-2">Culpa</label><label class="etapa e3" for="ciclo-3">Compensação</label>
+        <div class="centro"><p class="painel p0"><strong>Restrição</strong>Corta tudo de uma vez: pão, doce, jantar. Dá certo por alguns dias.</p><p class="painel p1"><strong>Exagero</strong>A vontade acumulada aparece de uma vez, quase sempre no fim de semana.</p><p class="painel p2"><strong>Culpa</strong>Vem a sensação de ter estragado tudo e a vontade de desistir.</p><p class="painel p3"><strong>Compensação</strong>Pula refeições ou aperta ainda mais para pagar o que comeu. E a roda volta ao começo.</p></div>
+      </div>
+    </div>
+    <div class="largura"><p class="saida revela"><strong>A saída:</strong> um plano que inclua o que você gosta, sem compensar depois, e <em>voltar à rotina na próxima refeição.</em></p></div>
+  </section>
+
+  <section class="pausa">
+    <div class="largura pausa-grade">
+      <div>
+        <h2 class="kin"><span class="palavra"><span style="--i:0">Entre</span></span> <span class="palavra"><span style="--i:1">a</span></span> <span class="palavra"><span style="--i:2">vontade</span></span> <span class="palavra"><span style="--i:3">e</span></span> <span class="palavra"><span style="--i:4">a</span></span> <span class="palavra"><span style="--i:5">escolha,</span></span> <span class="palavra"><span style="--i:6">existe</span></span> <span class="palavra"><span style="--i:7">uma</span></span> <span class="palavra"><span style="--i:8">pausa.</span></span></h2>
+        <p class="intro">Boa parte do cuidado com a alimentação acontece nesse intervalo: perceber o que o corpo pede antes de responder no automático. Experimente agora, leva um minuto.</p>
+        <ol class="ritmo">
+          <li><span>4s</span>inspire pelo nariz</li>
+          <li><span>2s</span>segure com calma</li>
+          <li><span>6s</span>solte devagar</li>
+        </ol>
+      </div>
+      <div class="respiro" data-respiro>
+        <div class="bolha"><button type="button" class="bolha-botao" aria-live="polite"><strong>Vamos?</strong><small>1 minuto</small></button></div>
+        <p class="respiro-legenda">5 respirações, cerca de 1 minuto</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-confianca">
+    <div class="largura">
+      <h2 class="kin"><span class="palavra"><span style="--i:0">Por</span></span> <span class="palavra"><span style="--i:1">que</span></span> <span class="palavra"><span style="--i:2">confiar</span></span></h2>
+      <dl class="numeros">
+        <div class="revela"><dt><span class="numero contador" style="--alvo:50"><span class="valor-real">5,0</span></span></dt><dd>de nota no Google</dd></div>
+        <div class="revela"><dt>29</dt><dd>avaliações de pacientes</dd></div>
+        <div class="revela"><dt>1:1</dt><dd>atendimento individual, do início ao fim</dd></div>
+        <div class="revela"><dt>0</dt><dd>dietas de modelo pronto</dd></div>
+      </dl>
+      <div class="provas">
+        <div class="prova revela"><span class="icone"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M250.82,90.71l-120-64a5.94,5.94,0,0,0-5.64,0l-120,64a6,6,0,0,0,0,10.58L34,116.67v49.62a14,14,0,0,0,3.55,9.32C50.42,189.94,79.29,214,128,214a127.21,127.21,0,0,0,50-9.73V240a6,6,0,0,0,12,0V198.35a113.18,113.18,0,0,0,28.45-22.75,13.91,13.91,0,0,0,3.55-9.31V116.67l28.82-15.38a6,6,0,0,0,0-10.58ZM128,202c-44,0-70-21.56-81.52-34.41a2,2,0,0,1-.48-1.3V123.07l79.18,42.22a6,6,0,0,0,5.64,0L178,140.13v51C165,197.35,148.45,202,128,202Zm82-35.71a2,2,0,0,1-.48,1.3A100.25,100.25,0,0,1,190,184.3V133.73l20-10.66Zm-22.15-45a6.27,6.27,0,0,0-1-.71l-56-29.86a6,6,0,0,0-5.64,10.58L175.25,128,128,153.2,20.75,96,128,38.8,235.25,96Z"/></svg></span><div><h3>Formação</h3><p>Formação e especializações, preenchidas com você na versão final.</p></div></div>
+        <div class="prova revela"><span class="icone"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M166,152a6,6,0,0,1-6,6H96a6,6,0,0,1,0-12h64A6,6,0,0,1,166,152Zm-6-38H96a6,6,0,0,0,0,12h64a6,6,0,0,0,0-12Zm54-66V216a14,14,0,0,1-14,14H56a14,14,0,0,1-14-14V48A14,14,0,0,1,56,34H93.17a45.91,45.91,0,0,1,69.66,0H200A14,14,0,0,1,214,48ZM94,64v2h68V64a34,34,0,0,0-68,0ZM202,48a2,2,0,0,0-2-2H170.33A45.77,45.77,0,0,1,174,64v8a6,6,0,0,1-6,6H88a6,6,0,0,1-6-6V64a45.77,45.77,0,0,1,3.67-18H56a2,2,0,0,0-2,2V216a2,2,0,0,0,2,2H200a2,2,0,0,0,2-2Z"/></svg></span><div><h3>Método</h3><p>Um plano individualizado, revisto a cada retorno, do primeiro contato ao acompanhamento.</p></div></div>
+      </div>
+      <p class="registro"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224.42,104.2c-3.9-4.07-7.93-8.27-9.55-12.18-1.5-3.63-1.58-9-1.67-14.68-.14-9.38-.3-20-7.42-27.12S188,42.94,178.66,42.8c-5.68-.09-11-.17-14.68-1.67-3.91-1.62-8.11-5.65-12.18-9.55C145.16,25.22,137.64,18,128,18s-17.16,7.22-23.8,13.58c-4.07,3.9-8.27,7.93-12.18,9.55-3.63,1.5-9,1.58-14.68,1.67-9.38.14-20,.3-27.12,7.42S42.94,68,42.8,77.34c-.09,5.68-.17,11-1.67,14.68-1.62,3.91-5.65,8.11-9.55,12.18C25.22,110.84,18,118.36,18,128s7.22,17.16,13.58,23.8c3.9,4.07,7.93,8.27,9.55,12.18,1.5,3.63,1.58,9,1.67,14.68.14,9.38.3,20,7.42,27.12S68,213.06,77.34,213.2c5.68.09,11,.17,14.68,1.67,3.91,1.62,8.11,5.65,12.18,9.55C110.84,230.78,118.36,238,128,238s17.16-7.22,23.8-13.58c4.07-3.9,8.27-7.93,12.18-9.55,3.63-1.5,9-1.58,14.68-1.67,9.38-.14,20-.3,27.12-7.42s7.28-17.74,7.42-27.12c.09-5.68.17-11,1.67-14.68,1.62-3.91,5.65-8.11,9.55-12.18C230.78,145.16,238,137.64,238,128S230.78,110.84,224.42,104.2Zm-8.66,39.3c-4.67,4.86-9.5,9.9-12,15.9-2.38,5.74-2.48,12.52-2.58,19.08-.11,7.44-.23,15.14-3.9,18.82s-11.38,3.79-18.82,3.9c-6.56.1-13.34.2-19.08,2.58-6,2.48-11,7.31-15.91,12-5.25,5-10.68,10.24-15.49,10.24s-10.24-5.21-15.5-10.24c-4.86-4.67-9.9-9.5-15.9-12-5.74-2.38-12.52-2.48-19.08-2.58-7.44-.11-15.14-.23-18.82-3.9s-3.79-11.38-3.9-18.82c-.1-6.56-.2-13.34-2.58-19.08-2.48-6-7.31-11-12-15.91C35.21,138.24,30,132.81,30,128s5.21-10.24,10.24-15.5c4.67-4.86,9.5-9.9,12-15.9,2.38-5.74,2.48-12.52,2.58-19.08.11-7.44.23-15.14,3.9-18.82s11.38-3.79,18.82-3.9c6.56-.1,13.34-.2,19.08-2.58,6-2.48,11-7.31,15.91-12C117.76,35.21,123.19,30,128,30s10.24,5.21,15.5,10.24c4.86,4.67,9.9,9.5,15.9,12,5.74,2.38,12.52,2.48,19.08,2.58,7.44.11,15.14.23,18.82,3.9s3.79,11.38,3.9,18.82c.1,6.56.2,13.34,2.58,19.08,2.48,6,7.31,11,12,15.91,5,5.25,10.24,10.68,10.24,15.49S220.79,138.24,215.76,143.5ZM172.24,99.76a6,6,0,0,1,0,8.48l-56,56a6,6,0,0,1-8.48,0l-24-24a6,6,0,0,1,8.48-8.48L112,151.51l51.76-51.75A6,6,0,0,1,172.24,99.76Z"/></svg>Nutricionista com registro no CRN (número a preencher).</p>
+    </div>
+  </section>
+
+  <section class="escuro" id="como-funciona" style="--n:4">
+    <div class="pan-fixo">
+      <div class="largura passos-grade">
+        <div class="passos-cabeca">
+          <h2 class="kin"><span class="palavra"><span style="--i:0">Do</span></span> <span class="palavra"><span style="--i:1">primeiro</span></span> <span class="palavra"><span style="--i:2">contato</span></span> <span class="palavra"><span style="--i:3">ao</span></span> <span class="palavra"><span style="--i:4">plano</span></span> <span class="palavra"><span style="--i:5">no</span></span> <span class="palavra"><span style="--i:6">seu</span></span> <span class="palavra"><span style="--i:7">dia</span></span> <span class="palavra"><span style="--i:8">a</span></span> <span class="palavra"><span style="--i:9">dia</span></span></h2>
+          <p class="intro">4 passos simples, no seu tempo.</p>
+        </div>
+        <ol class="passos">
+          <li class="passo" style="--i:0"><span class="icone"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M208,34H182V24a6,6,0,0,0-12,0V34H86V24a6,6,0,0,0-12,0V34H48A14,14,0,0,0,34,48V208a14,14,0,0,0,14,14H208a14,14,0,0,0,14-14V48A14,14,0,0,0,208,34ZM48,46H74V56a6,6,0,0,0,12,0V46h84V56a6,6,0,0,0,12,0V46h26a2,2,0,0,1,2,2V82H46V48A2,2,0,0,1,48,46ZM208,210H48a2,2,0,0,1-2-2V94H210V208A2,2,0,0,1,208,210Zm-39.76-86.24a6,6,0,0,1,0,8.48l-48,48a6,6,0,0,1-8.48,0l-24-24a6,6,0,0,1,8.48-8.48L116,167.51l43.76-43.75A6,6,0,0,1,168.24,123.76Z"/></svg></span><p>Você agenda pelo site ou pelo WhatsApp.</p></li>
+          <li class="passo" style="--i:1"><span class="icone"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg></span><p>Na primeira consulta conversamos sobre sua rotina, saúde e objetivos.</p></li>
+          <li class="passo" style="--i:2"><span class="icone"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M166,152a6,6,0,0,1-6,6H96a6,6,0,0,1,0-12h64A6,6,0,0,1,166,152Zm-6-38H96a6,6,0,0,0,0,12h64a6,6,0,0,0,0-12Zm54-66V216a14,14,0,0,1-14,14H56a14,14,0,0,1-14-14V48A14,14,0,0,1,56,34H93.17a45.91,45.91,0,0,1,69.66,0H200A14,14,0,0,1,214,48ZM94,64v2h68V64a34,34,0,0,0-68,0ZM202,48a2,2,0,0,0-2-2H170.33A45.77,45.77,0,0,1,174,64v8a6,6,0,0,1-6,6H88a6,6,0,0,1-6-6V64a45.77,45.77,0,0,1,3.67-18H56a2,2,0,0,0-2,2V216a2,2,0,0,0,2,2H200a2,2,0,0,0,2-2Z"/></svg></span><p>Você recebe um plano alimentar individualizado e orientações práticas.</p></li>
+          <li class="passo" style="--i:3"><span class="icone"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M222,48V96a6,6,0,0,1-6,6H168a6,6,0,0,1,0-12h33.52L183.47,72a81.51,81.51,0,0,0-57.53-24h-.46A81.5,81.5,0,0,0,68.19,71.28a6,6,0,1,1-8.38-8.58,93.38,93.38,0,0,1,65.67-26.76H126a93.45,93.45,0,0,1,66,27.53l18,18V48a6,6,0,0,1,12,0ZM187.81,184.72a81.5,81.5,0,0,1-57.29,23.34h-.46a81.51,81.51,0,0,1-57.53-24L54.48,166H88a6,6,0,0,0,0-12H40a6,6,0,0,0-6,6v48a6,6,0,0,0,12,0V174.48l18,18.05a93.45,93.45,0,0,0,66,27.53h.52a93.38,93.38,0,0,0,65.67-26.76,6,6,0,1,0-8.38-8.58Z"/></svg></span><p>Nos retornos ajustamos o plano juntos.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="largura valor">
+      <div class="cabeca">
+        <h2 class="kin"><span class="palavra"><span style="--i:0">O</span></span> <span class="palavra"><span style="--i:1">que</span></span> <span class="palavra"><span style="--i:2">está</span></span> <span class="palavra"><span style="--i:3">incluído</span></span></h2>
+        <p class="intro">Tudo o que faz parte do seu atendimento, do começo ao fim.</p>
+      </div>
+      <div>
+        <ul class="inclui">
+          <li class="revela"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"/></svg><span>Avaliação completa dos hábitos, da rotina e do histórico</span></li>
+          <li class="revela"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"/></svg><span>Plano alimentar individualizado, com orientações práticas</span></li>
+          <li class="revela"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"/></svg><span>Retornos para ajustar o plano conforme a sua evolução</span></li>
+          <li class="revela"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"/></svg><span>Atendimento presencial ou online, como for melhor para você</span></li>
+        </ul>
+        
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="largura">
+      <p class="rotulo">Sobre</p>
+      <h2 class="assinatura com-foto" style="--n:11;--m:5;--foto:url(&quot;https://lh3.googleusercontent.com/grass-cs/AABkmLcr_UEhvnzhFlYpGa_9bi4gZmMK5vl6pax2sNLGwvNTJQBeeBGhJbGPyt1EFyD5rO4W5Fd7HmpTTKbqeKRst5HubVsn8nb_y77bMF685llzucIVeZJFt6m9U2_DKn-boBoUszoM=w408-h510-k-no&quot;)"><span>Aline Alves</span></h2>
+      <div class="sobre">
+        <p class="acende">Aqui entra a sua história: formação, forma de atender e o que faz o seu consultório diferente.</p>
+        
+        <p class="nota">Na versão final, este texto é escrito com você.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="largura perguntas">
+      <h2 class="kin"><span class="palavra"><span style="--i:0">Perguntas</span></span> <span class="palavra"><span style="--i:1">frequentes</span></span></h2>
+      <div>
+        <details><summary>Atende online?<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M222,128a6,6,0,0,1-6,6H134v82a6,6,0,0,1-12,0V134H40a6,6,0,0,1,0-12h82V40a6,6,0,0,1,12,0v82h82A6,6,0,0,1,222,128Z"/></svg></summary><p>Sim, com a mesma atenção da consulta presencial.</p></details>
+        <details><summary>Como faço para agendar?<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M222,128a6,6,0,0,1-6,6H134v82a6,6,0,0,1-12,0V134H40a6,6,0,0,1,0-12h82V40a6,6,0,0,1,12,0v82h82A6,6,0,0,1,222,128Z"/></svg></summary><p>Pelo botão de agendamento ou pelo WhatsApp, no horário que for melhor para você.</p></details>
+        <details><summary>Preciso levar exames?<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M222,128a6,6,0,0,1-6,6H134v82a6,6,0,0,1-12,0V134H40a6,6,0,0,1,0-12h82V40a6,6,0,0,1,12,0v82h82A6,6,0,0,1,222,128Z"/></svg></summary><p>Se tiver exames recentes, traga. Se não tiver, avaliamos na consulta se são necessários.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0" id="contato">
+    <div class="largura final cresce">
+      <div>
+        <h2>Vamos marcar a sua consulta?</h2>
+        <dl class="ficha"><div><dt><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M128,66a38,38,0,1,0,38,38A38,38,0,0,0,128,66Zm0,64a26,26,0,1,1,26-26A26,26,0,0,1,128,130Zm0-112a86.1,86.1,0,0,0-86,86c0,30.91,14.34,63.74,41.47,94.94a252.32,252.32,0,0,0,41.09,38,6,6,0,0,0,6.88,0,252.32,252.32,0,0,0,41.09-38c27.13-31.2,41.47-64,41.47-94.94A86.1,86.1,0,0,0,128,18Zm0,206.51C113,212.93,54,163.62,54,104a74,74,0,0,1,148,0C202,163.62,143,212.93,128,224.51Z"/></svg>Onde</dt><dd>Aline Alves - Nutricionista - R. Nanci Guisard Kehier, 37 - Jardim das Nações, Taubaté - SP, 12080-020</dd></div><div><dt><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg>WhatsApp</dt><dd>(12) 3424-7627</dd></div><div><dt><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224.42,104.2c-3.9-4.07-7.93-8.27-9.55-12.18-1.5-3.63-1.58-9-1.67-14.68-.14-9.38-.3-20-7.42-27.12S188,42.94,178.66,42.8c-5.68-.09-11-.17-14.68-1.67-3.91-1.62-8.11-5.65-12.18-9.55C145.16,25.22,137.64,18,128,18s-17.16,7.22-23.8,13.58c-4.07,3.9-8.27,7.93-12.18,9.55-3.63,1.5-9,1.58-14.68,1.67-9.38.14-20,.3-27.12,7.42S42.94,68,42.8,77.34c-.09,5.68-.17,11-1.67,14.68-1.62,3.91-5.65,8.11-9.55,12.18C25.22,110.84,18,118.36,18,128s7.22,17.16,13.58,23.8c3.9,4.07,7.93,8.27,9.55,12.18,1.5,3.63,1.58,9,1.67,14.68.14,9.38.3,20,7.42,27.12S68,213.06,77.34,213.2c5.68.09,11,.17,14.68,1.67,3.91,1.62,8.11,5.65,12.18,9.55C110.84,230.78,118.36,238,128,238s17.16-7.22,23.8-13.58c4.07-3.9,8.27-7.93,12.18-9.55,3.63-1.5,9-1.58,14.68-1.67,9.38-.14,20-.3,27.12-7.42s7.28-17.74,7.42-27.12c.09-5.68.17-11,1.67-14.68,1.62-3.91,5.65-8.11,9.55-12.18C230.78,145.16,238,137.64,238,128S230.78,110.84,224.42,104.2Zm-8.66,39.3c-4.67,4.86-9.5,9.9-12,15.9-2.38,5.74-2.48,12.52-2.58,19.08-.11,7.44-.23,15.14-3.9,18.82s-11.38,3.79-18.82,3.9c-6.56.1-13.34.2-19.08,2.58-6,2.48-11,7.31-15.91,12-5.25,5-10.68,10.24-15.49,10.24s-10.24-5.21-15.5-10.24c-4.86-4.67-9.9-9.5-15.9-12-5.74-2.38-12.52-2.48-19.08-2.58-7.44-.11-15.14-.23-18.82-3.9s-3.79-11.38-3.9-18.82c-.1-6.56-.2-13.34-2.58-19.08-2.48-6-7.31-11-12-15.91C35.21,138.24,30,132.81,30,128s5.21-10.24,10.24-15.5c4.67-4.86,9.5-9.9,12-15.9,2.38-5.74,2.48-12.52,2.58-19.08.11-7.44.23-15.14,3.9-18.82s11.38-3.79,18.82-3.9c6.56-.1,13.34-.2,19.08-2.58,6-2.48,11-7.31,15.91-12C117.76,35.21,123.19,30,128,30s10.24,5.21,15.5,10.24c4.86,4.67,9.9,9.5,15.9,12,5.74,2.38,12.52,2.48,19.08,2.58,7.44.11,15.14.23,18.82,3.9s3.79,11.38,3.9,18.82c.1,6.56.2,13.34,2.58,19.08,2.48,6,7.31,11,12,15.91,5,5.25,10.24,10.68,10.24,15.49S220.79,138.24,215.76,143.5ZM172.24,99.76a6,6,0,0,1,0,8.48l-56,56a6,6,0,0,1-8.48,0l-24-24a6,6,0,0,1,8.48-8.48L112,151.51l51.76-51.75A6,6,0,0,1,172.24,99.76Z"/></svg>Registro</dt><dd>CRN (número a preencher)</dd></div><div><dt><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M128,66a38,38,0,1,0,38,38A38,38,0,0,0,128,66Zm0,64a26,26,0,1,1,26-26A26,26,0,0,1,128,130Zm0-112a86.1,86.1,0,0,0-86,86c0,30.91,14.34,63.74,41.47,94.94a252.32,252.32,0,0,0,41.09,38,6,6,0,0,0,6.88,0,252.32,252.32,0,0,0,41.09-38c27.13-31.2,41.47-64,41.47-94.94A86.1,86.1,0,0,0,128,18Zm0,206.51C113,212.93,54,163.62,54,104a74,74,0,0,1,148,0C202,163.62,143,212.93,128,224.51Z"/></svg>Mapa</dt><dd><a href="https://www.google.com/maps/place/Aline+Alves+-+Nutricionista/data=!4m7!3m6!1s0x94ccf955db58d411:0xa335d8fc34f3547f!8m2!3d-23.0289512!4d-45.5651149!16s%2Fg%2F11l15rnlcw!19sChIJEdRY21X5zJQRf1TzNPzYNaM?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MTAxMS4wIJJjKgBIAVAD&amp;rclk=1">Ver no Google Maps</a></dd></div></dl>
+      </div>
+      <div class="acoes">
+        <a class="botao claro" href="https://wa.me/551234247627?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.">Agendar consulta <svg class="ic seta" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="largura">
+    <p><strong>Aline Alves - Nutricionista</strong> · Nutricionista, CRN (número a preencher)</p>
+    <p>
+      <a href="https://wa.me/551234247627?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg>(12) 3424-7627</a>
+      
+    </p>
+  </div>
+</footer>
+<a class="botao flutuante" href="https://wa.me/551234247627?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg>Agendar consulta</a>
+<script>(function () {
+  var d = document.querySelector(".planta");
+  if (!d || !window.matchMedia || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var soltas = Array.prototype.slice.call(d.querySelectorAll(".solta"));
+  var cabeca = d.querySelector(".cabeca"), molde = d.querySelector("template").innerHTML;
+  var sobe = d.getAttribute("data-voo") === "sobe", maximo = Number(d.getAttribute("data-inclina")) || 14;
+  var ultimo = null, volta = null;
+  function soltar(s, vx, vy) {
+    if (s.classList.contains("foi") || !document.body.animate) return;
+    var r = s.getBoundingClientRect();
+    var v = document.createElement("span");
+    v.className = "voa";
+    v.innerHTML = molde;
+    v.style.left = r.left + r.width / 2 + "px";
+    v.style.top = r.top + r.height / 2 + "px";
+    document.body.appendChild(v);
+    s.classList.add("foi");
+    var dx = vx * 18 + (Math.random() - 0.5) * 160;
+    var dy = sobe ? -120 - Math.random() * 220 + vy * 6 : 160 + Math.random() * 200 + vy * 4;
+    var giro = (Math.random() - 0.5) * (sobe ? 220 : 540), tempo = 3800 + Math.random() * 2600;
+    var meio = sobe ? dx * 0.45 : dx * 0.45 + (Math.random() < 0.5 ? -40 : 40);
+    v.animate(
+      [
+        { transform: "translate(0,0) rotate(0deg)", opacity: 1 },
+        { transform: "translate(" + meio + "px," + dy * 0.4 + "px) rotate(" + giro * 0.4 + "deg)", opacity: 1, offset: 0.4 },
+        { transform: "translate(" + dx + "px," + dy + "px) rotate(" + giro + "deg)", opacity: 0 }
+      ],
+      { duration: tempo, easing: "cubic-bezier(.25,.6,.3,1)", fill: "forwards" }
+    ).onfinish = function () { v.remove(); };
+    clearTimeout(volta);
+    volta = setTimeout(function () {
+      soltas.forEach(function (x, i) { setTimeout(function () { x.classList.remove("foi"); }, i * 40); });
+    }, 5000);
+  }
+  function perto(x, y, q, vx, vy) {
+    var livres = soltas.filter(function (s) { return !s.classList.contains("foi"); });
+    livres.sort(function (a, b) {
+      var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+      return Math.hypot(ra.left - x, ra.top - y) - Math.hypot(rb.left - x, rb.top - y);
+    });
+    livres.slice(0, q).forEach(function (s) { soltar(s, vx, vy); });
+  }
+  window.addEventListener("pointermove", function (e) {
+    var r = cabeca.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    var vx = ultimo ? e.clientX - ultimo.x : 0, vy = ultimo ? e.clientY - ultimo.y : 0;
+    ultimo = { x: e.clientX, y: e.clientY };
+    d.style.setProperty("--inclina", Math.max(-maximo, Math.min(maximo, (e.clientX - cx) / 30)) + "deg");
+    if (Math.hypot(e.clientX - cx, e.clientY - cy) < 90 && Math.hypot(vx, vy) > 6) perto(e.clientX, e.clientY, 2, vx, vy);
+  }, { passive: true });
+  d.addEventListener("pointerdown", function (e) { perto(e.clientX, e.clientY, 9, (Math.random() - 0.5) * 8, -2); });
+})();
+(function () {
+  var ciclo = document.querySelector("[data-ciclo]");
+  if (!ciclo || !window.IntersectionObserver || (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  var opcoes = ciclo.querySelectorAll("input"), timer = null, mexeu = false;
+  function proxima() {
+    for (var i = 0; i < opcoes.length; i++) if (opcoes[i].checked) { opcoes[(i + 1) % opcoes.length].checked = true; return; }
+  }
+  ciclo.addEventListener("pointerdown", function () { mexeu = true; clearInterval(timer); });
+  ciclo.addEventListener("keydown", function () { mexeu = true; clearInterval(timer); });
+  new IntersectionObserver(function (es) {
+    clearInterval(timer);
+    if (es[0].isIntersecting && !mexeu) timer = setInterval(proxima, 3600);
+  }, { threshold: 0.5 }).observe(ciclo);
+})();
+(function () {
+  var reduz = !window.matchMedia || matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var aneis = document.querySelector(".aneis"), retrato = document.querySelector(".retrato");
+  if (aneis && retrato && !reduz) {
+    window.addEventListener("pointermove", function (e) {
+      if (e.pointerType !== "mouse") return;
+      var r = retrato.getBoundingClientRect();
+      var mx = Math.max(-1, Math.min(1, (e.clientX - (r.left + r.width / 2)) / (window.innerWidth / 2)));
+      var my = Math.max(-1, Math.min(1, (e.clientY - (r.top + r.height / 3)) / (window.innerHeight / 2)));
+      aneis.style.setProperty("--mx", (mx * 4).toFixed(2));
+      aneis.style.setProperty("--my", (my * 4).toFixed(2));
+    }, { passive: true });
+  }
+  var caixa = document.querySelector("[data-respiro]");
+  if (!caixa) return;
+  var botao = caixa.querySelector(".bolha-botao"), titulo = botao.querySelector("strong"), sub = botao.querySelector("small");
+  var legenda = caixa.querySelector(".respiro-legenda");
+  var fases = [["Inspire", 4, 1.45], ["Segure", 2, 1.45], ["Solte", 6, 1]];
+  var rodando = false, conta = null, espera = null;
+  function fim() {
+    clearInterval(conta);
+    titulo.textContent = "Pronto";
+    sub.textContent = "outra vez?";
+    legenda.textContent = "Como você se sente agora?";
+    botao.style.scale = "";
+    rodando = false;
+    caixa.classList.remove("rodando");
+  }
+  botao.addEventListener("click", function () {
+    if (rodando) return;
+    rodando = true;
+    caixa.classList.add("rodando");
+    var volta = 0, f = 0;
+    function passo() {
+      if (volta === 5) return fim();
+      var fase = fases[f], resta = fase[1];
+      titulo.textContent = fase[0];
+      sub.textContent = resta + "s";
+      legenda.textContent = "Respiração " + (volta + 1) + " de 5";
+      clearInterval(conta);
+      conta = setInterval(function () { resta--; if (resta > 0) sub.textContent = resta + "s"; }, 1000);
+      botao.style.setProperty("--dur", reduz ? "0ms" : fase[1] * 1000 + "ms");
+      if (!reduz) botao.style.scale = String(fase[2]);
+      clearTimeout(espera);
+      espera = setTimeout(function () { f++; if (f === fases.length) { f = 0; volta++; } passo(); }, fase[1] * 1000);
+    }
+    passo();
+  });
+})();</script>
+</body>
+</html>
