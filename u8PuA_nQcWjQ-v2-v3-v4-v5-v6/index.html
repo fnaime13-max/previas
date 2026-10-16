@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA · Nutricionista em Taubaté/SP | Consulta presencial e online</title>
+<meta name="description" content="SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA, nutricionista em Taubaté/SP. Consulta e acompanhamento nutricional individual, presencial e online, com foco em reeducação alimentar, saúde e qualidade de vida.">
+<meta name="theme-color" content="#0d2230">
+<!-- FAVICON: no site publicado, troque pelo arquivo próprio, por exemplo <link rel="icon" href="./favicon.png">. -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2232%22%20fill%3D%22%23e9a15b%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2241%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2226%22%20fill%3D%22%2320140a%22%3ESI%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Young+Serif&display=swap">
+<style>
+  :root {
+    --topo: #0d2230; --fundo: #eef0ea; --papel: #dfe5df; --tinta: #142028; --suave: #4c5a60;
+    --acento: #e9a15b; --sobre-acento: #20140a; --destaque: #1f6f78;
+    --escuro: #123a3f; --tinta-clara: #eef3f0; --suave-clara: #a9c1c4; --destaque-claro: #f2c08c;
+    --titulo: "Young Serif", Georgia, serif; --texto: "Hanken Grotesk", "Segoe UI", sans-serif; --italico: normal;
+    --topo-tinta: #eef3f0; --topo-suave: #a9c1c4; --topo-destaque: #f2c08c;
+    --arco-fundo: #12324a; --contato-fundo: #0d2230;
+  }
+  
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; overflow-x: clip; }
+  body { margin: 0; background: var(--fundo); color: var(--tinta); font-family: var(--texto); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--titulo); font-weight: 400; line-height: 1.08; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+  h1 em, h2 em { font-style: var(--italico); color: var(--destaque); }
+  h2 { font-size: clamp(32px, 1.2rem + 3vw, 56px); }
+  p, blockquote, dl, dd, figure { margin: 0; }
+  .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .largura { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+  .largura.estreita { width: min(760px, calc(100% - 40px)); }
+  .ic { width: 1.15em; height: 1.15em; flex: none; }
+  .ic.grande { width: 34px; height: 34px; color: var(--destaque); }
+  section { position: relative; }
+  .sobrelinha { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--destaque); margin-bottom: 18px; }
+  .aparte { color: var(--suave); max-width: 48ch; }
+  .lide { font-size: clamp(17px, 1rem + .3vw, 20px); color: var(--suave); max-width: 42ch; }
+
+  /* Botões: o principal sempre leva ao WhatsApp. */
+  .botao { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 24px; border: 0; border-radius: 999px; background: var(--acento); color: var(--sobre-acento); font: 600 16px/1.2 var(--texto); text-decoration: none; white-space: nowrap; cursor: pointer; transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s; }
+  .botao:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -14px var(--acento); }
+  .botao:active { transform: translateY(0) scale(.98); }
+  .botao.grande { padding: 17px 28px; font-size: 17px; }
+  .botao.pequeno { padding: 10px 18px; font-size: 15px; }
+  .link-calmo { color: inherit; text-decoration: none; padding-bottom: 3px; background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat; transition: background-size .3s; }
+  .link-calmo:hover { background-size: 40% 1px; }
+  .link-zap { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--destaque); text-decoration: none; }
+  .link-zap .ic { transition: transform .25s; }
+  .link-zap:hover .ic { transform: translateX(4px); }
+  :focus-visible { outline: 2px solid var(--destaque); outline-offset: 3px; }
+
+  /* Abertura de 3 segundos: o monograma se desenha, a linha enche e a tela sobe. */
+  .abertura { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: var(--topo); color: var(--topo-tinta); animation: recolhe .8s cubic-bezier(.7,0,.2,1) 3s forwards; }
+  .abertura-centro { display: grid; justify-items: center; gap: 16px; }
+  .logo-abertura { width: 84px; height: 84px; color: var(--topo-destaque); }
+  .logo-abertura .aro { stroke-dasharray: 1; stroke-dashoffset: 1; animation: traca 1.6s cubic-bezier(.6,0,.2,1) .2s forwards; }
+  .logo-abertura text, .logo-abertura use { opacity: 0; animation: surge .8s ease 1s forwards; }
+  .abertura p { font-family: var(--titulo); font-size: 22px; opacity: 0; animation: surge .8s ease 1.2s forwards; }
+  .barra { width: 160px; height: 1px; background: color-mix(in oklab, var(--topo-tinta) 18%, transparent); overflow: hidden; }
+  .barra i { display: block; height: 100%; background: var(--topo-destaque); transform: scaleX(0); transform-origin: left; animation: enche 3s linear forwards; }
+  @keyframes recolhe { to { clip-path: inset(0 0 100% 0); visibility: hidden; } }
+  @keyframes traca { to { stroke-dashoffset: 0; } }
+  @keyframes surge { to { opacity: 1; } }
+  @keyframes enche { to { transform: scaleX(1); } }
+
+  .previa { background: #1b1714; color: #f4efe8; font-size: 12px; text-align: center; padding: 8px 16px; }
+
+  /* Logo (monograma). */
+  .logo, .logo-abertura { flex: none; }
+  .logo { width: 40px; height: 40px; color: var(--topo-destaque); }
+  .logo .aro, .logo-abertura .aro { fill: none; stroke: currentColor; stroke-width: 1.4; }
+  .logo text, .logo-abertura text { font-family: var(--titulo); font-size: 22px; fill: currentColor; }
+  .logo use, .logo-abertura use { color: currentColor; }
+
+  /* Cabeçalho que ganha fundo ao rolar. */
+  .cabeca { position: sticky; top: 0; z-index: 50; background: var(--topo); color: var(--topo-tinta); transition: box-shadow .35s; }
+  .cabeca.rolou { box-shadow: 0 1px 0 color-mix(in oklab, var(--topo-tinta) 14%, transparent); }
+  .cabeca-dentro { display: flex; align-items: center; gap: 24px; min-height: 72px; }
+  .marca { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+  .marca strong { display: block; font-family: var(--titulo); font-weight: 400; font-size: 18px; line-height: 1.15; }
+  .marca small { display: block; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--topo-suave); }
+  .menu { display: none; gap: 26px; margin-left: auto; font-size: 15px; }
+  .menu a { text-decoration: none; padding: 4px 0; background: linear-gradient(var(--topo-destaque), var(--topo-destaque)) 0 100% / 0 1px no-repeat; transition: background-size .3s, color .3s; }
+  .menu a:hover, .menu a[aria-current] { background-size: 100% 1px; color: var(--topo-destaque); }
+  .cabeca .botao { margin-left: auto; }
+
+  /* Topo (celular primeiro): foto em arco com o selo girando por cima, nome e CRN, título e chamada. */
+  .heroi { background: var(--topo); color: var(--topo-tinta); padding: 28px 0 72px; overflow: hidden; }
+  .heroi-grade { display: grid; gap: 28px; }
+  .heroi-foto { position: relative; width: min(78%, 360px); }
+  .arco-fundo { position: absolute; inset: 9% -14% -6% 16%; border-radius: 999px 999px 24px 24px; background: var(--arco-fundo); }
+  .arco { position: relative; z-index: 1; aspect-ratio: 3 / 4; border-radius: 999px 999px 18px 18px; overflow: hidden; background: var(--papel); box-shadow: 0 30px 60px -36px rgba(0,0,0,.5); }
+  .foto, .foto-sobre { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+  .ramo { position: absolute; z-index: 2; left: -20%; bottom: -8%; width: 44%; height: 70%; pointer-events: none; transform-origin: 50% 100%; }
+  .ramo svg { width: 100%; height: 100%; overflow: visible; }
+  .fo { animation: respira 6s ease-in-out calc(var(--i) * -.37s) infinite alternate; transform-origin: 0 0; }
+  .fl { animation: respira 7s ease-in-out calc(var(--i) * -.5s) infinite alternate-reverse; transform-origin: 0 0; }
+  @keyframes respira { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+  .selo-giro { position: absolute; z-index: 3; right: -22%; bottom: 12%; width: 116px; height: 116px; display: grid; place-items: center; border-radius: 50%; background: var(--acento); color: var(--sobre-acento); }
+  .selo-giro .anel { position: absolute; inset: 0; width: 100%; height: 100%; animation: gira 26s linear infinite; }
+  .selo-giro text { font: 600 12.5px var(--texto); letter-spacing: .14em; text-transform: uppercase; fill: currentColor; }
+  .selo-giro .miolo { width: 30px; height: 30px; }
+  @keyframes gira { to { rotate: 360deg; } }
+  .heroi-id { display: flex; flex-direction: column; gap: 2px; padding-left: 16px; border-left: 2px solid var(--topo-destaque); }
+  .heroi-id .nome { font-family: var(--titulo); font-size: 22px; line-height: 1.2; }
+  .heroi-id .crn { font-size: 13px; letter-spacing: .06em; color: var(--topo-suave); }
+  .heroi h1 { font-size: clamp(38px, 1rem + 4.4vw, 74px); line-height: 1.04; }
+  .heroi h1 em { color: var(--topo-destaque); }
+  .heroi .lide { color: var(--topo-suave); }
+  .acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 28px; margin-top: 30px; }
+  .rabisco { position: relative; display: inline-block; padding-bottom: .1em; }
+  .rabisco svg { position: absolute; left: -2%; bottom: -.04em; width: 104%; height: .22em; overflow: visible; }
+  .rabisco path { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: traca 1.1s cubic-bezier(.6,0,.2,1) calc(var(--abre) + 1s) forwards; }
+  .selo-google { display: inline-flex; align-items: center; gap: 8px; margin-top: 26px; font-size: 14px; color: var(--topo-suave); text-decoration: none; }
+  .selo-google strong { color: var(--topo-tinta); }
+  .estrelas { display: inline-flex; gap: 2px; color: #e2a42a; }
+  .estrelas .ic { width: 15px; height: 15px; }
+
+  /* Dores: título grande e as frases em duas colunas desencontradas, como um caderno. */
+  .dores { padding: 96px 0; }
+  .dores-topo { display: grid; gap: 18px; margin-bottom: 48px; }
+  .dores-topo h2 { max-width: 16ch; }
+  .lista-dores { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .lista-dores li { display: grid; grid-template-columns: 26px minmax(0, 1fr); gap: 14px; padding: 26px 0; border-top: 1px solid color-mix(in oklab, var(--tinta) 14%, transparent); }
+  .marca-dor { width: 24px; height: 24px; margin-top: 4px; color: var(--destaque); }
+  .lista-dores p { font-family: var(--titulo); font-size: clamp(20px, 1rem + .9vw, 27px); line-height: 1.35; }
+  .lista-dores strong { font-weight: 400; color: var(--destaque); font-style: var(--italico); }
+  .dores-fim { margin-top: 40px; color: var(--suave); max-width: 60ch; }
+
+  /* Escuta: faixa escura, abertura centrada e as frases riscadas em linhas de tabela. */
+  .escura { background: var(--escuro); color: var(--tinta-clara); }
+  .escura .sobrelinha { color: var(--destaque-claro); }
+  .escura .aparte { color: var(--suave-clara); }
+  .escuta { padding: 96px 0; }
+  .escuta-topo { max-width: 760px; margin: 0 auto 56px; text-align: center; }
+  .escuta-topo .aparte { margin: 22px auto 0; }
+  .trocas { list-style: none; margin: 0; padding: 0; }
+  .trocas li { display: grid; gap: 10px; padding: 28px 0; border-top: 1px solid color-mix(in oklab, var(--tinta-clara) 16%, transparent); }
+  .riscada { font-family: var(--titulo); font-size: clamp(22px, 1rem + 1.4vw, 34px); line-height: 1.2; color: color-mix(in oklab, var(--tinta-clara) 60%, transparent); }
+  .riscada span { background: linear-gradient(var(--destaque-claro), var(--destaque-claro)) 0 56% / 0% 2px no-repeat; -webkit-box-decoration-break: clone; box-decoration-break: clone; transition: background-size 1s cubic-bezier(.6,0,.2,1) .3s; }
+  .in .riscada span { background-size: 100% 2px; }
+  .resposta { font-size: 17px; color: var(--tinta-clara); max-width: 46ch; }
+
+  /* Etapas: uma linha que cresce ligando raiz, fruto e ramo. */
+  .etapas { padding: 96px 0; }
+  .etapas-topo h2 { max-width: 20ch; }
+  .crescimento { position: relative; list-style: none; margin: 56px 0 0; padding: 0 0 0 34px; display: grid; gap: 48px; }
+  .crescimento::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1px; background: var(--destaque); transform: scaleY(0); transform-origin: top; transition: transform 1.6s cubic-bezier(.6,0,.2,1); }
+  .crescimento.in::before { transform: none; }
+  .crescimento li { position: relative; }
+  .crescimento .no { position: absolute; left: -34px; top: 6px; width: 15px; height: 15px; border-radius: 50%; border: 1.5px solid var(--destaque); background: var(--fundo); }
+  .arte { width: 92px; margin-bottom: 14px; fill: none; stroke: var(--tinta); stroke-width: 1.8; stroke-linecap: round; }
+  .arte .cheio { fill: color-mix(in oklab, var(--acento) 26%, var(--fundo)); }
+  .arte .corte { fill: color-mix(in oklab, var(--acento) 55%, var(--fundo)); }
+  .arte .chao { stroke-dasharray: 4 5; stroke: var(--destaque); }
+  .arte path { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.4s cubic-bezier(.6,0,.2,1) calc(.4s + var(--e, 0s)); }
+  .crescimento.in .arte path { stroke-dashoffset: 0; }
+  .crescimento li:nth-child(2) { --e: .3s; }
+  .crescimento li:nth-child(3) { --e: .6s; }
+  .rotulo { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--destaque); }
+  .crescimento h3 { font-size: 26px; margin: 6px 0 10px; }
+  .crescimento p { color: var(--suave); max-width: 36ch; }
+  .crescimento .legenda { margin-top: 10px; font-family: var(--titulo); font-style: italic; font-size: 15px; color: var(--destaque); }
+
+  /* Formatos: mosaico (um bloco alto e dois menores). */
+  .formatos { padding: 96px 0; background: var(--papel); }
+  .formatos-grade { display: grid; gap: 16px; }
+  .formatos-topo { padding-bottom: 24px; }
+  .formatos-topo .aparte { margin: 18px 0 26px; }
+  .formato { display: flex; flex-direction: column; gap: 12px; padding: 28px; border-radius: 22px; background: var(--fundo); }
+  .formato h3 { font-size: 24px; }
+  .formato p { color: var(--suave); }
+  .formato .link-zap { margin-top: auto; padding-top: 8px; }
+  .formato.f1 { background: var(--escuro); color: var(--tinta-clara); }
+  .formato.f1 p { color: var(--suave-clara); }
+  .formato.f1 .ic.grande, .formato.f1 .link-zap { color: var(--destaque-claro); }
+
+  /* Sobre: citação grande e ficha à esquerda; segunda foto à direita, mais baixa. */
+  .sobre { padding: 96px 0; }
+  .sobre-grade { display: grid; gap: 48px; }
+  .citacao p { font-family: var(--titulo); font-size: clamp(24px, 1rem + 1.8vw, 38px); line-height: 1.3; text-wrap: pretty; }
+  .citacao p::before { content: "“"; display: block; font-size: 2.4em; line-height: .6; color: var(--destaque); margin-bottom: 6px; }
+  .ficha { margin: 36px 0 30px; padding-top: 20px; border-top: 1px solid color-mix(in oklab, var(--tinta) 14%, transparent); }
+  .ficha-nome { font-family: var(--titulo); font-size: 24px; margin-bottom: 14px; }
+  .ficha dl { display: grid; gap: 10px; }
+  .ficha dl div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; }
+  .ficha dt { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--suave); padding-top: 3px; }
+  .sobre-foto { position: relative; width: min(86%, 400px); justify-self: end; }
+  .sobre-foto::before { content: ""; position: absolute; inset: -16px 16px 16px -16px; border: 1.5px solid var(--destaque); border-radius: 200px 200px 20px 20px; }
+  .foto-sobre { position: relative; aspect-ratio: 4 / 5; border-radius: 200px 200px 20px 20px; height: auto; }
+  .sobre-foto figcaption { margin-top: 14px; font-size: 13px; color: var(--suave); }
+
+  /* Avaliações: nota real grande e os relatos correndo de lado. */
+  .relatos-sec { padding: 96px 0; background: var(--papel); overflow: hidden; }
+  .relatos-topo { display: grid; gap: 32px; margin-bottom: 40px; }
+  .numero { font-family: var(--titulo); font-size: clamp(72px, 3rem + 5vw, 128px); line-height: .9; }
+  .numero small { font-size: .26em; color: var(--suave); }
+  .numero.sem-nota { font-size: clamp(48px, 2rem + 3vw, 80px); }
+  .estrelas.grandes .ic { width: 24px; height: 24px; }
+  .nota-grande .estrelas { margin-top: 14px; }
+  .contagem { margin-top: 8px; color: var(--suave); }
+  .relatos-topo .aparte { margin-top: 16px; }
+  .trilho { list-style: none; margin-block: 0; padding: 4px 0 20px; display: grid; grid-auto-flow: column; grid-auto-columns: min(82%, 340px); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+  .relato { scroll-snap-align: start; display: flex; flex-direction: column; gap: 16px; padding: 26px; border-radius: 22px; background: var(--fundo); }
+  .relato .espaco { font-family: var(--titulo); font-style: var(--italico); color: color-mix(in oklab, var(--tinta) 60%, transparent); line-height: 1.45; }
+  .quem { display: flex; align-items: center; gap: 10px; margin-top: auto; font-size: 13px; color: var(--suave); }
+  .bolinha { width: 28px; height: 28px; border-radius: 50%; background: color-mix(in oklab, var(--acento) 30%, var(--papel)); }
+
+  /* Perguntas: coluna estreita e centrada. */
+  .perguntas { padding: 96px 0; }
+  .perguntas h2 { text-align: center; margin-bottom: 36px; }
+  details { border-bottom: 1px solid color-mix(in oklab, var(--tinta) 14%, transparent); }
+  details:first-child { border-top: 1px solid color-mix(in oklab, var(--tinta) 14%, transparent); }
+  summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; cursor: pointer; list-style: none; font-family: var(--titulo); font-size: 21px; }
+  summary::-webkit-details-marker { display: none; }
+  .mais { position: relative; width: 16px; height: 16px; flex: none; }
+  .mais::before, .mais::after { content: ""; position: absolute; left: 0; top: 7px; width: 16px; height: 2px; background: var(--destaque); transition: rotate .3s; }
+  .mais::after { rotate: 90deg; }
+  details[open] .mais::after { rotate: 0deg; }
+  details p { padding: 0 0 22px; color: var(--suave); max-width: 60ch; }
+  .perg-fim { margin-top: 30px; text-align: center; color: var(--suave); }
+
+  /* Contato: texto e dados de um lado, formulário mínimo do outro. */
+  .contato { padding: 96px 0; background: var(--contato-fundo); color: var(--topo-tinta); }
+  .contato h2 em { color: var(--topo-destaque); }
+  .contato .sobrelinha { color: var(--topo-destaque); }
+  .contato .aparte { color: var(--topo-suave); margin-top: 18px; }
+  .contato-grade { display: grid; gap: 48px; }
+  .contatos { list-style: none; margin: 30px 0 0; padding: 0; }
+  .contatos li { display: grid; gap: 2px; padding: 12px 0; border-bottom: 1px solid color-mix(in oklab, var(--topo-tinta) 14%, transparent); }
+  .contatos .k { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--topo-suave); }
+  .formulario { display: grid; gap: 16px; padding: 28px 22px; border-radius: 24px; background: var(--fundo); color: var(--tinta); box-shadow: 0 30px 60px -40px rgba(0,0,0,.45); }
+  .form-titulo { font-family: var(--titulo); font-size: 24px; }
+  .formulario label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; }
+  .formulario input, .formulario select { width: 100%; padding: 14px 16px; border: 1px solid color-mix(in oklab, var(--tinta) 22%, transparent); border-radius: 12px; background: #fff; color: #1f1f1f; font: 400 16px var(--texto); }
+  .formulario input:focus, .formulario select:focus { outline: 2px solid var(--destaque); outline-offset: 1px; border-color: transparent; }
+  .formulario [aria-invalid="true"] { border-color: #b3261e; }
+  .formulario .botao { width: 100%; margin-top: 4px; }
+  .form-nota { font-size: 13px; color: var(--suave); text-align: center; }
+  .form-aviso { font-size: 14px; color: #b3261e; text-align: center; }
+  .form-aviso:empty { display: none; }
+
+  .rodape { background: var(--escuro); color: var(--suave-clara); padding: 44px 0 96px; font-size: 14px; }
+  .rodape .marca { color: var(--tinta-clara); }
+  .rodape .logo { color: var(--destaque-claro); }
+  .rodape .marca small { color: var(--suave-clara); }
+  .grade-rodape { display: grid; gap: 16px; }
+  .legal { font-size: 13px; max-width: 70ch; }
+
+  .zap-flutuante { position: fixed; right: 16px; bottom: 16px; z-index: 40; display: inline-flex; align-items: center; gap: 8px; padding: 15px; border-radius: 999px; background: #1f9d55; color: #fff; font-weight: 600; text-decoration: none; box-shadow: 0 16px 34px -12px rgba(31,157,85,.7); translate: 0 160%; transition: translate .5s cubic-bezier(.2,.8,.2,1); }
+  .zap-flutuante .ic { width: 24px; height: 24px; }
+  .zap-flutuante span { display: none; }
+  .mostra-zap .zap-flutuante { translate: 0 0; }
+
+  /* Entrada do topo (logo depois da abertura) e revelações ao rolar. */
+  body { --abre: 3s; }
+  .entra { animation: sobe 1s cubic-bezier(.2,.8,.2,1) calc(var(--abre) + var(--i) * .12s) both; }
+  @keyframes sobe { from { opacity: 0; transform: translateY(24px); } }
+  .js [data-revela] { opacity: 0; transform: translateY(24px); transition: opacity .9s cubic-bezier(.2,.8,.2,1) var(--d, 0s), transform .9s cubic-bezier(.2,.8,.2,1) var(--d, 0s); }
+  .js [data-revela].in { opacity: 1; transform: none; }
+
+  /* Telas maiores: cada seção ganha o seu desenho. */
+  @media (min-width: 700px) {
+    .largura { width: min(1180px, calc(100% - 64px)); }
+    .lista-dores { grid-template-columns: 1fr 1fr; column-gap: 56px; }
+    .lista-dores li:nth-child(even) { translate: 0 56px; }
+    .dores-fim { margin-top: 88px; }
+    .trocas li { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 48px; align-items: center; padding: 34px 0; }
+    .crescimento { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; padding: 34px 0 0; }
+    .crescimento::before { left: 0; right: 0; top: 7px; bottom: auto; width: auto; height: 1px; transform: scaleX(0); transform-origin: left; }
+    .crescimento .no { left: 0; top: -34px; }
+    .formatos-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .formatos-topo { grid-column: 1 / -1; }
+    .formato.f1 { grid-row: span 2; justify-content: flex-end; padding: 40px; }
+    .formato.f1 .link-zap { margin-top: 8px; }
+    .formato.f1 h3 { font-size: 34px; }
+    .trilho { grid-auto-columns: 340px; }
+    .relatos-topo { grid-template-columns: auto minmax(0, 1fr); gap: 64px; align-items: end; }
+    .formulario { padding: 36px; }
+    .grade-rodape { grid-template-columns: auto 1fr; align-items: center; column-gap: 40px; }
+    .rodape-local { text-align: right; }
+    .legal { grid-column: 1 / -1; }
+    .zap-flutuante { right: 24px; bottom: 24px; padding: 14px 20px 14px 16px; }
+    .zap-flutuante span { display: inline; }
+  }
+  @media (min-width: 1000px) {
+    .menu { display: flex; }
+    .cabeca .botao { margin-left: 0; }
+    /* Topo assimétrico: foto alta à esquerda; nome, título e chamada em degraus à direita. */
+    .heroi { padding: 40px 0 96px; }
+    .heroi-grade { grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: auto auto auto; column-gap: 24px; row-gap: 28px; align-items: end; }
+    .heroi-foto { grid-column: 1 / span 5; grid-row: 1 / span 3; width: auto; align-self: center; }
+    .heroi-id { grid-column: 7 / -1; grid-row: 1; }
+    .heroi h1 { grid-column: 6 / -1; grid-row: 2; }
+    .heroi-pe { grid-column: 8 / -1; grid-row: 3; align-self: start; }
+    .selo-giro { width: 150px; height: 150px; right: -16%; bottom: 16%; }
+    .selo-giro text { font-size: 12px; }
+    .dores-topo { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); align-items: end; gap: 64px; margin-bottom: 64px; }
+    .escuta, .dores, .etapas, .formatos, .sobre, .relatos-sec, .perguntas, .contato { padding: 130px 0; }
+    .formatos-grade { grid-template-columns: minmax(0, .9fr) minmax(0, 1fr) minmax(0, 1fr); }
+    .formatos-topo { grid-column: 1; grid-row: 1 / span 2; padding: 0 24px 0 0; align-self: center; }
+    .formato.f1 { grid-column: 2; grid-row: 1 / span 2; min-height: 460px; }
+    .sobre-grade { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 96px; align-items: start; }
+    .sobre-foto { width: 100%; margin-top: 140px; }
+    .contato-grade { grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: 96px; align-items: center; }
+  }
+
+  @media (max-width: 699px) {
+    .marca small { display: none; }
+    .marca strong { font-size: 17px; }
+    .logo { width: 36px; height: 36px; }
+    .cabeca .botao span { display: none; }
+    .cabeca .botao { padding: 11px; }
+    .acoes .botao { width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    /* A abertura continua com 3 segundos, só que parada. */
+    .abertura { animation-delay: 3s !important; }
+    .barra i { transform: none; }
+  }
+</style>
+</head>
+<body class="modelo-oceano topo-escuro">
+<svg class="sprite" aria-hidden="true" focusable="false"><symbol id="broto" viewBox="0 0 32 32"><path d="M16 29V15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 17c-6 0-10-3.5-11-9 6 0 10 3 11 9z" fill="currentColor"/><path d="M16 14c.6-5.5 4.4-9 11-9.5-.6 6-4.6 9.3-11 9.5z" fill="currentColor"/></symbol></svg>
+
+<!-- Abertura: dura 3 segundos (a linha enche) e depois se recolhe para cima, revelando o site. -->
+<div class="abertura" aria-hidden="true">
+  <div class="abertura-centro"><svg class="logo-abertura" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle class="aro" cx="32" cy="32" r="30" pathLength="1"/><text x="32" y="39.5" text-anchor="middle">SI</text><use href="#broto" x="25" y="1" width="14" height="14"/></svg><p>SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA</p><span class="barra"><i></i></span></div>
+</div>
+
+<div class="previa">Prévia de demonstração criada para SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA. Não é o site oficial.</div>
+
+<header class="cabeca" data-cabeca>
+  <div class="largura cabeca-dentro">
+    <!-- LOGO: troque o monograma pelo arquivo do logo na raiz do site, por exemplo uma tag img com src="./logo.svg" e alt="Logo de SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA".
+         A cor de acento (--acento, no :root) deve combinar com o logo. -->
+    <a class="marca" href="#inicio"><svg class="logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle class="aro" cx="32" cy="32" r="30" pathLength="1"/><text x="32" y="39.5" text-anchor="middle">SI</text><use href="#broto" x="25" y="1" width="14" height="14"/></svg><span><strong>SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA</strong><small>Nutricionista · CRN a preencher</small></span></a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#dores">Para quem</a><a href="#escuta">Como eu cuido</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+    </nav>
+    <a class="botao pequeno" href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="heroi" aria-labelledby="titulo-heroi">
+    <div class="largura heroi-grade">
+      <figure class="heroi-foto entra" style="--i:0">
+        <span class="arco-fundo" aria-hidden="true"></span>
+        <!-- FOTO 1 (topo): retrato vertical da profissional (3:4), rosto no terço de cima. Troque o src pelo arquivo, ex.: ./foto-hero.jpg -->
+        <div class="arco"><img class="foto sem-foto" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20800%22%3E%3Crect%20width%3D%22600%22%20height%3D%22800%22%20fill%3D%22%23dfe5df%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22400%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%22150%22%20fill%3D%22%234c5a60%22%20opacity%3D%22.35%22%3ESI%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22490%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2226%22%20letter-spacing%3D%223%22%20fill%3D%22%234c5a60%22%3EFOTO%201%3A%20TOPO%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Espaço reservado para foto 1: topo de SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA"></div>
+        <div class="ramo" aria-hidden="true"><svg viewBox="0 0 200 400" aria-hidden="true" focusable="false"><path d="M100 400 C91.8 300 118.9 190 99.2 40" stroke="#3f6f6a" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M100.6 293.4 C90.6 253.4 64.2 205.4 52.2 165.4" stroke="#3f6f6a" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M105 217.3 C115 177.3 142 128.7 154 88.7" stroke="#3f6f6a" stroke-width="2.2" fill="none" stroke-linecap="round"/><g transform="translate(98.5 369.7) rotate(-59.5)"><g class="fo" style="--i:0"><path d="M0 0C20 -12.2 15.6 -35 0 -43.7C-15.6 -35 -19.9 -12.2 0 0Z" fill="#3f7f7a"/><path d="M0 0L0 -37.6" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(98.5 347.2) rotate(66.4)"><g class="fo" style="--i:1"><path d="M0 0C19.2 -11.8 15 -33.6 0 -42C-15 -33.6 -19.2 -11.8 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -36.1" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(99.1 324.3) rotate(-56.6)"><g class="fo" style="--i:2"><path d="M0 0C18.4 -11.3 14.4 -32.3 0 -40.4C-14.4 -32.3 -18.4 -11.3 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -34.7" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(100.2 300.8) rotate(71)"><g class="fo" style="--i:3"><path d="M0 0C17.7 -10.8 13.8 -31 0 -38.7C-13.8 -31 -17.7 -10.8 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -33.3" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(101.6 276.7) rotate(-63.7)"><g class="fo" style="--i:4"><path d="M0 0C16.9 -10.4 13.2 -29.6 0 -37C-13.2 -29.6 -16.9 -10.4 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -31.8" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(103.1 251.9) rotate(65.5)"><g class="fo" style="--i:5"><path d="M0 0C16.1 -9.9 12.6 -28.3 0 -35.4C-12.6 -28.3 -16.1 -9.9 0 0Z" fill="#3f7f7a"/><path d="M0 0L0 -30.4" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(104.6 226.3) rotate(-57.3)"><g class="fo" style="--i:6"><path d="M0 0C15.4 -9.4 12 -27 0 -33.7C-12 -27 -15.4 -9.4 0 0Z" fill="#3f7f7a"/><path d="M0 0L0 -29" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(105.7 200) rotate(64.1)"><g class="fo" style="--i:7"><path d="M0 0C14.6 -9 11.4 -25.6 0 -32C-11.4 -25.6 -14.6 -9 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -27.5" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(106.4 172.7) rotate(-58.4)"><g class="fo" style="--i:8"><path d="M0 0C13.9 -8.5 10.8 -24.3 0 -30.4C-10.8 -24.3 -13.9 -8.5 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -26.1" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(106.5 144.5) rotate(68.3)"><g class="fo" style="--i:9"><path d="M0 0C13.1 -8 10.2 -23 0 -28.7C-10.2 -23 -13.1 -8 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -24.7" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(105.7 115.2) rotate(-65)"><g class="fo" style="--i:10"><path d="M0 0C12.3 -7.6 9.6 -21.6 0 -27C-9.6 -21.6 -12.3 -7.6 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -23.2" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(103.9 84.9) rotate(58.2)"><g class="fo" style="--i:11"><path d="M0 0C11.6 -7.1 9 -20.3 0 -25.4C-9 -20.3 -11.6 -7.1 0 0Z" fill="#3f7f7a"/><path d="M0 0L0 -21.8" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(95.1 274.9) rotate(-85.2)"><g class="fo" style="--i:12"><path d="M0 0C14 -8.6 10.9 -24.5 0 -30.6C-10.9 -24.5 -14 -8.6 0 0Z" fill="#3f7f7a"/><path d="M0 0L0 -26.3" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(88.7 257.4) rotate(36)"><g class="fo" style="--i:13"><path d="M0 0C13 -7.9 10.1 -22.7 0 -28.4C-10.1 -22.7 -13 -7.9 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -24.4" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(81.5 239.5) rotate(-84)"><g class="fo" style="--i:14"><path d="M0 0C11.9 -7.3 9.3 -20.9 0 -26.1C-9.3 -20.9 -11.9 -7.3 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -22.5" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(73.8 221.4) rotate(37.6)"><g class="fo" style="--i:15"><path d="M0 0C10.9 -6.7 8.5 -19.1 0 -23.8C-8.5 -19.1 -10.9 -6.7 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -20.5" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(66.3 203.5) rotate(-85.7)"><g class="fo" style="--i:16"><path d="M0 0C9.9 -6 7.7 -17.3 0 -21.6C-7.7 -17.3 -9.9 -6 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -18.6" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(59.3 186) rotate(46.4)"><g class="fo" style="--i:17"><path d="M0 0C8.8 -5.4 6.9 -15.5 0 -19.3C-6.9 -15.5 -8.8 -5.4 0 0Z" fill="#3f7f7a"/><path d="M0 0L0 -16.6" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(110.5 198.8) rotate(-46.3)"><g class="fo" style="--i:18"><path d="M0 0C14 -8.6 10.9 -24.5 0 -30.6C-10.9 -24.5 -14 -8.6 0 0Z" fill="#3f7f7a"/><path d="M0 0L0 -26.3" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(117 181.2) rotate(87.1)"><g class="fo" style="--i:19"><path d="M0 0C13 -7.9 10.1 -22.7 0 -28.4C-10.1 -22.7 -13 -7.9 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -24.4" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(124.4 163.2) rotate(-40.4)"><g class="fo" style="--i:20"><path d="M0 0C11.9 -7.3 9.3 -20.9 0 -26.1C-9.3 -20.9 -11.9 -7.3 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -22.5" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(132.2 145) rotate(86.2)"><g class="fo" style="--i:21"><path d="M0 0C10.9 -6.7 8.5 -19.1 0 -23.8C-8.5 -19.1 -10.9 -6.7 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -20.5" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(139.8 127) rotate(-41.3)"><g class="fo" style="--i:22"><path d="M0 0C9.9 -6 7.7 -17.3 0 -21.6C-7.7 -17.3 -9.9 -6 0 0Z" fill="#5fa3a0"/><path d="M0 0L0 -18.6" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g><g transform="translate(146.9 109.3) rotate(80.2)"><g class="fo" style="--i:23"><path d="M0 0C8.8 -5.4 6.9 -15.5 0 -19.3C-6.9 -15.5 -8.8 -5.4 0 0Z" fill="#3f7f7a"/><path d="M0 0L0 -16.6" stroke="#3f6f6a" stroke-width=".9" opacity=".45" fill="none"/></g></g></svg></div>
+        <div class="selo-giro" aria-hidden="true">
+          <svg class="anel" viewBox="0 0 200 200"><defs><path id="anel-selo" d="M100 100 m-74 0 a74 74 0 1 1 148 0 a74 74 0 1 1 -148 0"/></defs><text><textPath href="#anel-selo" textLength="462" lengthAdjust="spacing">escuta · ciência · cuidado · comida de verdade ·</textPath></text></svg>
+          <svg class="miolo"><use href="#broto"/></svg>
+        </div>
+      </figure>
+      <div class="heroi-id entra" style="--i:1">
+        <p class="nome">SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA</p>
+        <p class="crn">Nutricionista · CRN a preencher · Taubaté/SP</p>
+      </div>
+      <h1 id="titulo-heroi" class="entra" style="--i:2">Cuidar da alimentação <em class="rabisco">sem sofrimento<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 13 C 60 4 120 16 180 9 S 270 6 297 11" pathLength="1"/></svg></em>, no ritmo da sua vida.</h1>
+      <div class="heroi-pe entra" style="--i:3">
+        <p class="lide">Um acompanhamento que começa pela sua história, pela sua rotina e pelo que você gosta de comer. Nada de cardápio engessado.</p>
+        <div class="acoes">
+          <a class="botao grande" href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar consulta pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar consulta</span></a>
+          <a class="link-calmo" href="#escuta">Como é o acompanhamento</a>
+        </div>
+        <a class="selo-google" href="https://www.google.com/maps/place/SA%C3%9ADE+INTEGRADA+NUTRICIONISTA+E+FISIOTERAPIA/data=!4m7!3m6!1s0x94ccf91779eb5991:0xcadaa59398b817d0!8m2!3d-23.0297034!4d-45.5778747!16s%2Fg%2F11lsnd7ls7!19sChIJkVnreRf5zJQR0Be4mJOl2so?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MTAxMS4wIJJjKgBIAVAD&amp;rclk=1"><span class="estrelas" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg></span><strong>5,0</strong> no Google · 79 avaliações</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dores" id="dores" aria-labelledby="titulo-dores">
+    <div class="largura">
+      <header class="dores-topo">
+        <h2 id="titulo-dores" data-revela>Talvez você tenha chegado aqui porque…</h2>
+        <p class="aparte" data-revela>Para quem quer cuidar da alimentação de um jeito que dure, e não com mais uma dieta que termina no meio do caminho.</p>
+      </header>
+      <ul class="lista-dores"><li data-revela style="--n:0"><svg class="marca-dor" aria-hidden="true"><use href="#broto"/></svg><p>Você já começou várias dietas e, em algum momento, <strong>desistiu</strong> porque era sofrido demais.</p></li><li data-revela style="--n:1"><svg class="marca-dor" aria-hidden="true"><use href="#broto"/></svg><p>A <strong>culpa</strong> aparece depois de cada doce, de cada fim de semana, de cada jantar fora.</p></li><li data-revela style="--n:2"><svg class="marca-dor" aria-hidden="true"><use href="#broto"/></svg><p>A <strong>ansiedade</strong> decide o que você come mais do que a própria fome.</p></li><li data-revela style="--n:3"><svg class="marca-dor" aria-hidden="true"><use href="#broto"/></svg><p>A rotina é corrida e você precisa de algo <strong>prático</strong>, que caiba na agenda de verdade.</p></li><li data-revela style="--n:4"><svg class="marca-dor" aria-hidden="true"><use href="#broto"/></svg><p>Cada lugar diz uma coisa sobre comida e você já não sabe <strong>em quem acreditar</strong>.</p></li></ul>
+      <p class="dores-fim" data-revela>Se você se reconheceu em alguma dessas frases, a primeira conversa já é um bom começo. <a class="link-zap" href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Me%20reconheci%20no%20seu%20site%20e%20queria%20conversar%20sobre%20a%20minha%20alimenta%C3%A7%C3%A3o.">Me conte pelo WhatsApp<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></p>
+    </div>
+  </section>
+
+  <section class="escuta escura" id="escuta" aria-labelledby="titulo-escuta">
+    <div class="largura">
+      <div class="escuta-topo">
+        <p class="sobrelinha" data-revela>Como eu entendo</p>
+        <h2 id="titulo-escuta" data-revela>Antes de mudar o seu prato, eu quero entender a sua história.</h2>
+        <p class="aparte" data-revela>Na primeira consulta eu escuto a sua rotina, os seus horários, o que você gosta de comer e o que já tentou. É dessa conversa que nasce o acompanhamento: um plano que respeita a sua vida e muda junto com ela.</p>
+      </div>
+      <ol class="trocas"><li data-revela><p class="riscada"><span>“Segunda-feira eu começo de novo.”</span></p><p class="resposta">Aqui não existe recomeçar do zero: a gente ajusta o que você já faz.</p></li><li data-revela><p class="riscada"><span>“Esse alimento é proibido para mim.”</span></p><p class="resposta">Nenhum alimento vira inimigo. Ele ganha lugar e medida no seu dia.</p></li><li data-revela><p class="riscada"><span>“Preciso compensar o fim de semana.”</span></p><p class="resposta">O fim de semana faz parte do plano, não é um erro para pagar depois.</p></li></ol>
+    </div>
+  </section>
+
+  <section class="etapas" id="acompanhamento" aria-labelledby="titulo-etapas">
+    <div class="largura">
+      <div class="etapas-topo">
+        <p class="sobrelinha" data-revela>O acompanhamento</p>
+        <h2 id="titulo-etapas" data-revela>Um acompanhamento que cresce como uma planta: <em>raiz</em>, <em>fruto</em> e <em>ramo</em>.</h2>
+      </div>
+      <ol class="crescimento" data-revela><li><span class="no" aria-hidden="true"></span><svg class="arte" viewBox="0 0 160 160" aria-hidden="true"><path pathLength="1" class="chao" d="M18 72 H142"/><path pathLength="1" d="M80 72 V36"/><path pathLength="1" class="cheio" d="M80 52 C 66 50 58 40 56 28 C 70 28 78 38 80 52 Z"/><path pathLength="1" class="cheio" d="M80 44 C 92 40 100 30 102 18 C 88 18 80 28 80 44 Z"/><path pathLength="1" d="M80 72 C 80 92 74 106 70 128"/><path pathLength="1" d="M80 72 C 84 94 92 106 98 130"/><path pathLength="1" d="M78 88 C 70 92 60 96 50 106"/><path pathLength="1" d="M83 92 C 92 96 104 100 114 110"/></svg><p class="rotulo">Raiz</p><h3>Escuta da sua história</h3><p>Entender hábitos, horários, emoções e o que já funcionou antes de propor qualquer mudança.</p><p class="legenda">o que sustenta tudo</p></li><li><span class="no" aria-hidden="true"></span><svg class="arte" viewBox="0 0 160 160" aria-hidden="true"><path pathLength="1" d="M80 22 C 84 14 90 10 98 9"/><path pathLength="1" class="cheio" d="M80 22 C 116 22 130 60 126 96 C 122 130 104 146 80 146 C 56 146 38 130 34 96 C 30 60 44 22 80 22 Z"/><path pathLength="1" class="corte" d="M80 54 C 96 54 102 78 100 98 C 98 116 90 124 80 124 C 70 124 62 116 60 98 C 58 78 64 54 80 54 Z"/></svg><p class="rotulo">Fruto</p><h3>Um plano que cabe no seu dia</h3><p>Refeições possíveis, com comida de verdade e os alimentos de que você gosta, sem cardápio engessado.</p><p class="legenda">o que nutre e satisfaz</p></li><li><span class="no" aria-hidden="true"></span><svg class="arte" viewBox="0 0 160 160" aria-hidden="true"><path pathLength="1" d="M28 140 C 58 124 80 100 92 70 C 100 50 112 34 132 24"/><path pathLength="1" class="cheio" d="M52 128 C 44 116 46 102 56 94 C 62 106 60 118 52 128 Z"/><path pathLength="1" class="cheio" d="M66 116 C 80 116 90 124 94 134 C 80 136 70 128 66 116 Z"/><path pathLength="1" class="cheio" d="M84 86 C 74 76 72 62 78 52 C 88 62 90 76 84 86 Z"/><path pathLength="1" class="cheio" d="M94 66 C 106 60 118 62 126 70 C 114 78 102 76 94 66 Z"/><path pathLength="1" class="cheio" d="M110 38 C 106 28 110 18 118 12 C 122 22 118 32 110 38 Z"/></svg><p class="rotulo">Ramo</p><h3>Ajustes sem culpa</h3><p>Retornos para adaptar o plano à vida real: viagens, festas e semanas difíceis entram na conta.</p><p class="legenda">dobra com o vento, não quebra</p></li></ol>
+    </div>
+  </section>
+
+  <section class="formatos" id="formatos" aria-labelledby="titulo-formatos">
+    <div class="largura formatos-grade">
+      <header class="formatos-topo" data-revela>
+        <p class="sobrelinha">Atendimento</p>
+        <h2 id="titulo-formatos">Formas de caminhar junto.</h2>
+        <p class="aparte">Tudo começa na primeira consulta. Dali em diante, o acompanhamento segue o seu momento.</p>
+        <a class="botao" href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar consulta pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar consulta</span></a>
+      </header>
+      <article class="formato f1" data-revela><svg class="ic grande" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224,106H213.77a86,86,0,0,0-171.54,0H32a6,6,0,0,0-6,6,102.35,102.35,0,0,0,56,91.06V208a14,14,0,0,0,14,14h64a14,14,0,0,0,14-14v-4.94A102.35,102.35,0,0,0,230,112,6,6,0,0,0,224,106ZM174.24,54.29a74.15,74.15,0,0,1,8.15,7.6A85.89,85.89,0,0,0,130.84,106H97.34A74.24,74.24,0,0,1,168,54C170.08,54,172.17,54.11,174.24,54.29ZM190.3,72.14A73.49,73.49,0,0,1,201.74,106H144.48A73.89,73.89,0,0,1,190.3,72.14ZM128,38a73.68,73.68,0,0,1,26.8,5,86.32,86.32,0,0,0-69.94,63H54.26A74.09,74.09,0,0,1,128,38Zm37.5,155.84a6,6,0,0,0-3.5,5.46V208a2,2,0,0,1-2,2H96a2,2,0,0,1-2-2v-8.7a6,6,0,0,0-3.5-5.46A90.35,90.35,0,0,1,38.2,118H217.8A90.35,90.35,0,0,1,165.5,193.84Z"/></svg><h3>Consulta nutricional</h3><p>Avaliação completa dos seus hábitos, histórico e objetivos, com um plano alimentar feito para você.</p><a class="link-zap" href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Queria%20saber%20mais%20sobre%3A%20Consulta%20nutricional.">Perguntar no WhatsApp<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></article><article class="formato f2" data-revela><svg class="ic grande" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M250.83,74.71a6,6,0,0,0-6.16.3L206,100.79V72a14,14,0,0,0-14-14H32A14,14,0,0,0,18,72V184a14,14,0,0,0,14,14H192a14,14,0,0,0,14-14V155.21L244.67,181a6,6,0,0,0,9.33-5V80A6,6,0,0,0,250.83,74.71ZM194,184a2,2,0,0,1-2,2H32a2,2,0,0,1-2-2V72a2,2,0,0,1,2-2H192a2,2,0,0,1,2,2Zm48-19.21-36-24V115.21l36-24Z"/></svg><h3>Atendimento online</h3><p>Consultas por vídeo para quem prefere a praticidade de ser atendido de casa.</p><a class="link-zap" href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Queria%20saber%20mais%20sobre%3A%20Atendimento%20online.">Perguntar no WhatsApp<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></article><article class="formato f3" data-revela><svg class="ic grande" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M230,208a6,6,0,0,1-6,6H32a6,6,0,0,1-6-6V48a6,6,0,0,1,12,0V161.52l53.76-53.76a6,6,0,0,1,8.48,0L128,135.51,185.52,78H160a6,6,0,0,1,0-12h40a6,6,0,0,1,6,6v40a6,6,0,0,1-12,0V86.48l-61.76,61.76a6,6,0,0,1-8.48,0L96,120.49l-58,58V202H224A6,6,0,0,1,230,208Z"/></svg><h3>Acompanhamento</h3><p>Retornos para ajustar o plano conforme a sua rotina e as suas preferências.</p><a class="link-zap" href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Queria%20saber%20mais%20sobre%3A%20Acompanhamento.">Perguntar no WhatsApp<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></article>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre" aria-labelledby="titulo-sobre">
+    <div class="largura sobre-grade">
+      <div class="sobre-texto">
+        <p class="sobrelinha" data-revela>Quem vai te acompanhar</p>
+        <h2 id="titulo-sobre" class="sr">Sobre SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA</h2>
+        <blockquote class="citacao" data-revela><p>Acredito que ninguém come só com a boca. Comemos com a memória, com o cansaço do dia, com a pressa e com as emoções. Por isso o meu trabalho começa entendendo quem está à mesa, para que a mudança faça sentido e permaneça.</p></blockquote>
+        <div class="ficha" data-revela>
+          <p class="ficha-nome">SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA</p>
+          <dl><div><dt>CRN</dt><dd>Número a preencher</dd></div><div><dt>Atendimento</dt><dd>Presencial em Taubaté/SP e online</dd></div></dl>
+        </div>
+        <div data-revela><a class="botao" href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Falar comigo no WhatsApp pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Falar comigo no WhatsApp</span></a></div>
+      </div>
+      <figure class="sobre-foto" data-revela>
+        <!-- FOTO 2 (Sobre mim): foto mais espontânea, no consultório ou trabalhando. Troque o src, ex.: ./foto-sobre.jpg -->
+        <img class="foto-sobre sem-foto" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20800%22%3E%3Crect%20width%3D%22600%22%20height%3D%22800%22%20fill%3D%22%23dfe5df%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22400%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%22150%22%20fill%3D%22%234c5a60%22%20opacity%3D%22.35%22%3ESI%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22490%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2226%22%20letter-spacing%3D%223%22%20fill%3D%22%234c5a60%22%3EFOTO%202%3A%20SOBRE%20MIM%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Espaço reservado para foto 2: sobre mim de SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA">
+        <figcaption>SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA · CRN a preencher</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="relatos-sec" id="avaliacoes" aria-labelledby="titulo-av">
+    <div class="largura relatos-topo">
+      <div class="nota-grande" data-revela>
+        <p class="numero"><span data-nota="5.0">5,0</span><small> de 5</small></p>
+        <span class="estrelas grandes" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg></span>
+        <p class="contagem">79 avaliações no Google</p>
+      </div>
+      <div data-revela>
+        <p class="sobrelinha">Avaliações</p>
+        <h2 id="titulo-av">O que dizem sobre o atendimento.</h2>
+        <p class="aparte">Relatos sobre a escuta e o acolhimento, sem falar de resultados, como pede o conselho. <a class="link-calmo" href="https://www.google.com/maps/place/SA%C3%9ADE+INTEGRADA+NUTRICIONISTA+E+FISIOTERAPIA/data=!4m7!3m6!1s0x94ccf91779eb5991:0xcadaa59398b817d0!8m2!3d-23.0297034!4d-45.5778747!16s%2Fg%2F11lsnd7ls7!19sChIJkVnreRf5zJQR0Be4mJOl2so?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MTAxMS4wIJJjKgBIAVAD&amp;rclk=1">Ver todas no Google</a></p>
+      </div>
+    </div>
+    <ul class="trilho largura" aria-label="Relatos de pacientes"><li class="relato" data-revela style="--n:0"><span class="estrelas" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg></span><p class="espaco">Espaço para um relato real de paciente no Google sobre como foi a primeira consulta.</p><p class="quem"><span class="bolinha" aria-hidden="true"></span>Avaliação do Google · exemplo</p></li><li class="relato" data-revela style="--n:1"><span class="estrelas" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg></span><p class="espaco">Espaço para um relato real de paciente no Google sobre a forma como foi ouvido(a).</p><p class="quem"><span class="bolinha" aria-hidden="true"></span>Avaliação do Google · exemplo</p></li><li class="relato" data-revela style="--n:2"><span class="estrelas" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.2 1.2-6.5L2.5 9.5l6.6-.9z"/></svg></span><p class="espaco">Espaço para um relato real de paciente no Google sobre o acompanhamento entre as consultas.</p><p class="quem"><span class="bolinha" aria-hidden="true"></span>Avaliação do Google · exemplo</p></li></ul>
+  </section>
+
+  <section class="perguntas" aria-labelledby="titulo-perg">
+    <div class="largura estreita">
+      <h2 id="titulo-perg" data-revela>Perguntas frequentes</h2>
+      <div class="lista-perg"><details data-revela><summary>Atende online?<span class="mais" aria-hidden="true"></span></summary><p>Sim, com a mesma atenção da consulta presencial.</p></details><details data-revela><summary>Como faço para agendar?<span class="mais" aria-hidden="true"></span></summary><p>Pelo botão de agendamento ou pelo WhatsApp, no horário que for melhor para você.</p></details><details data-revela><summary>Preciso levar exames?<span class="mais" aria-hidden="true"></span></summary><p>Se tiver exames recentes, traga. Se não tiver, avaliamos na consulta se são necessários.</p></details></div>
+      <p class="perg-fim" data-revela>Ficou alguma dúvida? <a class="link-zap" href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Fiquei%20com%20uma%20d%C3%BAvida%20sobre%20a%20consulta.">Pergunte no WhatsApp<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></p>
+    </div>
+  </section>
+
+  <section class="contato" id="contato" aria-labelledby="titulo-contato">
+    <div class="largura contato-grade">
+      <div class="contato-texto">
+        <p class="sobrelinha" data-revela>Primeiro passo</p>
+        <h2 id="titulo-contato" data-revela>Vamos começar <em>com calma</em>?</h2>
+        <p class="aparte" data-revela>Me conte um pouco sobre você e escolha o formato que cabe na sua rotina: online, de onde estiver, ou presencial no consultório.</p>
+        <ul class="contatos" data-revela><li><span class="k">WhatsApp</span><a href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.">(12) 99245-6006</a></li><li><span class="k">Consultório</span><span>DHF Life - Rua Jurandir Martins Filho, número 85 - Sala 310, 3° andar - Jardim flamboyant, Taubaté - SP, 12041-065</span></li><li><span class="k">Mapa</span><a href="https://www.google.com/maps/place/SA%C3%9ADE+INTEGRADA+NUTRICIONISTA+E+FISIOTERAPIA/data=!4m7!3m6!1s0x94ccf91779eb5991:0xcadaa59398b817d0!8m2!3d-23.0297034!4d-45.5778747!16s%2Fg%2F11lsnd7ls7!19sChIJkVnreRf5zJQR0Be4mJOl2so?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MTAxMS4wIJJjKgBIAVAD&amp;rclk=1">Ver no Google Maps</a></li><li><span class="k">Atendimento</span><span>Presencial e online</span></li></ul>
+      </div>
+      <form class="formulario" data-form data-numero="5512992456006" data-revela novalidate>
+        <p class="form-titulo">Me conte em poucas palavras</p>
+        <label>Seu nome<input name="nome" autocomplete="name" required></label>
+        <label>Seu WhatsApp<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" required></label>
+        <label>Qual o objetivo da consulta?<select name="objetivo" required><option value="">Escolha uma opção</option><option>Reeducação alimentar</option><option>Melhorar a relação com a comida</option><option>Cuidar da saúde e dos exames</option><option>Organizar a alimentação na rotina</option><option>Outro objetivo</option></select></label>
+        <button class="botao grande" type="submit"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Continuar no WhatsApp</span></button>
+        <p class="form-nota">Abre o WhatsApp com a mensagem pronta. Nada fica salvo neste site.</p>
+        <p class="form-aviso" role="status" data-aviso></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="largura grade-rodape">
+    <a class="marca" href="#inicio"><svg class="logo" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><circle class="aro" cx="32" cy="32" r="30" pathLength="1"/><text x="32" y="39.5" text-anchor="middle">SI</text><use href="#broto" x="25" y="1" width="14" height="14"/></svg><span><strong>SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA</strong><small>Nutricionista · CRN a preencher</small></span></a>
+    <p class="rodape-local">Nutricionista em Taubaté/SP · atendimento presencial e online</p>
+    <p class="legal">Os conteúdos deste site são informativos e não substituem uma avaliação individual. SAÚDE INTEGRADA NUTRICIONISTA E FISIOTERAPIA · CRN a preencher.</p>
+  </div>
+</footer>
+<a class="zap-flutuante" href="https://wa.me/5512992456006?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar</span></a>
+<script>(function () {
+  var raiz = document.documentElement, corpo = document.body;
+  var reduz = !window.matchMedia || matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function todos(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
+  raiz.classList.add("js");
+  setTimeout(function () { raiz.classList.add("pronto"); revelar(); }, 3000);
+
+  var cabeca = document.querySelector("[data-cabeca]"), heroi = document.querySelector(".heroi");
+  function rolou() {
+    var y = window.scrollY;
+    if (cabeca) cabeca.classList.toggle("rolou", y > 20);
+    if (heroi) corpo.classList.toggle("mostra-zap", y > heroi.offsetHeight * 0.6);
+  }
+  rolou();
+  window.addEventListener("scroll", rolou, { passive: true });
+
+  var links = todos(".menu a");
+  if (window.IntersectionObserver && links.length) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.toggleAttribute("aria-current", a.getAttribute("href") === "#" + e.target.id); });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    todos("main section[id]").forEach(function (s) { io.observe(s); });
+  }
+
+  function revelar() {
+    var itens = todos("[data-revela]");
+    if (reduz || !window.IntersectionObserver) { itens.forEach(function (el) { el.classList.add("in"); }); return; }
+    var obs = new IntersectionObserver(function (es) {
+      var n = 0;
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.style.setProperty("--d", Math.min(n++, 4) * 0.08 + "s");
+        e.target.classList.add("in");
+        obs.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    itens.forEach(function (el) { obs.observe(el); });
+    var nota = document.querySelector("[data-nota]");
+    if (nota) {
+      var alvo = parseFloat(nota.getAttribute("data-nota"));
+      new IntersectionObserver(function (es, o) {
+        if (!es[0].isIntersecting) return;
+        o.disconnect();
+        var t0 = performance.now();
+        (function anda(t) {
+          var p = Math.min(1, (t - t0) / 1200);
+          nota.textContent = (alvo * (1 - Math.pow(1 - p, 3))).toFixed(1).replace(".", ",");
+          if (p < 1) requestAnimationFrame(anda);
+        })(t0);
+      }, { threshold: 0.6 }).observe(nota);
+    }
+  }
+
+  var form = document.querySelector("[data-form]");
+  if (form) form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var aviso = form.querySelector("[data-aviso]"), falta = null;
+    ["nome", "whatsapp", "objetivo"].forEach(function (n) {
+      var campo = form.elements[n], vazio = !campo.value.trim();
+      campo.setAttribute("aria-invalid", vazio ? "true" : "false");
+      if (vazio && !falta) falta = campo;
+    });
+    if (falta) { aviso.textContent = "Preencha os três campos para continuar."; falta.focus(); return; }
+    var numero = form.getAttribute("data-numero");
+    if (!numero) { aviso.textContent = "Nesta prévia o envio está desligado. No site publicado, este botão abre o WhatsApp."; return; }
+    aviso.textContent = "";
+    var texto = "Olá! Meu nome é " + form.elements.nome.value.trim() + ". Meu WhatsApp é " + form.elements.whatsapp.value.trim() + ". Gostaria de agendar uma consulta. Objetivo: " + form.elements.objetivo.value + ".";
+    window.location.href = "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
+  });
+})();</script>
+</body>
+</html>
