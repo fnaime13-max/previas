@@ -3,217 +3,403 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#f3f4f6">
-<title>Nutricionista em Belo Horizonte l Dra. Cleonice Soares | Nutricionista em Belo Horizonte/MG</title>
-<meta name="description" content="Nutricionista em Belo Horizonte/MG. Alimentação que cabe na sua rotina, com acompanhamento de perto.">
+<meta name="robots" content="noindex">
+<title>Nutricionista em Belo Horizonte l Dra. Cleonice Soares · Nutricionista em Belo Horizonte/MG | Consulta presencial e online</title>
+<meta name="description" content="Nutricionista em Belo Horizonte l Dra. Cleonice Soares, nutricionista em Belo Horizonte/MG. Consulta e acompanhamento nutricional individual, presencial e online, com foco em reeducação alimentar, saúde e qualidade de vida.">
+<meta name="theme-color" content="#f6f5f9">
+<!-- FAVICON: no site publicado, troque pelo arquivo próprio, por exemplo <link rel="icon" href="./favicon.png">. -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%235a4787%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2241%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22600%22%20font-size%3D%2224%22%20fill%3D%22%23ffffff%22%3EEB%3C%2Ftext%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap">
 <style>
   :root {
-    --fundo: #f3f4f6; --superficie: #ffffff; --tinta: #141a2b; --suave: #4d5568; --linha: #dcdfe6;
-    --acento: #2747c9; --acento-escuro: #1d379f; --acento-claro: #e6eafa;
-    --raio: 20px; --sombra: 0 1px 2px rgb(20 26 43 / .06), 0 12px 32px -12px rgb(20 26 43 / .18);
-    --saida: cubic-bezier(0.23, 1, 0.32, 1);
-    color-scheme: light;
+    --fundo: #f6f5f9; --superficie: #ecebf3; --tinta: #1c1a25; --suave: #605c71; --linha: #dddae7;
+    --acento: #5a4787; --sobre-acento: #ffffff; --escuro: #1e1b2a; --sobre-escuro: #f0eef6;
+    --texto: "Outfit", "Segoe UI", system-ui, sans-serif;
   }
+  
   *, *::before, *::after { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scrollbar-color: #b8bfcd var(--fundo); }
-  body { margin: 0; font-family: "Geist", ui-sans-serif, system-ui, sans-serif; font-size: 17px; line-height: 1.6; color: var(--tinta); background: var(--fundo); -webkit-font-smoothing: antialiased; }
-  ::selection { background: var(--acento); color: #fff; }
-  a { color: inherit; text-underline-offset: .2em; }
-  :focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; border-radius: 6px; }
-  h1, h2, h3 { font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; text-wrap: balance; margin: 0; }
-  p { margin: 0; text-wrap: pretty; }
-  .largura { width: min(1120px, 100% - 40px); margin-inline: auto; }
-  .ic { width: 1.15em; height: 1.15em; flex: none; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; overflow-x: clip; }
+  body { margin: 0; background: var(--fundo); color: var(--tinta); font-family: var(--texto); font-size: 16px; line-height: 1.65; font-weight: 400; -webkit-font-smoothing: antialiased; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3 { font-weight: 500; line-height: 1.1; letter-spacing: -.025em; margin: 0; text-wrap: balance; }
+  h1 em, h2 em { font-style: normal; color: var(--acento); }
+  h1 { font-size: clamp(36px, 1.4rem + 4.2vw, 72px); font-weight: 400; letter-spacing: -.035em; }
+  h2 { font-size: clamp(28px, 1.1rem + 2vw, 44px); font-weight: 400; letter-spacing: -.03em; }
+  h3 { font-size: 18px; letter-spacing: -.01em; }
+  p, blockquote, dl, dd, figure, ol, ul { margin: 0; }
+  ol, ul { padding: 0; list-style: none; }
+  .largura { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+  .largura.estreita { width: min(680px, calc(100% - 40px)); }
+  .ic { width: 1.1em; height: 1.1em; flex: none; }
+  .aparte { color: var(--suave); max-width: 52ch; }
+  .lide { font-size: clamp(17px, 1rem + .25vw, 19px); color: var(--suave); max-width: 44ch; }
+  :focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
 
-  .previa { background: var(--tinta); color: #d5d9e4; font-size: 13px; text-align: center; padding: 8px 16px; }
+  /* Botões: o principal sempre leva ao WhatsApp. */
+  .botao { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 22px; border: 0; border-radius: 10px; background: var(--acento); color: var(--sobre-acento); font: 500 15px/1.2 var(--texto); text-decoration: none; white-space: nowrap; cursor: pointer; transition: transform .2s, opacity .2s; }
+  .botao:hover { opacity: .9; }
+  .botao:active { transform: scale(.98); }
+  .botao.pequeno { padding: 9px 14px; font-size: 14px; }
+  .botao.secundario { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 1px var(--linha); }
+  .botao.secundario .ic { color: var(--acento); }
+  .link-calmo { text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid var(--linha); transition: border-color .2s; }
+  .link-calmo:hover { border-color: var(--tinta); }
+  .link-zap { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; color: var(--acento); text-decoration: none; }
+  .link-zap .ic { transition: transform .2s; }
+  .link-zap:hover .ic { transform: translateX(3px); }
+  .acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 32px; }
+  .nota-google { display: inline-block; margin-top: 22px; font-size: 14px; color: var(--suave); text-decoration: none; }
+  .nota-google strong { color: var(--tinta); font-weight: 600; }
 
-  .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
-  .marca { font-weight: 600; font-size: 18px; letter-spacing: -0.02em; text-decoration: none; }
+  /* Abertura de 3 segundos: o nome aparece, a linha enche e a tela sobe. */
+  .abertura { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; background: var(--fundo); color: var(--tinta); animation: recolhe .8s cubic-bezier(.7,0,.2,1) 3s forwards; }
+  .abertura-centro { display: grid; justify-items: center; gap: 18px; }
+  .abertura p { font-size: 15px; letter-spacing: .02em; opacity: 0; animation: surge .9s ease .3s forwards; }
+  .barra { width: 120px; height: 1px; background: var(--linha); overflow: hidden; }
+  .barra i { display: block; height: 100%; background: var(--acento); transform: scaleX(0); transform-origin: left; animation: enche 3s linear forwards; }
+  @keyframes recolhe { to { clip-path: inset(0 0 100% 0); visibility: hidden; } }
+  @keyframes surge { to { opacity: 1; } }
+  @keyframes enche { to { transform: scaleX(1); } }
 
-  .botao { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; font-weight: 500; font-size: 16px; text-decoration: none; white-space: nowrap;
-    background: var(--acento); color: #fff; box-shadow: 0 1px 2px rgb(29 55 159 / .25), 0 8px 20px -8px rgb(39 71 201 / .55);
-    transition: transform 160ms var(--saida), background-color 160ms var(--saida); }
-  .botao:hover { background: var(--acento-escuro); }
-  .botao:active { transform: scale(0.97); }
-  .botao .ic { transition: transform 200ms var(--saida); }
-  .botao:hover .ic.seta { transform: translateX(3px); }
-  .botao.leve { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 1.5px var(--linha); }
-  .botao.leve:hover { background: var(--superficie); }
-  .nav .botao { min-height: 42px; padding: 0 18px; font-size: 15px; }
+  .previa { background: var(--escuro); color: var(--sobre-escuro); font-size: 12px; text-align: center; padding: 7px 16px; }
 
-  .heroi { display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(32px, 6vw, 80px); align-items: center; padding: clamp(32px, 6vw, 72px) 0 clamp(56px, 8vw, 104px); }
-  .heroi h1 { font-size: clamp(34px, 4.2vw, 54px); max-width: 18ch; text-wrap: pretty; }
-  .heroi .sub { margin-top: 20px; font-size: 19px; color: var(--suave); max-width: 44ch; }
-  .acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  /* Cabeçalho fino. */
+  .cabeca { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--fundo) 92%, transparent); backdrop-filter: blur(10px); transition: box-shadow .3s; }
+  .cabeca.rolou { box-shadow: 0 1px 0 var(--linha); }
+  .cabeca-dentro { display: flex; align-items: center; gap: 24px; min-height: 64px; }
+  .marca { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+  .logo { display: grid; place-items: center; width: 34px; height: 34px; flex: none; border: 1px solid var(--tinta); border-radius: 50%; font-size: 12px; font-weight: 500; letter-spacing: .04em; }
+  .marca strong { display: block; font-weight: 500; font-size: 15px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .marca small { display: block; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--suave); }
+  .menu { display: none; gap: 28px; margin-left: auto; font-size: 14px; }
+  .menu a { text-decoration: none; color: var(--suave); transition: color .2s; }
+  .menu a:hover, .menu a[aria-current] { color: var(--tinta); }
+  .cabeca .botao { margin-left: auto; }
+  @media (max-width: 520px) { .marca small { display: none; } .cabeca .botao span { display: none; } }
 
-  .retrato { position: relative; }
-  .foto { aspect-ratio: 4 / 5; border-radius: var(--raio); background:
-      radial-gradient(120% 80% at 80% 0%, #d3dbf7 0%, transparent 60%), linear-gradient(180deg, var(--acento-claro), #dfe3ee);
-    display: flex; justify-content: flex-end; align-items: flex-start; padding: 20px; }
-  .foto span { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: #5a6380; }
-  .ficha { position: absolute; left: clamp(-40px, -3vw, -16px); bottom: 28px; width: min(300px, 86%); margin: 0; padding: 18px 20px; display: grid; gap: 14px;
-    background: var(--superficie); border-radius: 16px; box-shadow: var(--sombra); font-size: 15px; }
-  .ficha dt { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--suave); }
-  .ficha dt .ic { color: var(--acento); }
-  .ficha dd { margin: 2px 0 0; font-weight: 500; }
+  /* Identificação no topo: nome e CRN. */
+  .id { display: grid; gap: 2px; margin-bottom: 28px; }
+  .id strong { font-weight: 500; font-size: 15px; }
+  .id span { font-size: 13px; color: var(--suave); }
 
-  section { padding: clamp(64px, 9vw, 112px) 0; }
-  h2 { font-size: clamp(30px, 3.6vw, 42px); }
+  /* Fotos: o quadro segue o formato da foto (o script mede); sem foto, um quadro sinalizado. */
+  .quadro { position: relative; aspect-ratio: var(--proporcao, 4 / 5); overflow: hidden; border-radius: var(--raio, 12px); background: var(--superficie); }
+  .foto, .foto-sobre { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+  .foto-topo, .foto-sobre-fig { max-width: var(--maximo, none); }
+  .foto-sobre-fig figcaption { margin-top: 12px; font-size: 13px; color: var(--suave); }
 
-  .servicos { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
-  .servicos h2 { position: sticky; top: 32px; max-width: 12ch; }
-  .lista { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--linha); }
-  .lista li { display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--linha); }
-  .lista h3 { font-size: 21px; letter-spacing: -0.02em; }
-  .lista p { color: var(--suave); }
+  /* Seções: espaço em branco e linhas finas, sem caixas. */
+  .sec { padding: 88px 0; }
+  .sec + .sec { border-top: 1px solid var(--linha); }
+  .rotulo { display: flex; gap: 12px; align-items: baseline; margin-bottom: 18px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--suave); }
+  .rotulo-n { color: var(--acento); font-variant-numeric: tabular-nums; }
+  .sec-topo .aparte { margin-top: 18px; }
+  .sec-grade { display: grid; gap: 40px; }
+  .lista li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; padding: 18px 0; border-top: 1px solid var(--linha); }
+  .lista li:last-child { border-bottom: 1px solid var(--linha); }
+  .n { font-size: 13px; color: var(--acento); font-variant-numeric: tabular-nums; padding-top: 3px; }
+  .fecho { margin-top: 28px; color: var(--suave); }
+  .trocas li { display: grid; gap: 6px; padding: 22px 0; border-top: 1px solid var(--linha); }
+  .trocas .frase { color: var(--suave); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--acento) 70%, transparent); text-decoration-thickness: 1px; }
+  .trocas .resposta { font-size: 18px; }
+  .passos { display: grid; gap: 32px; }
+  .passos li { display: grid; gap: 8px; }
+  .passos p { color: var(--suave); }
+  .servicos { display: grid; gap: 0; }
+  .servicos li { display: grid; gap: 8px; padding: 24px 0; border-top: 1px solid var(--linha); }
+  .servicos p { color: var(--suave); max-width: 56ch; }
+  .sobre-grade { display: grid; gap: 48px; align-items: start; }
+  .sobre h2 { margin-bottom: 24px; }
+  .citacao p { font-size: clamp(19px, 1rem + .7vw, 24px); line-height: 1.5; letter-spacing: -.01em; max-width: 34ch; }
+  .ficha { display: grid; gap: 0; margin: 32px 0; max-width: 420px; }
+  .ficha div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-top: 1px solid var(--linha); font-size: 14px; }
+  .ficha dt { color: var(--suave); }
+  .ficha dd { text-align: right; }
+  .nota { display: flex; align-items: baseline; gap: 12px; margin-top: 18px; color: var(--suave); font-size: 14px; }
+  .nota strong { font-size: 44px; font-weight: 400; letter-spacing: -.03em; color: var(--tinta); }
+  .relatos { display: grid; gap: 16px; }
+  .relato { padding: 24px; border: 1px dashed var(--linha); border-radius: 12px; }
+  .relato .espaco { color: var(--suave); }
+  .relato .quem { margin-top: 14px; font-size: 13px; color: var(--suave); }
+  .faq details { border-top: 1px solid var(--linha); }
+  .faq details:last-child { border-bottom: 1px solid var(--linha); }
+  .faq summary { display: flex; justify-content: space-between; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font-weight: 500; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .mais { position: relative; width: 12px; height: 12px; flex: none; margin-top: 6px; }
+  .mais::before, .mais::after { content: ""; position: absolute; inset: 5.5px 0 auto; height: 1px; background: currentColor; transition: transform .25s; }
+  .mais::after { transform: rotate(90deg); }
+  details[open] .mais::after { transform: rotate(0); }
+  .faq details p { padding: 0 0 22px; color: var(--suave); max-width: 60ch; }
+  .contato-grade { display: grid; gap: 48px; }
+  .contatos { display: grid; margin-top: 28px; max-width: 460px; }
+  .contatos li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-top: 1px solid var(--linha); font-size: 14px; }
+  .contatos .k { color: var(--suave); }
+  .contatos a { text-decoration: none; }
+  .formulario { display: grid; gap: 16px; align-content: start; }
+  .formulario label { display: grid; gap: 6px; font-size: 13px; color: var(--suave); }
+  .formulario input, .formulario select { width: 100%; padding: 13px 14px; border: 1px solid var(--linha); border-radius: 10px; background: transparent; color: var(--tinta); font: 400 16px/1.3 var(--texto); }
+  .formulario input:focus, .formulario select:focus { outline: none; border-color: var(--acento); }
+  .formulario [aria-invalid="true"] { border-color: #b3261e; }
+  .formulario .botao { margin-top: 6px; }
+  .form-nota, .form-aviso { font-size: 13px; color: var(--suave); }
+  .form-aviso:empty { display: none; }
+  .rodape { padding: 48px 0 96px; border-top: 1px solid var(--linha); font-size: 13px; color: var(--suave); }
+  .rodape-dentro { display: grid; gap: 6px; }
+  .rodape strong { color: var(--tinta); font-weight: 500; }
+  .legal { margin-top: 10px; max-width: 70ch; }
+  .zap-flutuante { position: fixed; right: 18px; bottom: 18px; z-index: 40; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: var(--acento); color: var(--sobre-acento); box-shadow: 0 8px 24px -10px rgba(0,0,0,.35); opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .3s, transform .3s; }
+  .zap-flutuante .ic { width: 24px; height: 24px; }
+  .mostra-zap .zap-flutuante { opacity: 1; transform: none; pointer-events: auto; }
 
-  .escuro { background: var(--tinta); color: #eef0f5; }
-  .escuro h2 { max-width: 16ch; }
-  .passos { counter-reset: passo; list-style: none; margin: 48px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
-  .passos li { counter-increment: passo; padding-top: 22px; border-top: 1px solid rgb(255 255 255 / .18); font-size: 18px; line-height: 1.45; color: #d9dde8; }
-  .passos li::before { content: counter(passo); display: block; margin-bottom: 14px; font-size: 14px; font-variant-numeric: tabular-nums; color: #9fb1f2; }
-
-  .sobre { max-width: 62ch; }
-  .sobre p { margin-top: 18px; font-size: 19px; color: var(--suave); }
-  .sobre .nota { font-size: 14px; }
-
-  .perguntas { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
-  details { border-bottom: 1px solid var(--linha); }
-  details:first-of-type { border-top: 1px solid var(--linha); }
-  summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; cursor: pointer; list-style: none; font-weight: 500; font-size: 18px; }
-  summary::-webkit-details-marker { display: none; }
-  summary .ic { color: var(--acento); transition: transform 200ms var(--saida); }
-  details[open] summary .ic { transform: rotate(45deg); }
-  details p { padding: 0 0 22px; color: var(--suave); max-width: 60ch; }
-
-  .final { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: center; padding: clamp(32px, 5vw, 56px); border-radius: var(--raio); background: var(--superficie); box-shadow: var(--sombra); }
-  .final h2 { font-size: clamp(28px, 3.2vw, 38px); }
-  .final .onde { margin-top: 14px; display: flex; gap: 8px; color: var(--suave); }
-  .final .onde .ic { margin-top: .25em; color: var(--acento); }
-  .final .acoes { margin-top: 0; justify-content: flex-end; }
-
-  footer { padding: 40px 0 56px; font-size: 14px; color: var(--suave); }
-  footer .largura { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; }
-  footer a { display: inline-flex; align-items: center; gap: 6px; }
-
-  .flutuante { display: none; }
-
-  /* Um único momento de animação: a abertura do topo. */
-  @media (prefers-reduced-motion: no-preference) {
-    .entra { animation: entra 700ms var(--saida) both; animation-delay: calc(var(--i, 0) * 70ms); }
-    .retrato.entra { animation-duration: 900ms; }
-    @keyframes entra { from { opacity: 0; transform: translateY(14px); filter: blur(6px); } }
+  /* Entrada suave ao rolar (só depois da abertura). */
+  .js [data-revela] { opacity: 0; transform: translateY(12px); transition: opacity .7s ease var(--d, 0s), transform .7s ease var(--d, 0s); }
+  .js [data-revela].in { opacity: 1; transform: none; }
+  .js .entra { opacity: 0; transform: translateY(10px); }
+  .pronto .entra { opacity: 1; transform: none; transition: opacity .8s ease, transform .8s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition: none !important; scroll-behavior: auto !important; }
+    .abertura { display: none; }
+    .js [data-revela], .js .entra { opacity: 1; transform: none; }
   }
 
-  @media (max-width: 860px) {
-    .heroi, .servicos, .perguntas, .final { grid-template-columns: 1fr; }
-    .heroi { padding-top: 24px; }
-    .retrato { max-width: 440px; }
-    .ficha { left: 16px; bottom: 16px; }
-    .servicos h2 { position: static; }
-    .lista li { grid-template-columns: 1fr; gap: 8px; }
-    .passos { grid-template-columns: 1fr 1fr; }
-    .final .acoes { justify-content: flex-start; }
-    .nav .botao { display: none; }
-    .flutuante { display: inline-flex; position: fixed; right: 16px; bottom: 16px; z-index: 10; }
-    footer { padding-bottom: 104px; }
+  @media (min-width: 900px) {
+    .menu { display: flex; }
+    .cabeca .botao { margin-left: 0; }
+    .sec { padding: 128px 0; }
+    .contato-grade { grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: 96px; }
   }
-  @media (max-width: 520px) {
-    body { font-size: 16px; }
-    .passos { grid-template-columns: 1fr; }
-    .acoes .botao { flex: 1 1 100%; justify-content: center; }
+
+  
+  .topo { padding: 56px 0 72px; }
+  .topo .foto-topo { width: 100%; max-width: none; margin-top: 56px; padding: clamp(16px, 4vw, 48px); background: var(--superficie); border-radius: 24px; }
+  /* A altura fica limitada pela largura (largura = altura x formato da foto): a foto aparece inteira, sem corte. */
+  .topo .quadro { width: min(100%, calc(64svh * var(--proporcao, .8))); margin-inline: auto; border-radius: 12px; }
+  .moldura-texto { display: grid; gap: 28px; }
+  .moldura-texto .acoes { margin-top: 24px; }
+  .quadro { border-radius: 20px; }
+  .servicos { gap: 12px; }
+  .servicos li { padding: 28px; border: 1px solid var(--linha); border-radius: 16px; }
+  .relato { border-style: solid; border-radius: 16px; }
+  .passos li { padding: 28px; background: var(--superficie); border-radius: 16px; }
+  @media (min-width: 900px) {
+    .moldura-texto { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 72px; align-items: end; }
+    .sec-topo { max-width: 640px; }
+    .servicos, .passos, .relatos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .faq { columns: 2; column-gap: 56px; }
+    .faq details { break-inside: avoid; }
+    .sobre-grade { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 80px; align-items: center; }
   }
-</style>
+  </style>
 </head>
-<body>
+<body class="modelo-lavanda layout-moldura">
+
+<!-- Abertura: dura 3 segundos (a linha enche) e depois se recolhe para cima, revelando o site. -->
+<div class="abertura" aria-hidden="true">
+  <div class="abertura-centro"><p>Nutricionista em Belo Horizonte l Dra. Cleonice Soares</p><span class="barra"><i></i></span></div>
+</div>
+
 <div class="previa">Prévia de demonstração criada para Nutricionista em Belo Horizonte l Dra. Cleonice Soares. Não é o site oficial.</div>
-<header class="largura nav">
-  <a class="marca" href="#topo">Nutricionista em Belo Horizonte l Dra. Cleonice Soares</a>
-  <a class="botao" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.">Agendar consulta</a>
-</header>
-<main id="topo">
-  <div class="largura heroi">
-    <div>
-      <h1 class="entra">Alimentação que cabe na sua rotina, com acompanhamento de perto.</h1>
-      <p class="sub entra" style="--i:1">Nutricionista em Belo Horizonte/MG. Atendimento com um plano feito para a sua rotina, no consultório ou online.</p>
-      <div class="acoes entra" style="--i:2">
-        <a class="botao" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.">Agendar consulta <svg class="ic seta" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
-        <a class="botao leve" href="#como-funciona">Como funciona</a>
-      </div>
-    </div>
-    <div class="retrato entra" style="--i:3">
-      <div class="foto"><span><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM48,48H208v77.38l-24.69-24.7a16,16,0,0,0-22.62,0L53.37,208H48ZM208,208H76l96-96,36,36v60ZM96,120A24,24,0,1,0,72,96,24,24,0,0,0,96,120Zm0-32a8,8,0,1,1-8,8A8,8,0,0,1,96,88Z"/></svg>Espaço para a sua foto</span></div>
-      <dl class="ficha"><div><dt><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg>Onde</dt><dd>Nutricionista em Belo Horizonte l Dra. Cleonice Soares - Av. Afonso Pena - Centro, Belo Horizonte - MG, 30130-002</dd></div><div><dt><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>WhatsApp</dt><dd>(85) 99267-9860</dd></div><div><dt><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/></svg>Registro</dt><dd>CRN (número a preencher)</dd></div></dl>
-    </div>
+
+<header class="cabeca" data-cabeca>
+  <div class="largura cabeca-dentro">
+    <!-- LOGO: troque o monograma pelo arquivo do logo na raiz do site, por exemplo uma tag img com src="./logo.svg" e alt="Logo de Nutricionista em Belo Horizonte l Dra. Cleonice Soares".
+         A cor de acento (--acento, no :root) deve combinar com o logo. -->
+    <a class="marca" href="#inicio"><span class="logo" aria-hidden="true">EB</span><span><strong>Nutricionista em Belo Horizonte l Dra. Cleonice Soares</strong><small>Nutricionista · CRN a preencher</small></span></a>
+    <nav class="menu" aria-label="Seções"><a href="#dores">Para quem</a><a href="#escuta">Como eu cuido</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+    <a class="botao pequeno" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar</span></a>
   </div>
+</header>
 
-  <section>
-    <div class="largura servicos">
-      <h2>Como posso te ajudar</h2>
-      <ul class="lista">
-        <li><h3>Consulta nutricional</h3><p>Avaliação completa dos seus hábitos, histórico e objetivos, com um plano alimentar feito para você.</p></li>
-        <li><h3>Atendimento online</h3><p>Consultas por vídeo para quem prefere a praticidade de ser atendido de casa.</p></li>
-        <li><h3>Acompanhamento</h3><p>Retornos para ajustar o plano conforme a sua rotina e as suas preferências.</p></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="escuro" id="como-funciona">
-    <div class="largura">
-      <h2>Do primeiro contato ao plano no seu dia a dia</h2>
-      <ol class="passos">
-        <li>Você agenda pelo site ou pelo WhatsApp.</li>
-        <li>Na primeira consulta conversamos sobre sua rotina, saúde e objetivos.</li>
-        <li>Você recebe um plano alimentar individualizado e orientações práticas.</li>
-        <li>Nos retornos ajustamos o plano juntos.</li>
-      </ol>
-    </div>
-  </section>
-
-  <section>
-    <div class="largura sobre">
-      <h2>Sobre Nutricionista em Belo Horizonte l Dra. Cleonice Soares</h2>
-      <p>Aqui entra a sua história: formação, forma de atender e o que faz o seu consultório diferente.</p>
-      <p class="nota">Na versão final, este texto é escrito com você.</p>
-    </div>
-  </section>
-
-  <section style="padding-top:0">
-    <div class="largura perguntas">
-      <h2>Perguntas frequentes</h2>
-      <div>
-        <details><summary>Atende online?<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>Sim, com a mesma atenção da consulta presencial.</p></details>
-        <details><summary>Como faço para agendar?<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>Pelo botão de agendamento ou pelo WhatsApp, no horário que for melhor para você.</p></details>
-        <details><summary>Preciso levar exames?<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></summary><p>Se tiver exames recentes, traga. Se não tiver, avaliamos na consulta se são necessários.</p></details>
+<main id="inicio">
+  <section class="topo" aria-labelledby="titulo-heroi">
+    <div class="largura topo-dentro">
+      <div class="moldura-texto">
+        <div><p class="id"><strong>Nutricionista em Belo Horizonte l Dra. Cleonice Soares</strong><span>Nutricionista · CRN a preencher · Belo Horizonte/MG</span></p><h1 id="titulo-heroi" class="entra">Uma alimentação que <em>entende você</em> antes de mudar o seu prato.</h1></div>
+        <div><p class="lide">Um acompanhamento que começa pela sua história, pela sua rotina e pelo que você gosta de comer. Nada de cardápio engessado.</p><div class="acoes"><a class="botao" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar consulta pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar consulta</span></a><a class="link-calmo" href="#acompanhamento">Como funciona</a></div><a class="nota-google" href="https://www.google.com/maps/place/Nutricionista+em+Belo+Horizonte+l+Dra.+Cleonice+Soares/data=!4m7!3m6!1s0xa69946cffa5b77:0x997a701ccf93ca2b!8m2!3d-19.920671!4d-43.9375458!16s%2Fg%2F11xrz9_pp1!19sChIJd1v6z0aZpgARK8qTzxxwepk?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkzMC4wIJJjKgBIAVAD&amp;rclk=1"><strong>5,0</strong> no Google · 2 avaliações</a></div>
       </div>
+      <figure class="foto-topo">
+        <!-- FOTO 1 (topo): retrato da profissional, rosto bem visível. Troque o src pelo arquivo, ex.: ./foto-hero.jpg -->
+        <div class="quadro"><img class="foto sem-foto" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20800%22%3E%3Crect%20width%3D%22600%22%20height%3D%22800%22%20fill%3D%22%23ecebf3%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22410%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22300%22%20font-size%3D%22120%22%20fill%3D%22%23605c71%22%20opacity%3D%22.45%22%3EEB%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22490%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20letter-spacing%3D%224%22%20fill%3D%22%23605c71%22%3EFOTO%201%3A%20TOPO%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Espaço reservado para foto 1: topo de Nutricionista em Belo Horizonte l Dra. Cleonice Soares"></div>
+      </figure>
     </div>
   </section>
 
-  <section style="padding-top:0" id="contato">
-    <div class="largura final">
-      <div>
-        <h2>Vamos marcar a sua consulta?</h2>
-        <p class="onde"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg><span>Nutricionista em Belo Horizonte l Dra. Cleonice Soares - Av. Afonso Pena - Centro, Belo Horizonte - MG, 30130-002 · <a href="https://www.google.com/maps/place/Nutricionista+em+Belo+Horizonte+l+Dra.+Cleonice+Soares/data=!4m7!3m6!1s0xa69946cffa5b77:0x997a701ccf93ca2b!8m2!3d-19.920671!4d-43.9375458!16s%2Fg%2F11xrz9_pp1!19sChIJd1v6z0aZpgARK8qTzxxwepk?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkzMC4wIJJjKgBIAVAD&amp;rclk=1">Ver no Google Maps</a></span></p>
+  <section class="sec escuta" id="escuta" aria-labelledby="titulo-escuta">
+    <div class="largura sec-grade">
+      <header class="sec-topo"><p class="rotulo"><span class="rotulo-n">01</span><span class="rotulo-t">Como eu cuido</span></p><h2 id="titulo-escuta" data-revela>Antes de mudar o seu prato, eu quero entender a sua história.</h2><p class="aparte" data-revela>Na primeira consulta eu escuto a sua rotina, os seus horários, o que você gosta de comer e o que já tentou. É dessa conversa que nasce o acompanhamento: um plano que respeita a sua vida e muda junto com ela.</p></header>
+      <div class="sec-corpo"><ul class="trocas"><li data-revela><p class="frase">“Segunda-feira eu começo de novo.”</p><p class="resposta">Aqui não existe recomeçar do zero: a gente ajusta o que você já faz.</p></li><li data-revela><p class="frase">“Esse alimento é proibido para mim.”</p><p class="resposta">Nenhum alimento vira inimigo. Ele ganha lugar e medida no seu dia.</p></li><li data-revela><p class="frase">“Preciso compensar o fim de semana.”</p><p class="resposta">O fim de semana faz parte do plano, não é um erro para pagar depois.</p></li></ul></div>
+    </div>
+  </section>
+  <section class="sec dores" id="dores" aria-labelledby="titulo-dores">
+    <div class="largura sec-grade">
+      <header class="sec-topo"><p class="rotulo"><span class="rotulo-n">02</span><span class="rotulo-t">Para quem</span></p><h2 id="titulo-dores" data-revela>Talvez você tenha chegado aqui porque…</h2><p class="aparte" data-revela>Para quem quer cuidar da alimentação de um jeito que dure, e não com mais uma dieta que termina no meio do caminho.</p></header>
+      <div class="sec-corpo"><ol class="lista"><li data-revela><span class="n">01</span><p>Você já começou várias dietas e, em algum momento, desistiu porque era sofrido demais.</p></li><li data-revela><span class="n">02</span><p>A culpa aparece depois de cada doce, de cada fim de semana, de cada jantar fora.</p></li><li data-revela><span class="n">03</span><p>A ansiedade decide o que você come mais do que a própria fome.</p></li><li data-revela><span class="n">04</span><p>A rotina é corrida e você precisa de algo prático, que caiba na agenda de verdade.</p></li><li data-revela><span class="n">05</span><p>Cada lugar diz uma coisa sobre comida e você já não sabe em quem acreditar.</p></li></ol>
+      <p class="fecho" data-revela>Se você se reconheceu, a primeira conversa já é um bom começo. <a class="link-zap" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Me%20reconheci%20no%20seu%20site%20e%20queria%20conversar%20sobre%20a%20minha%20alimenta%C3%A7%C3%A3o.">Me conte pelo WhatsApp<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></p></div>
+    </div>
+  </section>
+  <section class="sec formatos" id="formatos" aria-labelledby="titulo-formatos">
+    <div class="largura sec-grade">
+      <header class="sec-topo"><p class="rotulo"><span class="rotulo-n">03</span><span class="rotulo-t">Atendimento</span></p><h2 id="titulo-formatos" data-revela>Formas de atendimento.</h2><p class="aparte" data-revela>Tudo começa na primeira consulta. Depois, o acompanhamento segue o seu momento.</p></header>
+      <div class="sec-corpo"><ul class="servicos"><li data-revela><h3>Consulta nutricional</h3><p>Avaliação completa dos seus hábitos, histórico e objetivos, com um plano alimentar feito para você.</p><a class="link-zap" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Queria%20saber%20mais%20sobre%3A%20Consulta%20nutricional.">Perguntar no WhatsApp<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li><li data-revela><h3>Atendimento online</h3><p>Consultas por vídeo para quem prefere a praticidade de ser atendido de casa.</p><a class="link-zap" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Queria%20saber%20mais%20sobre%3A%20Atendimento%20online.">Perguntar no WhatsApp<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li><li data-revela><h3>Acompanhamento</h3><p>Retornos para ajustar o plano conforme a sua rotina e as suas preferências.</p><a class="link-zap" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Queria%20saber%20mais%20sobre%3A%20Acompanhamento.">Perguntar no WhatsApp<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></li></ul></div>
+    </div>
+  </section>
+  <section class="sec etapas" id="acompanhamento" aria-labelledby="titulo-etapas">
+    <div class="largura sec-grade">
+      <header class="sec-topo"><p class="rotulo"><span class="rotulo-n">04</span><span class="rotulo-t">O acompanhamento</span></p><h2 id="titulo-etapas" data-revela>Três passos, no seu ritmo.</h2></header>
+      <div class="sec-corpo"><ol class="passos"><li data-revela><span class="n">01</span><h3>Escuta da sua história</h3><p>Entender hábitos, horários, emoções e o que já funcionou antes de propor qualquer mudança.</p></li><li data-revela><span class="n">02</span><h3>Um plano que cabe no seu dia</h3><p>Refeições possíveis, com comida de verdade e os alimentos de que você gosta, sem cardápio engessado.</p></li><li data-revela><span class="n">03</span><h3>Ajustes sem culpa</h3><p>Retornos para adaptar o plano à vida real: viagens, festas e semanas difíceis entram na conta.</p></li></ol></div>
+    </div>
+  </section>
+  <section class="sec sobre" id="sobre" aria-labelledby="titulo-sobre">
+    <div class="largura sobre-grade">
+      <div class="sobre-texto">
+        <p class="rotulo"><span class="rotulo-n">05</span><span class="rotulo-t">Sobre</span></p>
+        <h2 id="titulo-sobre" data-revela>Nutricionista em Belo Horizonte l Dra. Cleonice Soares</h2>
+        <blockquote class="citacao" data-revela><p>Acredito que ninguém come só com a boca. Comemos com a memória, com o cansaço do dia, com a pressa e com as emoções. Por isso o meu trabalho começa entendendo quem está à mesa, para que a mudança faça sentido e permaneça.</p></blockquote>
+        <dl class="ficha" data-revela><div><dt>CRN</dt><dd>Número a preencher</dd></div><div><dt>Atendimento</dt><dd>Presencial em Belo Horizonte/MG e online</dd></div></dl>
+        <div data-revela><a class="botao secundario" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Falar comigo no WhatsApp pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Falar comigo no WhatsApp</span></a></div>
       </div>
-      <div class="acoes">
-        <a class="botao" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.">Agendar consulta <svg class="ic seta" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+      <figure class="foto-sobre-fig" data-revela>
+        <!-- FOTO 2 (Sobre mim): foto mais espontânea, no consultório ou trabalhando. Troque o src, ex.: ./foto-sobre.jpg -->
+        <div class="quadro"><img class="foto-sobre sem-foto" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20800%22%3E%3Crect%20width%3D%22600%22%20height%3D%22800%22%20fill%3D%22%23ecebf3%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22410%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22300%22%20font-size%3D%22120%22%20fill%3D%22%23605c71%22%20opacity%3D%22.45%22%3EEB%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22490%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20letter-spacing%3D%224%22%20fill%3D%22%23605c71%22%3EFOTO%202%3A%20SOBRE%20MIM%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Espaço reservado para foto 2: sobre mim de Nutricionista em Belo Horizonte l Dra. Cleonice Soares"></div>
+        <figcaption>Nutricionista em Belo Horizonte l Dra. Cleonice Soares · CRN a preencher</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="sec relatos-sec" id="avaliacoes" aria-labelledby="titulo-av">
+    <div class="largura sec-grade">
+      <header class="sec-topo"><p class="rotulo"><span class="rotulo-n">06</span><span class="rotulo-t">Avaliações</span></p><h2 id="titulo-av" data-revela>O que dizem sobre o atendimento.</h2>
+        <p class="nota" data-revela><strong>5,0</strong><span>de 5 · 2 avaliações no Google</span></p>
+        <p class="aparte" data-revela>Relatos sobre a escuta e o acolhimento, sem falar de resultados, como pede o conselho. <a class="link-calmo" href="https://www.google.com/maps/place/Nutricionista+em+Belo+Horizonte+l+Dra.+Cleonice+Soares/data=!4m7!3m6!1s0xa69946cffa5b77:0x997a701ccf93ca2b!8m2!3d-19.920671!4d-43.9375458!16s%2Fg%2F11xrz9_pp1!19sChIJd1v6z0aZpgARK8qTzxxwepk?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkzMC4wIJJjKgBIAVAD&amp;rclk=1">Ver no Google</a></p></header>
+      <div class="sec-corpo"><ul class="relatos" aria-label="Relatos de pacientes"><li class="relato" data-revela><p class="espaco">Espaço para um relato real de paciente no Google sobre como foi a primeira consulta.</p><p class="quem">Avaliação do Google · exemplo</p></li><li class="relato" data-revela><p class="espaco">Espaço para um relato real de paciente no Google sobre a forma como foi ouvido(a).</p><p class="quem">Avaliação do Google · exemplo</p></li><li class="relato" data-revela><p class="espaco">Espaço para um relato real de paciente no Google sobre o acompanhamento entre as consultas.</p><p class="quem">Avaliação do Google · exemplo</p></li></ul></div>
+    </div>
+  </section>
+  <section class="sec perguntas" id="perguntas" aria-labelledby="titulo-perg">
+    <div class="largura sec-grade">
+      <header class="sec-topo"><p class="rotulo"><span class="rotulo-n">07</span><span class="rotulo-t">Dúvidas</span></p><h2 id="titulo-perg" data-revela>Perguntas frequentes</h2></header>
+      <div class="sec-corpo"><div class="faq"><details data-revela><summary>Atende online?<span class="mais" aria-hidden="true"></span></summary><p>Sim, com a mesma atenção da consulta presencial.</p></details><details data-revela><summary>Como faço para agendar?<span class="mais" aria-hidden="true"></span></summary><p>Pelo botão de agendamento ou pelo WhatsApp, no horário que for melhor para você.</p></details><details data-revela><summary>Preciso levar exames?<span class="mais" aria-hidden="true"></span></summary><p>Se tiver exames recentes, traga. Se não tiver, avaliamos na consulta se são necessários.</p></details></div>
+      <p class="fecho" data-revela>Ficou alguma dúvida? <a class="link-zap" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Fiquei%20com%20uma%20d%C3%BAvida%20sobre%20a%20consulta.">Pergunte no WhatsApp<svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M220.24,132.24l-72,72a6,6,0,0,1-8.48-8.48L201.51,134H40a6,6,0,0,1,0-12H201.51L139.76,60.24a6,6,0,0,1,8.48-8.48l72,72A6,6,0,0,1,220.24,132.24Z"/></svg></a></p></div>
+    </div>
+  </section>
+  <section class="sec contato" id="contato" aria-labelledby="titulo-contato">
+    <div class="largura contato-grade">
+      <div class="contato-texto">
+        <p class="rotulo"><span class="rotulo-n">08</span><span class="rotulo-t">Contato</span></p>
+        <h2 id="titulo-contato" data-revela>Vamos começar <em>com calma</em>?</h2>
+        <p class="aparte" data-revela>Me conte um pouco sobre você e escolha o formato que cabe na sua rotina: online, de onde estiver, ou presencial no consultório.</p>
+        <ul class="contatos" data-revela><li><span class="k">WhatsApp</span><a href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.">(85) 99267-9860</a></li><li><span class="k">Consultório</span><span>Nutricionista em Belo Horizonte l Dra. Cleonice Soares - Av. Afonso Pena - Centro, Belo Horizonte - MG, 30130-002</span></li><li><span class="k">Mapa</span><a href="https://www.google.com/maps/place/Nutricionista+em+Belo+Horizonte+l+Dra.+Cleonice+Soares/data=!4m7!3m6!1s0xa69946cffa5b77:0x997a701ccf93ca2b!8m2!3d-19.920671!4d-43.9375458!16s%2Fg%2F11xrz9_pp1!19sChIJd1v6z0aZpgARK8qTzxxwepk?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MDkzMC4wIJJjKgBIAVAD&amp;rclk=1">Ver no Google Maps</a></li><li><span class="k">Atendimento</span><span>Presencial e online</span></li></ul>
       </div>
+      <form class="formulario" data-form data-numero="5585992679860" data-revela novalidate>
+        <label>Seu nome<input name="nome" autocomplete="name" required></label>
+        <label>Seu WhatsApp<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" required></label>
+        <label>Qual o objetivo da consulta?<select name="objetivo" required><option value="">Escolha uma opção</option><option>Reeducação alimentar</option><option>Melhorar a relação com a comida</option><option>Cuidar da saúde e dos exames</option><option>Organizar a alimentação na rotina</option><option>Outro objetivo</option></select></label>
+        <button class="botao" type="submit"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Continuar no WhatsApp</span></button>
+        <p class="form-nota">Abre o WhatsApp com a mensagem pronta. Nada fica salvo neste site.</p>
+        <p class="form-aviso" role="status" data-aviso></p>
+      </form>
     </div>
   </section>
 </main>
-<footer>
-  <div class="largura">
-    <p><strong>Nutricionista em Belo Horizonte l Dra. Cleonice Soares</strong> · Nutricionista, CRN (número a preencher)</p>
-    <p>
-      <a href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>(85) 99267-9860</a>
-      
-    </p>
+
+<footer class="rodape">
+  <div class="largura rodape-dentro">
+    <p><strong>Nutricionista em Belo Horizonte l Dra. Cleonice Soares</strong> · Nutricionista · CRN a preencher</p>
+    <p>Nutricionista em Belo Horizonte/MG · atendimento presencial e online</p>
+    <p class="legal">Os conteúdos deste site são informativos e não substituem uma avaliação individual. Nutricionista em Belo Horizonte l Dra. Cleonice Soares · CRN a preencher.</p>
   </div>
 </footer>
-<a class="botao flutuante" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta."><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>Agendar consulta</a>
+<a class="zap-flutuante" href="https://wa.me/5585992679860?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg></a>
+<script>(function () {
+  var raiz = document.documentElement, corpo = document.body;
+  var reduz = !window.matchMedia || matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function todos(s) { return Array.prototype.slice.call(document.querySelectorAll(s)); }
+  raiz.classList.add("js");
+  setTimeout(function () { raiz.classList.add("pronto"); revelar(); }, 3000);
+
+  var cabeca = document.querySelector("[data-cabeca]"), heroi = document.querySelector(".topo");
+  function rolou() {
+    var y = window.scrollY;
+    if (cabeca) cabeca.classList.toggle("rolou", y > 20);
+    if (heroi) corpo.classList.toggle("mostra-zap", y > heroi.offsetHeight * 0.6);
+  }
+  rolou();
+
+  // Foto do lead: o quadro pega o formato da foto (deitada, quadrada ou em pé), para não esticar nem cortar a pessoa.
+  todos("img.foto, img.foto-sobre").forEach(function (img) {
+    if (img.classList.contains("sem-foto")) return;
+    function medir() {
+      var w = img.naturalWidth, h = img.naturalHeight;
+      if (!w || !h) return;
+      var r = Math.min(Math.max(w / h, 0.75), 1.5);
+      img.parentNode.style.setProperty("--proporcao", String(r));
+      var figura = img.closest("figure");
+      if (!figura) return;
+      figura.classList.toggle("deitada", r > 1.15);
+      figura.classList.toggle("pequena", w < 200);
+      figura.style.setProperty("--maximo", Math.max(w * 2, 240) + "px");
+    }
+    if (img.complete) medir(); else img.addEventListener("load", medir);
+  });
+  window.addEventListener("scroll", rolou, { passive: true });
+
+  var links = todos(".menu a");
+  if (window.IntersectionObserver && links.length) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        links.forEach(function (a) { a.toggleAttribute("aria-current", a.getAttribute("href") === "#" + e.target.id); });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    todos("main section[id]").forEach(function (s) { io.observe(s); });
+  }
+
+  function revelar() {
+    var itens = todos("[data-revela]");
+    if (reduz || !window.IntersectionObserver) { itens.forEach(function (el) { el.classList.add("in"); }); return; }
+    var obs = new IntersectionObserver(function (es) {
+      var n = 0;
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.style.setProperty("--d", Math.min(n++, 4) * 0.08 + "s");
+        e.target.classList.add("in");
+        obs.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    itens.forEach(function (el) { obs.observe(el); });
+    var nota = document.querySelector("[data-nota]");
+    if (nota) {
+      var alvo = parseFloat(nota.getAttribute("data-nota"));
+      new IntersectionObserver(function (es, o) {
+        if (!es[0].isIntersecting) return;
+        o.disconnect();
+        var t0 = performance.now();
+        (function anda(t) {
+          var p = Math.min(1, (t - t0) / 1200);
+          nota.textContent = (alvo * (1 - Math.pow(1 - p, 3))).toFixed(1).replace(".", ",");
+          if (p < 1) requestAnimationFrame(anda);
+        })(t0);
+      }, { threshold: 0.6 }).observe(nota);
+    }
+  }
+
+  var form = document.querySelector("[data-form]");
+  if (form) form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var aviso = form.querySelector("[data-aviso]"), falta = null;
+    ["nome", "whatsapp", "objetivo"].forEach(function (n) {
+      var campo = form.elements[n], vazio = !campo.value.trim();
+      campo.setAttribute("aria-invalid", vazio ? "true" : "false");
+      if (vazio && !falta) falta = campo;
+    });
+    if (falta) { aviso.textContent = "Preencha os três campos para continuar."; falta.focus(); return; }
+    var numero = form.getAttribute("data-numero");
+    if (!numero) { aviso.textContent = "Nesta prévia o envio está desligado. No site publicado, este botão abre o WhatsApp."; return; }
+    aviso.textContent = "";
+    var texto = "Olá! Meu nome é " + form.elements.nome.value.trim() + ". Meu WhatsApp é " + form.elements.whatsapp.value.trim() + ". Gostaria de agendar uma consulta. Objetivo: " + form.elements.objetivo.value + ".";
+    window.location.href = "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
+  });
+})();</script>
 </body>
 </html>
