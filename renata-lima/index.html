@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<meta name="modelo-previa" content="minimalista-1">
+<meta name="modelo-previa" content="minimalista-2">
 <title>Nutricionista Renata Lima · Nutricionista em governador valadares/MG | Consulta presencial e online</title>
 <meta name="description" content="Nutricionista Renata Lima, nutricionista em governador valadares/MG. Consulta e acompanhamento nutricional individual, presencial e online, com foco em reeducação alimentar, saúde e qualidade de vida.">
 <meta name="theme-color" content="#f7f7f2">
@@ -92,6 +92,19 @@
   .foto-topo, .foto-sobre-fig { max-width: var(--maximo, none); }
   .foto-sobre-fig figcaption { margin-top: 12px; font-size: 13px; color: var(--suave); }
 
+  /* Topo: texto e foto lado a lado no computador; no celular a foto desce para baixo do texto. */
+  .topo-par { display: grid; gap: 48px; }
+  .topo-foto { display: grid; justify-items: center; }
+  .topo-foto .foto-topo { width: 100%; }
+  /* A foto aparece inteira e sem passar da altura da tela (largura = altura x formato da foto). */
+  .topo .quadro { width: min(100%, calc(70svh * var(--proporcao, .8))); margin-inline: auto; }
+  @media (min-width: 900px) {
+    .topo-par { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; align-items: center; }
+    .topo-par.foto-esquerda { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+    .topo-foto { justify-items: end; }
+    .foto-esquerda .topo-foto { justify-items: start; }
+  }
+
   /* Seções: espaço em branco e linhas finas, sem caixas. */
   .sec { padding: 88px 0; }
   .sec + .sec { border-top: 1px solid var(--linha); }
@@ -174,13 +187,11 @@
   }
 
   
-  .topo-dentro { display: grid; gap: 40px; width: min(1120px, calc(100% - 40px)); margin-inline: auto; padding: 48px 0 80px; }
-  .topo-foto .foto-topo { width: min(100%, 460px); }
+  .topo-dentro { width: min(1120px, calc(100% - 40px)); margin-inline: auto; padding: 48px 0 80px; }
   .topo .lide { margin-top: 24px; }
   .quadro { border-radius: 4px; }
   @media (min-width: 900px) {
-    .topo-dentro { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 64px; min-height: calc(100svh - 100px); padding: 40px 0; }
-    .topo-foto { justify-self: end; width: 100%; display: grid; justify-items: end; }
+    .topo-par { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: calc(100svh - 100px); padding: 40px 0; }
     .sec-grade { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 64px; align-items: start; }
     .sec-topo { position: sticky; top: 104px; }
     .sobre-grade { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 80px; }
@@ -210,7 +221,7 @@
 
 <main id="inicio">
   <section class="topo" aria-labelledby="titulo-heroi">
-    <div class="topo-dentro">
+    <div class="topo-dentro topo-par">
       <div class="topo-texto">
         <p class="id"><strong>Nutricionista Renata Lima</strong><span>Nutricionista · CRN a preencher · governador valadares/MG</span></p>
         <h1 id="titulo-heroi" class="entra">Comer bem pode ser <em>leve</em>, sem dieta sofrida e sem culpa.</h1>
