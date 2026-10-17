@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<meta name="modelo-previa" content="minimalista-1">
+<meta name="modelo-previa" content="minimalista-2">
 <title>Nutricionista Leticia Filgueira · Nutricionista em Taubaté/SP | Consulta presencial e online</title>
 <meta name="description" content="Nutricionista Leticia Filgueira, nutricionista em Taubaté/SP. Consulta e acompanhamento nutricional individual, presencial e online, com foco em reeducação alimentar, saúde e qualidade de vida.">
 <meta name="theme-color" content="#f3f6f7">
@@ -92,6 +92,19 @@
   .foto-topo, .foto-sobre-fig { max-width: var(--maximo, none); }
   .foto-sobre-fig figcaption { margin-top: 12px; font-size: 13px; color: var(--suave); }
 
+  /* Topo: texto e foto lado a lado no computador; no celular a foto desce para baixo do texto. */
+  .topo-par { display: grid; gap: 48px; }
+  .topo-foto { display: grid; justify-items: center; }
+  .topo-foto .foto-topo { width: 100%; }
+  /* A foto aparece inteira e sem passar da altura da tela (largura = altura x formato da foto). */
+  .topo .quadro { width: min(100%, calc(70svh * var(--proporcao, .8))); margin-inline: auto; }
+  @media (min-width: 900px) {
+    .topo-par { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; align-items: center; }
+    .topo-par.foto-esquerda { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+    .topo-foto { justify-items: end; }
+    .foto-esquerda .topo-foto { justify-items: start; }
+  }
+
   /* Seções: espaço em branco e linhas finas, sem caixas. */
   .sec { padding: 88px 0; }
   .sec + .sec { border-top: 1px solid var(--linha); }
@@ -177,8 +190,7 @@
   .cabeca-dentro { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
   .topo-dentro { width: min(1120px, calc(100% - 40px)); margin-inline: auto; padding: 56px 0 80px; }
   .topo h1 { font-size: clamp(36px, 1.2rem + 3.8vw, 64px); max-width: 16ch; }
-  .lateral-linha { display: grid; gap: 40px; margin-top: 48px; }
-  .lateral-linha .foto-topo { width: min(100%, 340px); }
+  .topo .lide { margin-top: 24px; }
   .quadro { border-radius: 999px 999px 12px 12px; }
   .foto-sobre-fig .quadro { border-radius: 12px; }
   @media (min-width: 1100px) {
@@ -191,7 +203,6 @@
     .cabeca .botao { margin: 0; }
     .previa { position: relative; z-index: 60; }
     .largura, .topo-dentro { width: min(880px, calc(100% - 96px)); }
-    .lateral-linha { grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; align-items: end; }
     .sec-grade { grid-template-columns: 1fr; gap: 40px; }
     .passos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .sobre-grade { grid-template-columns: minmax(0, 1fr) 280px; gap: 56px; }
@@ -220,15 +231,15 @@
 
 <main id="inicio">
   <section class="topo" aria-labelledby="titulo-heroi">
-    <div class="topo-dentro">
-      <h1 id="titulo-heroi" class="entra">Uma alimentação que <em>entende você</em> antes de mudar o seu prato.</h1>
-      <div class="lateral-linha">
-        <div><p class="lide">Um acompanhamento que começa pela sua história, pela sua rotina e pelo que você gosta de comer. Nada de cardápio engessado.</p><div class="acoes"><a class="botao" href="https://wa.me/5512997526518?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar consulta pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar consulta</span></a><a class="link-calmo" href="#acompanhamento">Como funciona</a></div><a class="nota-google" href="https://www.google.com/maps/place/Nutricionista+Leticia+Filgueira/data=!4m7!3m6!1s0x94ccf9b9fe37c687:0xa9063a768c1028e6!8m2!3d-23.0248875!4d-45.574961!16s%2Fg%2F11zw_8332f!19sChIJh8Y3_rn5zJQR5igQjHY6Bqk?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MTAxMS4wIJJjKgBIAVAD&amp;rclk=1"><strong>4,8</strong> no Google · 6 avaliações</a></div>
-        <figure class="foto-topo">
+    <div class="topo-dentro topo-par">
+      <div class="topo-texto">
+        <h1 id="titulo-heroi" class="entra">Uma alimentação que <em>entende você</em> antes de mudar o seu prato.</h1>
+        <p class="lide">Um acompanhamento que começa pela sua história, pela sua rotina e pelo que você gosta de comer. Nada de cardápio engessado.</p><div class="acoes"><a class="botao" href="https://wa.me/5512997526518?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar consulta pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar consulta</span></a><a class="link-calmo" href="#acompanhamento">Como funciona</a></div><a class="nota-google" href="https://www.google.com/maps/place/Nutricionista+Leticia+Filgueira/data=!4m7!3m6!1s0x94ccf9b9fe37c687:0xa9063a768c1028e6!8m2!3d-23.0248875!4d-45.574961!16s%2Fg%2F11zw_8332f!19sChIJh8Y3_rn5zJQR5igQjHY6Bqk?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MTAxMS4wIJJjKgBIAVAD&amp;rclk=1"><strong>4,8</strong> no Google · 6 avaliações</a>
+      </div>
+      <div class="topo-foto"><figure class="foto-topo">
         <!-- FOTO 1 (topo): retrato da profissional, rosto bem visível. Troque o src pelo arquivo, ex.: ./foto-hero.jpg -->
         <div class="quadro"><img class="foto" src="https://lh3.googleusercontent.com/grass-cs/AABkmLddCX64tq5mjpl1E_aLNLcYL7fMbiiSdCCk1xiT0l9iWUVa_WBvlC8Lun89-5-Pf9wIo6nDsERdHbHU4I3mmOKeNC9syhhMyj5W5c-YkfkrGGlAerMVbB2CyRYrQpuu9oiZsoXiiCsdFcmG=s1200-k-no" alt="Retrato de Nutricionista Leticia Filgueira, nutricionista em Taubaté/SP" referrerpolicy="no-referrer"></div>
-      </figure>
-      </div>
+      </figure></div>
     </div>
   </section>
 
