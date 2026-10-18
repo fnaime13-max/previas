@@ -102,11 +102,12 @@
   /* Árvore da cor do perfil atrás da foto, meio escondida: aparece depois da abertura, os cachos balançam no vento e
      o script solta pétalas ou folhas (na .queda, por cima da foto) quando o mouse passa ou o dedo toca. */
   .vaso .quadro { z-index: 1; }
-  .arvore { position: absolute; z-index: 0; right: -8%; top: -28%; width: 70%; aspect-ratio: 400 / 480; pointer-events: none; rotate: var(--balanco, 0deg); transform-origin: 50% 100%; transition: rotate 1.4s cubic-bezier(.2,.8,.2,1); }
-  .foto-esquerda .arvore { right: auto; left: -8%; transform: scaleX(-1); }
+  .arvore { position: absolute; z-index: 0; right: -14%; top: -30%; width: 84%; aspect-ratio: 400 / 480; pointer-events: none; rotate: var(--balanco, 0deg); transform-origin: 50% 100%; transition: rotate 1.4s cubic-bezier(.2,.8,.2,1); }
+  .foto-esquerda .arvore { right: auto; left: -14%; transform: scaleX(-1); }
   .arvore svg { width: 100%; height: 100%; overflow: visible; transform-origin: 50% 100%; }
-  .js .arvore svg { opacity: 0; transform: scale(.85); }
-  .pronto .arvore svg { opacity: 1; transform: none; transition: opacity 1.2s ease, transform 1.8s cubic-bezier(.2,.8,.2,1); }
+  .js .arvore svg { opacity: 0; }
+  .pronto .arvore svg { animation: brota 1.6s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes brota { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
   .cacho { animation: vento 7s ease-in-out calc(var(--i) * -.53s) infinite alternate; transform-box: fill-box; transform-origin: 50% 0; }
   @keyframes vento { from { transform: rotate(-2.5deg); } to { transform: rotate(2.5deg); } }
   .queda { position: absolute; inset: -20% -16% 0; z-index: 2; pointer-events: none; overflow: visible; }
@@ -125,8 +126,8 @@
     .topo-par.foto-esquerda { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
     .topo-foto { justify-items: end; }
     .foto-esquerda .topo-foto { justify-items: start; }
-    .arvore { right: -28%; top: -32%; width: 88%; }
-    .foto-esquerda .arvore { left: -28%; }
+    .arvore { right: -46%; top: -40%; width: 112%; }
+    .foto-esquerda .arvore { left: -46%; }
   }
 
   /* Seções: espaço em branco e linhas finas, sem caixas. */
