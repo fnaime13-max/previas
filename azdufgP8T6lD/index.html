@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<meta name="modelo-previa" content="minimalista-1">
+<meta name="modelo-previa" content="minimalista-2">
 <title>Nutricionista Clínica e Esportiva Cotia e on Line Josana Monteiro · Nutricionista em Cotia/SP | Consulta presencial e online</title>
 <meta name="description" content="Nutricionista Clínica e Esportiva Cotia e on Line Josana Monteiro, nutricionista em Cotia/SP. Consulta e acompanhamento nutricional individual, presencial e online, com foco em reeducação alimentar, saúde e qualidade de vida.">
 <meta name="theme-color" content="#f9f5f5">
@@ -92,6 +92,19 @@
   .foto-topo, .foto-sobre-fig { max-width: var(--maximo, none); }
   .foto-sobre-fig figcaption { margin-top: 12px; font-size: 13px; color: var(--suave); }
 
+  /* Topo: texto e foto lado a lado no computador; no celular a foto desce para baixo do texto. */
+  .topo-par { display: grid; gap: 48px; }
+  .topo-foto { display: grid; justify-items: center; }
+  .topo-foto .foto-topo { width: 100%; }
+  /* A foto aparece inteira e sem passar da altura da tela (largura = altura x formato da foto). */
+  .topo .quadro { width: min(100%, calc(70svh * var(--proporcao, .8))); margin-inline: auto; }
+  @media (min-width: 900px) {
+    .topo-par { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; align-items: center; }
+    .topo-par.foto-esquerda { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+    .topo-foto { justify-items: end; }
+    .foto-esquerda .topo-foto { justify-items: start; }
+  }
+
   /* Seções: espaço em branco e linhas finas, sem caixas. */
   .sec { padding: 88px 0; }
   .sec + .sec { border-top: 1px solid var(--linha); }
@@ -175,18 +188,15 @@
 
   
   .topo { padding: 56px 0 72px; }
-  .topo .foto-topo { width: 100%; max-width: none; margin-top: 56px; padding: clamp(16px, 4vw, 48px); background: var(--superficie); border-radius: 24px; }
-  /* A altura fica limitada pela largura (largura = altura x formato da foto): a foto aparece inteira, sem corte. */
-  .topo .quadro { width: min(100%, calc(64svh * var(--proporcao, .8))); margin-inline: auto; border-radius: 12px; }
-  .moldura-texto { display: grid; gap: 28px; }
-  .moldura-texto .acoes { margin-top: 24px; }
+  .topo .foto-topo { padding: clamp(16px, 3vw, 36px); background: var(--superficie); border-radius: 24px; }
+  .topo .quadro { border-radius: 12px; }
+  .topo .lide { margin-top: 24px; }
   .quadro { border-radius: 20px; }
   .servicos { gap: 12px; }
   .servicos li { padding: 28px; border: 1px solid var(--linha); border-radius: 16px; }
   .relato { border-style: solid; border-radius: 16px; }
   .passos li { padding: 28px; background: var(--superficie); border-radius: 16px; }
   @media (min-width: 900px) {
-    .moldura-texto { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 72px; align-items: end; }
     .sec-topo { max-width: 640px; }
     .servicos, .passos, .relatos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .faq { columns: 2; column-gap: 56px; }
@@ -216,15 +226,15 @@
 
 <main id="inicio">
   <section class="topo" aria-labelledby="titulo-heroi">
-    <div class="largura topo-dentro">
-      <div class="moldura-texto">
-        <div><p class="id"><strong>Nutricionista Clínica e Esportiva Cotia e on Line Josana Monteiro</strong><span>Nutricionista · CRN a preencher · Cotia/SP</span></p><h1 id="titulo-heroi" class="entra">Uma alimentação que <em>entende você</em> antes de mudar o seu prato.</h1></div>
-        <div><p class="lide">Um acompanhamento que começa pela sua história, pela sua rotina e pelo que você gosta de comer. Nada de cardápio engessado.</p><div class="acoes"><a class="botao" href="https://wa.me/5511945935495?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar consulta pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar consulta</span></a><a class="link-calmo" href="#acompanhamento">Como funciona</a></div><a class="nota-google" href="https://www.google.com/maps/place/Nutricionista+Cl%C3%ADnica+e+Esportiva+Cotia+e+on+Line+Josana+Monteiro/data=!4m7!3m6!1s0x94ceff57192fc8fd:0xf2255554449efd0b!8m2!3d-23.5870819!4d-46.8389192!16s%2Fg%2F11spgn0y5l!19sChIJ_cgvGVf_zpQRC_2eRFRVJfI?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MTAxMS4wIJJjKgBIAVAD&amp;rclk=1"><strong>5,0</strong> no Google · 153 avaliações</a></div>
+    <div class="largura topo-dentro topo-par">
+      <div class="topo-texto">
+        <p class="id"><strong>Nutricionista Clínica e Esportiva Cotia e on Line Josana Monteiro</strong><span>Nutricionista · CRN a preencher · Cotia/SP</span></p><h1 id="titulo-heroi" class="entra">Uma alimentação que <em>entende você</em> antes de mudar o seu prato.</h1>
+        <p class="lide">Um acompanhamento que começa pela sua história, pela sua rotina e pelo que você gosta de comer. Nada de cardápio engessado.</p><div class="acoes"><a class="botao" href="https://wa.me/5511945935495?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar consulta pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar consulta</span></a><a class="link-calmo" href="#acompanhamento">Como funciona</a></div><a class="nota-google" href="https://www.google.com/maps/place/Nutricionista+Cl%C3%ADnica+e+Esportiva+Cotia+e+on+Line+Josana+Monteiro/data=!4m7!3m6!1s0x94ceff57192fc8fd:0xf2255554449efd0b!8m2!3d-23.5870819!4d-46.8389192!16s%2Fg%2F11spgn0y5l!19sChIJ_cgvGVf_zpQRC_2eRFRVJfI?authuser=0&amp;hl=pt-BR&amp;g_ep=EgoyMDI2MTAxMS4wIJJjKgBIAVAD&amp;rclk=1"><strong>5,0</strong> no Google · 153 avaliações</a>
       </div>
-      <figure class="foto-topo">
+      <div class="topo-foto"><figure class="foto-topo">
         <!-- FOTO 1 (topo): retrato da profissional, rosto bem visível. Troque o src pelo arquivo, ex.: ./foto-hero.jpg -->
         <div class="quadro"><img class="foto sem-foto" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20800%22%3E%3Crect%20width%3D%22600%22%20height%3D%22800%22%20fill%3D%22%23f1e8e9%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22410%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22300%22%20font-size%3D%22120%22%20fill%3D%22%236e5b60%22%20opacity%3D%22.45%22%3ECE%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22490%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20letter-spacing%3D%224%22%20fill%3D%22%236e5b60%22%3EFOTO%201%3A%20TOPO%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Espaço reservado para foto 1: topo de Nutricionista Clínica e Esportiva Cotia e on Line Josana Monteiro"></div>
-      </figure>
+      </figure></div>
     </div>
   </section>
 
