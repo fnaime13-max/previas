@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<meta name="modelo-previa" content="minimalista-1">
+<meta name="modelo-previa" content="minimalista-4">
 <title>Nutricionista Fernanda Simões Cordenonsi · Nutricionista em santa maria/RS | Consulta presencial e online</title>
 <meta name="description" content="Nutricionista Fernanda Simões Cordenonsi, nutricionista em santa maria/RS. Consulta e acompanhamento nutricional individual, presencial e online, com foco em reeducação alimentar, saúde e qualidade de vida.">
 <meta name="theme-color" content="#f6f5f9">
@@ -16,8 +16,9 @@
 <style>
   :root {
     --fundo: #f6f5f9; --superficie: #ecebf3; --tinta: #1c1a25; --suave: #605c71; --linha: #dddae7;
-    --acento: #5a4787; --sobre-acento: #ffffff; --escuro: #1e1b2a; --sobre-escuro: #f0eef6;
+    --acento: #5a4787; --sobre-acento: #ffffff; --acento-texto: #5a4787; --escuro: #1e1b2a; --sobre-escuro: #f0eef6;
     --texto: "Sora", "Segoe UI", system-ui, sans-serif;
+    --titulo: var(--texto);
   }
   
   *, *::before, *::after { box-sizing: border-box; }
@@ -25,8 +26,8 @@
   body { margin: 0; background: var(--fundo); color: var(--tinta); font-family: var(--texto); font-size: 16px; line-height: 1.65; font-weight: 400; -webkit-font-smoothing: antialiased; }
   img, svg { display: block; max-width: 100%; }
   a { color: inherit; }
-  h1, h2, h3 { font-weight: 500; line-height: 1.1; letter-spacing: -.025em; margin: 0; text-wrap: balance; }
-  h1 em, h2 em { font-style: normal; color: var(--acento); }
+  h1, h2, h3 { font-family: var(--titulo); font-weight: 500; line-height: 1.1; letter-spacing: -.025em; margin: 0; text-wrap: balance; }
+  h1 em, h2 em { font-style: normal; color: var(--acento-texto); }
   h1 { font-size: clamp(36px, 1.4rem + 4.2vw, 72px); font-weight: 400; letter-spacing: -.035em; }
   h2 { font-size: clamp(28px, 1.1rem + 2vw, 44px); font-weight: 400; letter-spacing: -.03em; }
   h3 { font-size: 18px; letter-spacing: -.01em; }
@@ -45,10 +46,10 @@
   .botao:active { transform: scale(.98); }
   .botao.pequeno { padding: 9px 14px; font-size: 14px; }
   .botao.secundario { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 1px var(--linha); }
-  .botao.secundario .ic { color: var(--acento); }
+  .botao.secundario .ic { color: var(--acento-texto); }
   .link-calmo { text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid var(--linha); transition: border-color .2s; }
   .link-calmo:hover { border-color: var(--tinta); }
-  .link-zap { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; color: var(--acento); text-decoration: none; }
+  .link-zap { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; color: var(--acento-texto); text-decoration: none; }
   .link-zap .ic { transition: transform .2s; }
   .link-zap:hover .ic { transform: translateX(3px); }
   .acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 32px; }
@@ -92,16 +93,53 @@
   .foto-topo, .foto-sobre-fig { max-width: var(--maximo, none); }
   .foto-sobre-fig figcaption { margin-top: 12px; font-size: 13px; color: var(--suave); }
 
+  /* Topo: texto e foto lado a lado no computador; no celular a foto desce para baixo do texto. */
+  .topo-par { display: grid; gap: 48px; }
+  .topo-foto { display: grid; justify-items: center; }
+  .topo-foto .foto-topo { width: 100%; }
+  /* A foto aparece inteira e sem passar da altura da tela (largura = altura x formato da foto). */
+  .topo .vaso { position: relative; width: min(100%, calc(70svh * var(--proporcao, .8))); margin-inline: auto; }
+  /* Árvore da cor do perfil atrás da foto, meio escondida: aparece depois da abertura, os cachos balançam no vento e
+     o script solta pétalas ou folhas (na .queda, por cima da foto) quando o mouse passa ou o dedo toca. */
+  .vaso .quadro { z-index: 1; }
+  .arvore { position: absolute; z-index: 0; right: -14%; top: -30%; width: 84%; aspect-ratio: 400 / 480; pointer-events: none; rotate: var(--balanco, 0deg); transform-origin: 50% 100%; transition: rotate 1.4s cubic-bezier(.2,.8,.2,1); }
+  .foto-esquerda .arvore { right: auto; left: -14%; transform: scaleX(-1); }
+  .arvore svg { width: 100%; height: 100%; overflow: visible; transform-origin: 50% 100%; }
+  .js .arvore svg { opacity: 0; }
+  .pronto .arvore svg { animation: brota 1.6s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes brota { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
+  .cacho { animation: vento 7s ease-in-out calc(var(--i) * -.53s) infinite alternate; transform-box: fill-box; transform-origin: 50% 0; }
+  @keyframes vento { from { transform: rotate(-2.5deg); } to { transform: rotate(2.5deg); } }
+  .queda { position: absolute; inset: -20% -16% 0; z-index: 2; pointer-events: none; overflow: visible; }
+  .cai { position: absolute; left: 0; top: 0; width: 11px; height: 14px; border-radius: 70% 0 70% 0; background: var(--cor); opacity: 0; animation: cai var(--t, 3.2s) cubic-bezier(.35,.1,.55,1) forwards; }
+  .cai.flor { width: 12px; height: 12px; border-radius: 50%; background: radial-gradient(circle, var(--miolo, #fff6) 0 22%, var(--cor) 24%); }
+  .cai.folha { width: 9px; height: 18px; border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%; }
+  .cai.folha-longa { width: 5px; height: 26px; border-radius: 50%; }
+  @keyframes cai {
+    0% { opacity: 0; transform: translate(0, 0) rotate(0); }
+    10% { opacity: .95; }
+    85% { opacity: .9; }
+    100% { opacity: 0; transform: translate(var(--dx, 40px), var(--dy, 320px)) rotate(var(--giro, 420deg)); }
+  }
+  @media (min-width: 900px) {
+    .topo-par { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; align-items: center; }
+    .topo-par.foto-esquerda { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+    .topo-foto { justify-items: end; }
+    .foto-esquerda .topo-foto { justify-items: start; }
+    .arvore { right: -46%; top: -40%; width: 112%; }
+    .foto-esquerda .arvore { left: -46%; }
+  }
+
   /* Seções: espaço em branco e linhas finas, sem caixas. */
   .sec { padding: 88px 0; }
   .sec + .sec { border-top: 1px solid var(--linha); }
   .rotulo { display: flex; gap: 12px; align-items: baseline; margin-bottom: 18px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--suave); }
-  .rotulo-n { color: var(--acento); font-variant-numeric: tabular-nums; }
+  .rotulo-n { color: var(--acento-texto); font-variant-numeric: tabular-nums; }
   .sec-topo .aparte { margin-top: 18px; }
   .sec-grade { display: grid; gap: 40px; }
   .lista li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; padding: 18px 0; border-top: 1px solid var(--linha); }
   .lista li:last-child { border-bottom: 1px solid var(--linha); }
-  .n { font-size: 13px; color: var(--acento); font-variant-numeric: tabular-nums; padding-top: 3px; }
+  .n { font-size: 13px; color: var(--acento-texto); font-variant-numeric: tabular-nums; padding-top: 3px; }
   .fecho { margin-top: 28px; color: var(--suave); }
   .trocas li { display: grid; gap: 6px; padding: 22px 0; border-top: 1px solid var(--linha); }
   .trocas .frase { color: var(--suave); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--acento) 70%, transparent); text-decoration-thickness: 1px; }
@@ -142,7 +180,7 @@
   .formulario { display: grid; gap: 16px; align-content: start; }
   .formulario label { display: grid; gap: 6px; font-size: 13px; color: var(--suave); }
   .formulario input, .formulario select { width: 100%; padding: 13px 14px; border: 1px solid var(--linha); border-radius: 10px; background: transparent; color: var(--tinta); font: 400 16px/1.3 var(--texto); }
-  .formulario input:focus, .formulario select:focus { outline: none; border-color: var(--acento); }
+  .formulario input:focus, .formulario select:focus { outline: none; border-color: var(--acento-texto); }
   .formulario [aria-invalid="true"] { border-color: #b3261e; }
   .formulario .botao { margin-top: 6px; }
   .form-nota, .form-aviso { font-size: 13px; color: var(--suave); }
@@ -163,7 +201,8 @@
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition: none !important; scroll-behavior: auto !important; }
     .abertura { display: none; }
-    .js [data-revela], .js .entra { opacity: 1; transform: none; }
+    .js [data-revela], .js .entra, .js .arvore svg { opacity: 1; transform: none; }
+    .queda { display: none; }
   }
 
   @media (min-width: 900px) {
@@ -176,16 +215,14 @@
   
   .topo { padding: 40px 0 72px; }
   .indice-cima { display: flex; justify-content: space-between; gap: 16px; padding-bottom: 18px; margin-bottom: 48px; border-bottom: 1px solid var(--tinta); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
-  .topo h1 { font-size: clamp(40px, 1.2rem + 5.4vw, 92px); font-weight: 300; letter-spacing: -.045em; line-height: 1.02; }
-  .indice-baixo { display: grid; gap: 32px; margin-top: 56px; }
-  .indice-baixo .foto-topo { width: min(100%, 260px); }
+  .topo h1 { font-size: clamp(40px, 1.2rem + 4.4vw, 80px); font-weight: 300; letter-spacing: -.045em; line-height: 1.02; }
+  .topo .topo-texto h1 { margin-bottom: 32px; }
   .nome-grande { font-size: 22px; font-weight: 500; letter-spacing: -.02em; margin-bottom: 14px; }
   .quadro { border-radius: 0; }
   .rotulo { display: block; }
   .rotulo-n { display: block; font-size: clamp(56px, 2rem + 4vw, 96px); font-weight: 300; letter-spacing: -.05em; line-height: 1; margin-bottom: 12px; }
   .sec + .sec { border-top-color: var(--tinta); }
   @media (min-width: 900px) {
-    .indice-baixo { grid-template-columns: 260px minmax(0, 1fr); gap: 48px; align-items: end; padding-left: 33%; }
     .sec-grade { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 72px; }
     .passos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
     .sobre-grade { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 72px; }
@@ -216,13 +253,17 @@
   <section class="topo" aria-labelledby="titulo-heroi">
     <div class="largura topo-dentro">
       <p class="indice-cima"><span>Nutricionista · CRN a preencher</span><span>santa maria/RS</span></p>
-      <h1 id="titulo-heroi" class="entra">Uma alimentação que <em>entende você</em> antes de mudar o seu prato.</h1>
-      <div class="indice-baixo">
-        <figure class="foto-topo">
+      <div class="topo-par foto-esquerda">
+        <div class="topo-foto"><figure class="foto-topo">
         <!-- FOTO 1 (topo): retrato da profissional, rosto bem visível. Troque o src pelo arquivo, ex.: ./foto-hero.jpg -->
-        <div class="quadro"><img class="foto sem-foto" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20800%22%3E%3Crect%20width%3D%22600%22%20height%3D%22800%22%20fill%3D%22%23ecebf3%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22410%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22300%22%20font-size%3D%22120%22%20fill%3D%22%23605c71%22%20opacity%3D%22.45%22%3EFS%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22490%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20letter-spacing%3D%224%22%20fill%3D%22%23605c71%22%3EFOTO%201%3A%20TOPO%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Espaço reservado para foto 1: topo de Nutricionista Fernanda Simões Cordenonsi"></div>
-      </figure>
-        <div>
+        <div class="vaso">
+          <div class="quadro"><img class="foto sem-foto" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20800%22%3E%3Crect%20width%3D%22600%22%20height%3D%22800%22%20fill%3D%22%23ecebf3%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22410%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22300%22%20font-size%3D%22120%22%20fill%3D%22%23605c71%22%20opacity%3D%22.45%22%3EFS%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22490%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20letter-spacing%3D%224%22%20fill%3D%22%23605c71%22%3EFOTO%201%3A%20TOPO%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Espaço reservado para foto 1: topo de Nutricionista Fernanda Simões Cordenonsi"></div>
+          <div class="arvore" aria-hidden="true" data-queda="petala" data-cores="#886ec4,#b19ad6,#cec7e6"><!-- Ipê --><svg viewBox="0 0 400 480" aria-hidden="true" focusable="false"><g fill="none" stroke="#604f43" stroke-linecap="round"><path d="M200 480Q212.5 421.2 201.9 362" stroke-width="16"/><path d="M201.9 362Q175.7 330.2 163.1 291" stroke-width="9.9"/><path d="M163.1 291Q136.2 279.7 109 269.5" stroke-width="6.2"/><path d="M109 269.5Q88.3 269.6 67.9 273" stroke-width="3.8"/><path d="M67.9 273Q55.1 283.5 43 294.7" stroke-width="2.4"/><path d="M67.9 273Q52 269.2 38 260.7" stroke-width="2.4"/><path d="M109 269.5Q94.1 252.4 83.9 232.1" stroke-width="3.8"/><path d="M83.9 232.1Q69.5 225.7 54.2 222.2" stroke-width="2.4"/><path d="M83.9 232.1Q78.5 217 80.7 201.1" stroke-width="2.4"/><path d="M163.1 291Q157.7 263 167 236.1" stroke-width="6.2"/><path d="M167 236.1Q159.9 215.4 147.2 197.6" stroke-width="3.8"/><path d="M147.2 197.6Q134.8 188.6 120.7 182.5" stroke-width="2.4"/><path d="M147.2 197.6Q135 184.8 128.6 168.4" stroke-width="2.4"/><path d="M147.2 197.6Q154.5 181.5 152.1 164" stroke-width="2.4"/><path d="M167 236.1Q164.7 215.1 170.4 194.8" stroke-width="3.8"/><path d="M170.4 194.8Q161.1 181.4 158.6 165.2" stroke-width="2.4"/><path d="M170.4 194.8Q179.1 182 189.4 170.4" stroke-width="2.4"/><path d="M167 236.1Q178 219.9 192.6 206.8" stroke-width="3.8"/><path d="M192.6 206.8Q190.8 191.4 194.5 176.4" stroke-width="2.4"/><path d="M192.6 206.8Q199.7 193.8 212.8 186.8" stroke-width="2.4"/><path d="M192.6 206.8Q206.4 203.5 218.1 195.3" stroke-width="2.4"/><path d="M201.9 362Q223.6 327.8 252 298.9" stroke-width="9.9"/><path d="M252 298.9Q260.4 269.2 257.7 238.4" stroke-width="6.2"/><path d="M257.7 238.4Q247.1 219.3 237.2 199.7" stroke-width="3.8"/><path d="M237.2 199.7Q219.6 196.1 205.6 184.9" stroke-width="2.4"/><path d="M237.2 199.7Q244.1 184.5 244.2 167.7" stroke-width="2.4"/><path d="M257.7 238.4Q253.3 214.1 261.2 190.7" stroke-width="3.8"/><path d="M261.2 190.7Q257 172 247.6 155.2" stroke-width="2.4"/><path d="M261.2 190.7Q273.5 176.9 285 162.4" stroke-width="2.4"/><path d="M257.7 238.4Q277 223.6 287.5 201.6" stroke-width="3.8"/><path d="M287.5 201.6Q291 183.9 290.4 165.8" stroke-width="2.4"/><path d="M287.5 201.6Q302.3 190.6 320.2 186.1" stroke-width="2.4"/><path d="M252 298.9Q280.1 293.3 306.7 282.8" stroke-width="6.2"/><path d="M306.7 282.8Q320.6 268.7 333.8 253.8" stroke-width="3.8"/><path d="M333.8 253.8Q334.9 239 342.6 226.4" stroke-width="2.4"/><path d="M333.8 253.8Q348.5 252.1 362.8 248.3" stroke-width="2.4"/><path d="M306.7 282.8Q330 282.1 351.4 291.4" stroke-width="3.8"/><path d="M351.4 291.4Q368.6 290.1 382.5 279.9" stroke-width="2.4"/><path d="M351.4 291.4Q368.1 290 383.7 296.2" stroke-width="2.4"/><path d="M351.4 291.4Q366.2 301.2 376.8 315.5" stroke-width="2.4"/></g><g transform="translate(43 294.7)"><g class="cacho" style="--i:0"><circle cx="-15.9" cy="-6.9" r="16.3" fill="#b19ad6"/><circle cx="3.4" cy="-12.4" r="11.3" fill="#886ec4"/><circle cx="-9.7" cy="-7.3" r="18.6" fill="#886ec4"/><circle cx="-20.7" cy="-2.6" r="16.9" fill="#886ec4"/><circle cx="-23.1" cy="0.5" r="16.7" fill="#b19ad6"/><circle cx="-0.4" cy="4.4" r="14.3" fill="#886ec4"/><circle cx="-8.7" cy="18.8" r="12.8" fill="#b19ad6"/><circle cx="-16.6" cy="9.9" r="12.8" fill="#cec7e6"/></g></g><g transform="translate(38 260.7)"><g class="cacho" style="--i:1"><circle cx="1.8" cy="-1.3" r="15" fill="#b19ad6"/><circle cx="-2.2" cy="-8.1" r="16.8" fill="#b19ad6"/><circle cx="23.1" cy="6.1" r="15.2" fill="#b19ad6"/><circle cx="-1.5" cy="-0.4" r="16.4" fill="#cec7e6"/><circle cx="1.2" cy="-4.1" r="11.5" fill="#886ec4"/><circle cx="-0.4" cy="5.8" r="17.8" fill="#886ec4"/><circle cx="22.9" cy="0.4" r="20.8" fill="#886ec4"/></g></g><g transform="translate(54.2 222.2)"><g class="cacho" style="--i:2"><circle cx="-1.7" cy="0.1" r="11.9" fill="#886ec4"/><circle cx="-15.2" cy="0.8" r="10.6" fill="#cec7e6"/><circle cx="-5.1" cy="-2.1" r="20.9" fill="#886ec4"/><circle cx="5" cy="-8.4" r="13.7" fill="#cec7e6"/><circle cx="9" cy="3.7" r="13" fill="#886ec4"/><circle cx="-1.6" cy="-1.6" r="16.9" fill="#cec7e6"/></g></g><g transform="translate(80.7 201.1)"><g class="cacho" style="--i:3"><circle cx="-2.3" cy="0.1" r="9.1" fill="#b19ad6"/><circle cx="-8.1" cy="10.6" r="9.1" fill="#b19ad6"/><circle cx="12" cy="11.9" r="16.1" fill="#cec7e6"/><circle cx="-12.4" cy="-10.9" r="14.3" fill="#cec7e6"/><circle cx="3.9" cy="8.5" r="13.1" fill="#cec7e6"/><circle cx="-19.8" cy="-12.4" r="10.5" fill="#b19ad6"/><circle cx="-11.1" cy="-2.8" r="11.9" fill="#cec7e6"/><circle cx="8.3" cy="1" r="15.6" fill="#cec7e6"/><circle cx="22.7" cy="6.2" r="15.2" fill="#b19ad6"/></g></g><g transform="translate(120.7 182.5)"><g class="cacho" style="--i:4"><circle cx="-4.8" cy="2.2" r="15.6" fill="#b19ad6"/><circle cx="-12" cy="14.2" r="11.6" fill="#cec7e6"/><circle cx="1.9" cy="-15" r="9.5" fill="#886ec4"/><circle cx="-8.7" cy="5.3" r="12.6" fill="#cec7e6"/><circle cx="-11.8" cy="-0.2" r="19.5" fill="#cec7e6"/><circle cx="-9.5" cy="-9.5" r="19.6" fill="#b19ad6"/></g></g><g transform="translate(128.6 168.4)"><g class="cacho" style="--i:5"><circle cx="-5.8" cy="12.1" r="18.3" fill="#cec7e6"/><circle cx="4.2" cy="-0.8" r="16.4" fill="#b19ad6"/><circle cx="-1.1" cy="-0.8" r="12.6" fill="#b19ad6"/><circle cx="6.4" cy="-2.8" r="18.2" fill="#cec7e6"/><circle cx="2.2" cy="11.6" r="20.9" fill="#cec7e6"/><circle cx="-5.7" cy="9" r="15.7" fill="#cec7e6"/><circle cx="-1.8" cy="2.2" r="15.2" fill="#cec7e6"/><circle cx="1.1" cy="-1.8" r="15" fill="#b19ad6"/></g></g><g transform="translate(152.1 164)"><g class="cacho" style="--i:6"><circle cx="-5.6" cy="5.1" r="10.3" fill="#886ec4"/><circle cx="2.6" cy="-10.7" r="20.3" fill="#b19ad6"/><circle cx="5.8" cy="0.4" r="13" fill="#886ec4"/><circle cx="-0.2" cy="6.2" r="14" fill="#cec7e6"/><circle cx="-12.6" cy="-9" r="12.3" fill="#886ec4"/><circle cx="4.9" cy="-12.1" r="15.7" fill="#886ec4"/><circle cx="3.5" cy="-13.7" r="20.1" fill="#b19ad6"/><circle cx="-10" cy="-1.7" r="15.9" fill="#886ec4"/><circle cx="15.1" cy="14.9" r="12.1" fill="#886ec4"/></g></g><g transform="translate(158.6 165.2)"><g class="cacho" style="--i:7"><circle cx="5.9" cy="-1.1" r="17.9" fill="#cec7e6"/><circle cx="4.1" cy="-20.1" r="15" fill="#886ec4"/><circle cx="-7.8" cy="-13.7" r="17.4" fill="#b19ad6"/><circle cx="7.1" cy="2.8" r="15" fill="#886ec4"/><circle cx="-11.7" cy="11.8" r="20.4" fill="#cec7e6"/><circle cx="-16.4" cy="1.2" r="16.3" fill="#b19ad6"/><circle cx="-3.7" cy="6.4" r="16.1" fill="#886ec4"/><circle cx="5.4" cy="-15.1" r="10.3" fill="#cec7e6"/><circle cx="17.9" cy="11.8" r="18.6" fill="#b19ad6"/></g></g><g transform="translate(189.4 170.4)"><g class="cacho" style="--i:8"><circle cx="2.4" cy="9.3" r="14.9" fill="#886ec4"/><circle cx="3" cy="-1.6" r="11.9" fill="#b19ad6"/><circle cx="17.9" cy="0.6" r="19.3" fill="#cec7e6"/><circle cx="-14.5" cy="-13" r="18.7" fill="#cec7e6"/><circle cx="0.8" cy="3.1" r="15.1" fill="#cec7e6"/><circle cx="7.1" cy="-5.1" r="9.1" fill="#cec7e6"/><circle cx="-4" cy="-0.8" r="10.1" fill="#b19ad6"/></g></g><g transform="translate(194.5 176.4)"><g class="cacho" style="--i:9"><circle cx="8" cy="-5.3" r="11.8" fill="#cec7e6"/><circle cx="-7.1" cy="1.2" r="12.7" fill="#886ec4"/><circle cx="11.4" cy="-16.3" r="18.3" fill="#b19ad6"/><circle cx="6" cy="-0.5" r="18.8" fill="#886ec4"/><circle cx="14.5" cy="-10.5" r="10.8" fill="#b19ad6"/><circle cx="21.2" cy="-11.5" r="13" fill="#b19ad6"/><circle cx="-4.3" cy="10.3" r="20.8" fill="#b19ad6"/><circle cx="-8.3" cy="4.3" r="11" fill="#b19ad6"/><circle cx="-15.8" cy="-14.7" r="18.1" fill="#cec7e6"/></g></g><g transform="translate(212.8 186.8)"><g class="cacho" style="--i:10"><circle cx="8.5" cy="-13.8" r="17.6" fill="#b19ad6"/><circle cx="2.4" cy="-5.4" r="13" fill="#886ec4"/><circle cx="-15.3" cy="15.8" r="16" fill="#886ec4"/><circle cx="1.1" cy="1.1" r="14.1" fill="#b19ad6"/><circle cx="-5.2" cy="-1.7" r="9.9" fill="#cec7e6"/><circle cx="-8.4" cy="14.7" r="10.7" fill="#cec7e6"/></g></g><g transform="translate(218.1 195.3)"><g class="cacho" style="--i:11"><circle cx="-3.1" cy="5.5" r="16.6" fill="#cec7e6"/><circle cx="-2.7" cy="-2.1" r="14.4" fill="#b19ad6"/><circle cx="9.4" cy="-0.2" r="18.6" fill="#cec7e6"/><circle cx="-17.3" cy="2" r="17.3" fill="#b19ad6"/><circle cx="1" cy="0.1" r="10.4" fill="#cec7e6"/><circle cx="-1.4" cy="5.6" r="14.7" fill="#886ec4"/><circle cx="13.9" cy="1.2" r="10.5" fill="#cec7e6"/><circle cx="-22.8" cy="6.2" r="11" fill="#cec7e6"/></g></g><g transform="translate(205.6 184.9)"><g class="cacho" style="--i:12"><circle cx="-6.8" cy="-10.5" r="16.5" fill="#886ec4"/><circle cx="22.4" cy="6" r="10.9" fill="#886ec4"/><circle cx="12.1" cy="9.6" r="18" fill="#886ec4"/><circle cx="-1.8" cy="-0.7" r="19.7" fill="#b19ad6"/><circle cx="22.5" cy="-8.5" r="15.2" fill="#886ec4"/><circle cx="4.4" cy="3.8" r="12.9" fill="#cec7e6"/></g></g><g transform="translate(244.2 167.7)"><g class="cacho" style="--i:13"><circle cx="-1.9" cy="2.5" r="19.3" fill="#886ec4"/><circle cx="0.5" cy="9.2" r="20.7" fill="#886ec4"/><circle cx="-13.1" cy="2.2" r="15.2" fill="#cec7e6"/><circle cx="0.5" cy="9.4" r="14.2" fill="#b19ad6"/><circle cx="14" cy="11.2" r="19.7" fill="#b19ad6"/><circle cx="1.2" cy="12.4" r="17.7" fill="#b19ad6"/><circle cx="-10.1" cy="14.4" r="17.6" fill="#886ec4"/><circle cx="-0.6" cy="2.8" r="20.7" fill="#886ec4"/></g></g><g transform="translate(247.6 155.2)"><g class="cacho" style="--i:14"><circle cx="-18.8" cy="-4.6" r="19.7" fill="#886ec4"/><circle cx="-8.2" cy="18.1" r="12.1" fill="#886ec4"/><circle cx="7.6" cy="-12" r="10" fill="#886ec4"/><circle cx="7.8" cy="14.4" r="18.3" fill="#886ec4"/><circle cx="15.8" cy="8.5" r="20.6" fill="#b19ad6"/><circle cx="-2.7" cy="-2.7" r="9.5" fill="#cec7e6"/><circle cx="2.8" cy="-6.4" r="11.9" fill="#b19ad6"/></g></g><g transform="translate(285 162.4)"><g class="cacho" style="--i:15"><circle cx="8.6" cy="9.1" r="11.7" fill="#886ec4"/><circle cx="-8.1" cy="3.4" r="19.1" fill="#b19ad6"/><circle cx="1" cy="-17.4" r="9.8" fill="#cec7e6"/><circle cx="-9.2" cy="4.1" r="16.1" fill="#b19ad6"/><circle cx="-4.3" cy="17.7" r="11.7" fill="#b19ad6"/><circle cx="0.6" cy="13.5" r="9.3" fill="#b19ad6"/><circle cx="-17.9" cy="4.9" r="11.9" fill="#b19ad6"/><circle cx="3.8" cy="13.5" r="12.3" fill="#b19ad6"/><circle cx="10.5" cy="-3" r="18.7" fill="#886ec4"/></g></g><g transform="translate(290.4 165.8)"><g class="cacho" style="--i:16"><circle cx="-8.4" cy="-13.1" r="18.4" fill="#886ec4"/><circle cx="2.5" cy="11.6" r="11.3" fill="#886ec4"/><circle cx="-8.3" cy="7.4" r="19.1" fill="#cec7e6"/><circle cx="2.3" cy="14.2" r="19.9" fill="#b19ad6"/><circle cx="7.8" cy="-8" r="15.9" fill="#886ec4"/><circle cx="-2" cy="6" r="18.3" fill="#b19ad6"/></g></g><g transform="translate(320.2 186.1)"><g class="cacho" style="--i:17"><circle cx="-23.5" cy="-5.8" r="15.3" fill="#cec7e6"/><circle cx="14.2" cy="-3.6" r="20.4" fill="#886ec4"/><circle cx="-12.1" cy="-0.7" r="13.2" fill="#cec7e6"/><circle cx="8.3" cy="14" r="18.4" fill="#b19ad6"/><circle cx="1.5" cy="-3.7" r="13" fill="#cec7e6"/><circle cx="17.8" cy="-8.3" r="9.7" fill="#b19ad6"/><circle cx="-0.1" cy="-1" r="19.1" fill="#b19ad6"/></g></g><g transform="translate(342.6 226.4)"><g class="cacho" style="--i:18"><circle cx="-10.7" cy="10.6" r="11.6" fill="#886ec4"/><circle cx="-13.7" cy="10.6" r="12.4" fill="#886ec4"/><circle cx="19.2" cy="-11.4" r="17.2" fill="#b19ad6"/><circle cx="7" cy="-2.1" r="12.6" fill="#cec7e6"/><circle cx="8.5" cy="0.9" r="11.6" fill="#886ec4"/><circle cx="-2.3" cy="4.2" r="12.8" fill="#b19ad6"/><circle cx="-15.2" cy="2.6" r="9.6" fill="#b19ad6"/><circle cx="-2.9" cy="5" r="17.6" fill="#b19ad6"/><circle cx="1.6" cy="4.5" r="10.9" fill="#b19ad6"/></g></g><g transform="translate(362.8 248.3)"><g class="cacho" style="--i:19"><circle cx="8" cy="11.9" r="18.7" fill="#886ec4"/><circle cx="-1.2" cy="-3.5" r="19.1" fill="#886ec4"/><circle cx="10.1" cy="2" r="10.6" fill="#b19ad6"/><circle cx="3" cy="11.8" r="18.8" fill="#b19ad6"/><circle cx="0.7" cy="-0.8" r="11.6" fill="#b19ad6"/><circle cx="10.2" cy="6.8" r="15.7" fill="#b19ad6"/></g></g><g transform="translate(382.5 279.9)"><g class="cacho" style="--i:20"><circle cx="-9.5" cy="13" r="16.9" fill="#cec7e6"/><circle cx="2.3" cy="-1.5" r="11.6" fill="#b19ad6"/><circle cx="18.7" cy="4" r="18.4" fill="#886ec4"/><circle cx="-9.1" cy="0.2" r="17.1" fill="#cec7e6"/><circle cx="-3.6" cy="-16.1" r="18.3" fill="#886ec4"/><circle cx="-4.1" cy="7.4" r="16.8" fill="#886ec4"/><circle cx="16.8" cy="-14.2" r="20.6" fill="#886ec4"/></g></g><g transform="translate(383.7 296.2)"><g class="cacho" style="--i:21"><circle cx="16.5" cy="5.6" r="13" fill="#b19ad6"/><circle cx="3.2" cy="-5.4" r="15.4" fill="#b19ad6"/><circle cx="0" cy="-0.1" r="17.3" fill="#b19ad6"/><circle cx="2.2" cy="1.1" r="19" fill="#cec7e6"/><circle cx="-25.9" cy="-1.5" r="12.4" fill="#886ec4"/><circle cx="13.6" cy="14.2" r="10" fill="#cec7e6"/><circle cx="11.4" cy="-9.9" r="15.4" fill="#cec7e6"/><circle cx="-6.8" cy="14" r="9.8" fill="#cec7e6"/><circle cx="-5.5" cy="2.2" r="18.7" fill="#b19ad6"/></g></g><g transform="translate(376.8 315.5)"><g class="cacho" style="--i:22"><circle cx="-2.5" cy="2.8" r="18" fill="#886ec4"/><circle cx="6.3" cy="-18.4" r="10.3" fill="#886ec4"/><circle cx="-12.2" cy="5.5" r="9.5" fill="#886ec4"/><circle cx="5.8" cy="-5.4" r="16.8" fill="#cec7e6"/><circle cx="2.1" cy="-2.8" r="19.8" fill="#886ec4"/><circle cx="-0.7" cy="0.1" r="9.5" fill="#b19ad6"/><circle cx="-5.7" cy="-4.7" r="16.3" fill="#b19ad6"/><circle cx="-23.5" cy="-2.1" r="10.7" fill="#886ec4"/><circle cx="-4.9" cy="-8.6" r="11.6" fill="#886ec4"/></g></g></svg></div>
+          <div class="queda" aria-hidden="true"></div>
+        </div>
+      </figure></div>
+        <div class="topo-texto">
+          <h1 id="titulo-heroi" class="entra">Uma alimentação que <em>entende você</em> antes de mudar o seu prato.</h1>
           <p class="nome-grande">Nutricionista Fernanda Simões Cordenonsi</p>
           <p class="lide">Um acompanhamento que começa pela sua história, pela sua rotina e pelo que você gosta de comer. Nada de cardápio engessado.</p>
           <div class="acoes"><a class="botao" href="https://wa.me/5555992001884?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Agendar consulta pelo WhatsApp"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" focusable="false"><path fill="currentColor" d="M186.68,146.63l-32-16a6,6,0,0,0-6,.38L133,141.46A42.49,42.49,0,0,1,114.54,123L125,107.33a6,6,0,0,0,.38-6l-16-32A6,6,0,0,0,104,66a38,38,0,0,0-38,38,86.1,86.1,0,0,0,86,86,38,38,0,0,0,38-38A6,6,0,0,0,186.68,146.63ZM152,178a74.09,74.09,0,0,1-74-74,26,26,0,0,1,22.42-25.75l12.66,25.32-10.39,15.58a6,6,0,0,0-.54,5.63,54.43,54.43,0,0,0,29.07,29.07,6,6,0,0,0,5.63-.54l15.58-10.39,25.32,12.66A26,26,0,0,1,152,178ZM128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></svg><span>Agendar consulta</span></a><a class="link-calmo" href="#acompanhamento">Como funciona</a></div>
@@ -338,8 +379,8 @@
       var w = img.naturalWidth, h = img.naturalHeight;
       if (!w || !h) return;
       var r = Math.min(Math.max(w / h, 0.75), 1.5);
-      img.parentNode.style.setProperty("--proporcao", String(r));
       var figura = img.closest("figure");
+      (figura || img.parentNode).style.setProperty("--proporcao", String(r));
       if (!figura) return;
       figura.classList.toggle("deitada", r > 1.15);
       figura.classList.toggle("pequena", w < 200);
@@ -348,6 +389,53 @@
     if (img.complete) medir(); else img.addEventListener("load", medir);
   });
   window.addEventListener("scroll", rolou, { passive: true });
+
+  // Árvore do topo: pende de leve para o lado do cursor e solta pétalas (ou folhas) quando o mouse passa por ela ou
+  // pela foto, e quando o dedo toca. No máximo 28 caindo ao mesmo tempo.
+  var arvore = document.querySelector(".arvore"), queda = document.querySelector(".queda"), area = document.querySelector(".topo-foto");
+  if (arvore && queda && area && !reduz) {
+    var cores = (arvore.getAttribute("data-cores") || "").split(","), forma = arvore.getAttribute("data-queda") || "petala";
+    var caindo = 0, ultima = 0;
+    function solta(x, y) {
+      if (caindo >= 28) return;
+      var p = document.createElement("span");
+      p.className = "cai " + forma;
+      var w = queda.clientWidth, h = queda.clientHeight;
+      var px = x == null ? w * (0.35 + Math.random() * 0.6) : x, py = y == null ? h * (0.05 + Math.random() * 0.3) : y;
+      p.style.left = px + "px";
+      p.style.top = py + "px";
+      p.style.setProperty("--cor", cores[Math.floor(Math.random() * cores.length)] || "#ccc");
+      p.style.setProperty("--miolo", cores[0] || "#fff");
+      p.style.setProperty("--dx", (Math.random() * 120 - 70).toFixed(0) + "px");
+      p.style.setProperty("--dy", (h - py + 40 + Math.random() * 80).toFixed(0) + "px");
+      p.style.setProperty("--giro", (Math.random() * 720 - 360).toFixed(0) + "deg");
+      p.style.setProperty("--t", (2.6 + Math.random() * 1.8).toFixed(2) + "s");
+      caindo++;
+      p.addEventListener("animationend", function () { caindo--; p.remove(); });
+      queda.appendChild(p);
+    }
+    function perto(e) {
+      var r = queda.getBoundingClientRect();
+      return { x: e.clientX - r.left, y: Math.max(0, e.clientY - r.top - 40 - Math.random() * 60) };
+    }
+    area.addEventListener("pointermove", function (e) {
+      var agora = Date.now();
+      if (agora - ultima < 70) return;
+      ultima = agora;
+      var q = perto(e);
+      solta(q.x + (Math.random() * 60 - 30), q.y);
+      if (e.pointerType === "mouse") arvore.style.setProperty("--balanco", ((e.clientX / window.innerWidth - 0.5) * 4).toFixed(2) + "deg");
+    }, { passive: true });
+    area.addEventListener("pointerdown", function (e) {
+      var q = perto(e);
+      for (var i = 0; i < 8; i++) solta(q.x + (Math.random() * 120 - 60), q.y * Math.random());
+    }, { passive: true });
+    // Depois da abertura, algumas caem sozinhas de vez em quando, para mostrar que a árvore está viva.
+    setTimeout(function () {
+      for (var i = 0; i < 3; i++) setTimeout(solta, i * 500);
+      setInterval(function () { if (window.scrollY < window.innerHeight && !document.hidden) solta(); }, 2600);
+    }, 3400);
+  }
 
   var links = todos(".menu a");
   if (window.IntersectionObserver && links.length) {
