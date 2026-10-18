@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<meta name="modelo-previa" content="minimalista-2">
+<meta name="modelo-previa" content="minimalista-4">
 <title>Letícia Loureiro - Nutricionista Educadora em Diabetes · Nutricionista em Belo Horizonte/MG | Consulta presencial e online</title>
 <meta name="description" content="Letícia Loureiro - Nutricionista Educadora em Diabetes, nutricionista em Belo Horizonte/MG. Consulta e acompanhamento nutricional individual, presencial e online, com foco em reeducação alimentar, saúde e qualidade de vida.">
 <meta name="theme-color" content="#f6f5f9">
@@ -16,8 +16,9 @@
 <style>
   :root {
     --fundo: #f6f5f9; --superficie: #ecebf3; --tinta: #1c1a25; --suave: #605c71; --linha: #dddae7;
-    --acento: #5a4787; --sobre-acento: #ffffff; --escuro: #1e1b2a; --sobre-escuro: #f0eef6;
+    --acento: #5a4787; --sobre-acento: #ffffff; --acento-texto: #5a4787; --escuro: #1e1b2a; --sobre-escuro: #f0eef6;
     --texto: "Outfit", "Segoe UI", system-ui, sans-serif;
+    --titulo: var(--texto);
   }
   
   *, *::before, *::after { box-sizing: border-box; }
@@ -25,8 +26,8 @@
   body { margin: 0; background: var(--fundo); color: var(--tinta); font-family: var(--texto); font-size: 16px; line-height: 1.65; font-weight: 400; -webkit-font-smoothing: antialiased; }
   img, svg { display: block; max-width: 100%; }
   a { color: inherit; }
-  h1, h2, h3 { font-weight: 500; line-height: 1.1; letter-spacing: -.025em; margin: 0; text-wrap: balance; }
-  h1 em, h2 em { font-style: normal; color: var(--acento); }
+  h1, h2, h3 { font-family: var(--titulo); font-weight: 500; line-height: 1.1; letter-spacing: -.025em; margin: 0; text-wrap: balance; }
+  h1 em, h2 em { font-style: normal; color: var(--acento-texto); }
   h1 { font-size: clamp(36px, 1.4rem + 4.2vw, 72px); font-weight: 400; letter-spacing: -.035em; }
   h2 { font-size: clamp(28px, 1.1rem + 2vw, 44px); font-weight: 400; letter-spacing: -.03em; }
   h3 { font-size: 18px; letter-spacing: -.01em; }
@@ -45,10 +46,10 @@
   .botao:active { transform: scale(.98); }
   .botao.pequeno { padding: 9px 14px; font-size: 14px; }
   .botao.secundario { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 1px var(--linha); }
-  .botao.secundario .ic { color: var(--acento); }
+  .botao.secundario .ic { color: var(--acento-texto); }
   .link-calmo { text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid var(--linha); transition: border-color .2s; }
   .link-calmo:hover { border-color: var(--tinta); }
-  .link-zap { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; color: var(--acento); text-decoration: none; }
+  .link-zap { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; color: var(--acento-texto); text-decoration: none; }
   .link-zap .ic { transition: transform .2s; }
   .link-zap:hover .ic { transform: translateX(3px); }
   .acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 32px; }
@@ -97,24 +98,48 @@
   .topo-foto { display: grid; justify-items: center; }
   .topo-foto .foto-topo { width: 100%; }
   /* A foto aparece inteira e sem passar da altura da tela (largura = altura x formato da foto). */
-  .topo .quadro { width: min(100%, calc(70svh * var(--proporcao, .8))); margin-inline: auto; }
+  .topo .vaso { position: relative; width: min(100%, calc(70svh * var(--proporcao, .8))); margin-inline: auto; }
+  /* Árvore da cor do perfil atrás da foto, meio escondida: aparece depois da abertura, os cachos balançam no vento e
+     o script solta pétalas ou folhas (na .queda, por cima da foto) quando o mouse passa ou o dedo toca. */
+  .vaso .quadro { z-index: 1; }
+  .arvore { position: absolute; z-index: 0; right: -14%; top: -30%; width: 84%; aspect-ratio: 400 / 480; pointer-events: none; rotate: var(--balanco, 0deg); transform-origin: 50% 100%; transition: rotate 1.4s cubic-bezier(.2,.8,.2,1); }
+  .foto-esquerda .arvore { right: auto; left: -14%; transform: scaleX(-1); }
+  .arvore svg { width: 100%; height: 100%; overflow: visible; transform-origin: 50% 100%; }
+  .js .arvore svg { opacity: 0; }
+  .pronto .arvore svg { animation: brota 1.6s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes brota { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
+  .cacho { animation: vento 7s ease-in-out calc(var(--i) * -.53s) infinite alternate; transform-box: fill-box; transform-origin: 50% 0; }
+  @keyframes vento { from { transform: rotate(-2.5deg); } to { transform: rotate(2.5deg); } }
+  .queda { position: absolute; inset: -20% -16% 0; z-index: 2; pointer-events: none; overflow: visible; }
+  .cai { position: absolute; left: 0; top: 0; width: 11px; height: 14px; border-radius: 70% 0 70% 0; background: var(--cor); opacity: 0; animation: cai var(--t, 3.2s) cubic-bezier(.35,.1,.55,1) forwards; }
+  .cai.flor { width: 12px; height: 12px; border-radius: 50%; background: radial-gradient(circle, var(--miolo, #fff6) 0 22%, var(--cor) 24%); }
+  .cai.folha { width: 9px; height: 18px; border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%; }
+  .cai.folha-longa { width: 5px; height: 26px; border-radius: 50%; }
+  @keyframes cai {
+    0% { opacity: 0; transform: translate(0, 0) rotate(0); }
+    10% { opacity: .95; }
+    85% { opacity: .9; }
+    100% { opacity: 0; transform: translate(var(--dx, 40px), var(--dy, 320px)) rotate(var(--giro, 420deg)); }
+  }
   @media (min-width: 900px) {
     .topo-par { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 64px; align-items: center; }
     .topo-par.foto-esquerda { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
     .topo-foto { justify-items: end; }
     .foto-esquerda .topo-foto { justify-items: start; }
+    .arvore { right: -46%; top: -40%; width: 112%; }
+    .foto-esquerda .arvore { left: -46%; }
   }
 
   /* Seções: espaço em branco e linhas finas, sem caixas. */
   .sec { padding: 88px 0; }
   .sec + .sec { border-top: 1px solid var(--linha); }
   .rotulo { display: flex; gap: 12px; align-items: baseline; margin-bottom: 18px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--suave); }
-  .rotulo-n { color: var(--acento); font-variant-numeric: tabular-nums; }
+  .rotulo-n { color: var(--acento-texto); font-variant-numeric: tabular-nums; }
   .sec-topo .aparte { margin-top: 18px; }
   .sec-grade { display: grid; gap: 40px; }
   .lista li { display: grid; grid-template-columns: 40px 1fr; gap: 12px; padding: 18px 0; border-top: 1px solid var(--linha); }
   .lista li:last-child { border-bottom: 1px solid var(--linha); }
-  .n { font-size: 13px; color: var(--acento); font-variant-numeric: tabular-nums; padding-top: 3px; }
+  .n { font-size: 13px; color: var(--acento-texto); font-variant-numeric: tabular-nums; padding-top: 3px; }
   .fecho { margin-top: 28px; color: var(--suave); }
   .trocas li { display: grid; gap: 6px; padding: 22px 0; border-top: 1px solid var(--linha); }
   .trocas .frase { color: var(--suave); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--acento) 70%, transparent); text-decoration-thickness: 1px; }
@@ -155,7 +180,7 @@
   .formulario { display: grid; gap: 16px; align-content: start; }
   .formulario label { display: grid; gap: 6px; font-size: 13px; color: var(--suave); }
   .formulario input, .formulario select { width: 100%; padding: 13px 14px; border: 1px solid var(--linha); border-radius: 10px; background: transparent; color: var(--tinta); font: 400 16px/1.3 var(--texto); }
-  .formulario input:focus, .formulario select:focus { outline: none; border-color: var(--acento); }
+  .formulario input:focus, .formulario select:focus { outline: none; border-color: var(--acento-texto); }
   .formulario [aria-invalid="true"] { border-color: #b3261e; }
   .formulario .botao { margin-top: 6px; }
   .form-nota, .form-aviso { font-size: 13px; color: var(--suave); }
@@ -176,7 +201,8 @@
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; transition: none !important; scroll-behavior: auto !important; }
     .abertura { display: none; }
-    .js [data-revela], .js .entra { opacity: 1; transform: none; }
+    .js [data-revela], .js .entra, .js .arvore svg { opacity: 1; transform: none; }
+    .queda { display: none; }
   }
 
   @media (min-width: 900px) {
@@ -233,7 +259,11 @@
       </div>
       <div class="topo-foto"><figure class="foto-topo">
         <!-- FOTO 1 (topo): retrato da profissional, rosto bem visível. Troque o src pelo arquivo, ex.: ./foto-hero.jpg -->
-        <div class="quadro"><img class="foto sem-foto" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20800%22%3E%3Crect%20width%3D%22600%22%20height%3D%22800%22%20fill%3D%22%23ecebf3%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22410%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22300%22%20font-size%3D%22120%22%20fill%3D%22%23605c71%22%20opacity%3D%22.45%22%3ELL%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22490%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20letter-spacing%3D%224%22%20fill%3D%22%23605c71%22%3EFOTO%201%3A%20TOPO%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Espaço reservado para foto 1: topo de Letícia Loureiro - Nutricionista Educadora em Diabetes"></div>
+        <div class="vaso">
+          <div class="quadro"><img class="foto sem-foto" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20800%22%3E%3Crect%20width%3D%22600%22%20height%3D%22800%22%20fill%3D%22%23ecebf3%22%2F%3E%3Ctext%20x%3D%22300%22%20y%3D%22410%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-weight%3D%22300%22%20font-size%3D%22120%22%20fill%3D%22%23605c71%22%20opacity%3D%22.45%22%3ELL%3C%2Ftext%3E%3Ctext%20x%3D%22300%22%20y%3D%22490%22%20text-anchor%3D%22middle%22%20font-family%3D%22Arial%2Csans-serif%22%20font-size%3D%2222%22%20letter-spacing%3D%224%22%20fill%3D%22%23605c71%22%3EFOTO%201%3A%20TOPO%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Espaço reservado para foto 1: topo de Letícia Loureiro - Nutricionista Educadora em Diabetes"></div>
+          <div class="arvore" aria-hidden="true" data-queda="flor" data-cores="#886ec4,#b19ad6,#cec7e6"><!-- Glicínia --><svg viewBox="0 0 400 480" aria-hidden="true" focusable="false"><g fill="none" stroke="#604f43" stroke-linecap="round"><path d="M400 60Q208.6 46.2 23.8 98" stroke-width="7"/><path d="M400 110Q235 193.9 57.6 140.9" stroke-width="6"/><path d="M400 160Q211.3 173.7 25.7 210.8" stroke-width="5"/></g><g transform="translate(344 68)"><g class="cacho" style="--i:0"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-8.4" cy="0" r="11" fill="#886ec4"/><circle cx="2" cy="9" r="10.3" fill="#b19ad6"/><circle cx="4.9" cy="18" r="9.6" fill="#cec7e6"/><circle cx="-4.8" cy="27.1" r="8.9" fill="#886ec4"/><circle cx="-5.3" cy="36.1" r="8.2" fill="#b19ad6"/><circle cx="1.4" cy="45.1" r="7.5" fill="#cec7e6"/><circle cx="-1.6" cy="54.1" r="6.8" fill="#886ec4"/><circle cx="1.1" cy="63.2" r="6.1" fill="#b19ad6"/><circle cx="0.7" cy="72.2" r="5.4" fill="#cec7e6"/><circle cx="1.2" cy="81.2" r="4.7" fill="#886ec4"/><circle cx="0.2" cy="90.2" r="4" fill="#b19ad6"/><circle cx="0" cy="99.3" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(284.4 74)"><g class="cacho" style="--i:1"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="5" cy="0" r="11" fill="#886ec4"/><circle cx="6.7" cy="8.4" r="10.3" fill="#b19ad6"/><circle cx="7.3" cy="16.8" r="9.6" fill="#cec7e6"/><circle cx="2.1" cy="25.2" r="8.9" fill="#886ec4"/><circle cx="-4.9" cy="33.6" r="8.2" fill="#b19ad6"/><circle cx="0.6" cy="42.1" r="7.5" fill="#cec7e6"/><circle cx="-1.3" cy="50.5" r="6.8" fill="#886ec4"/><circle cx="3.2" cy="58.9" r="6.1" fill="#b19ad6"/><circle cx="2.1" cy="67.3" r="5.4" fill="#cec7e6"/><circle cx="-1.4" cy="75.7" r="4.7" fill="#886ec4"/><circle cx="0.4" cy="84.1" r="4" fill="#b19ad6"/><circle cx="0" cy="92.5" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(228.3 80)"><g class="cacho" style="--i:2"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-6.4" cy="0" r="11" fill="#886ec4"/><circle cx="-7.8" cy="12.4" r="10.3" fill="#b19ad6"/><circle cx="-1.3" cy="24.9" r="9.6" fill="#cec7e6"/><circle cx="-3.6" cy="37.3" r="8.9" fill="#886ec4"/><circle cx="4.4" cy="49.7" r="8.2" fill="#b19ad6"/><circle cx="4.1" cy="62.2" r="7.5" fill="#cec7e6"/><circle cx="-2.8" cy="74.6" r="6.8" fill="#886ec4"/><circle cx="-1.6" cy="87" r="6.1" fill="#b19ad6"/><circle cx="-1" cy="99.5" r="5.4" fill="#cec7e6"/><circle cx="-0.4" cy="111.9" r="4.7" fill="#886ec4"/><circle cx="0" cy="124.3" r="4" fill="#b19ad6"/><circle cx="0" cy="136.8" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(158.2 86)"><g class="cacho" style="--i:3"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="8.9" cy="0" r="11" fill="#886ec4"/><circle cx="7.1" cy="9.6" r="10.3" fill="#b19ad6"/><circle cx="4.2" cy="19.2" r="9.6" fill="#cec7e6"/><circle cx="1.5" cy="28.9" r="8.9" fill="#886ec4"/><circle cx="-1.7" cy="38.5" r="8.2" fill="#b19ad6"/><circle cx="-1.4" cy="48.1" r="7.5" fill="#cec7e6"/><circle cx="4" cy="57.7" r="6.8" fill="#886ec4"/><circle cx="-0.4" cy="67.4" r="6.1" fill="#b19ad6"/><circle cx="2.3" cy="77" r="5.4" fill="#cec7e6"/><circle cx="1.6" cy="86.6" r="4.7" fill="#886ec4"/><circle cx="0.3" cy="96.2" r="4" fill="#b19ad6"/><circle cx="0" cy="105.9" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(104.7 92)"><g class="cacho" style="--i:4"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="7.1" cy="0" r="11" fill="#886ec4"/><circle cx="4.3" cy="12.3" r="10.3" fill="#b19ad6"/><circle cx="-5.6" cy="24.6" r="9.6" fill="#cec7e6"/><circle cx="-1.8" cy="36.9" r="8.9" fill="#886ec4"/><circle cx="-3.9" cy="49.1" r="8.2" fill="#b19ad6"/><circle cx="2.1" cy="61.4" r="7.5" fill="#cec7e6"/><circle cx="-2.7" cy="73.7" r="6.8" fill="#886ec4"/><circle cx="2.1" cy="86" r="6.1" fill="#b19ad6"/><circle cx="1.6" cy="98.3" r="5.4" fill="#cec7e6"/><circle cx="0.2" cy="110.6" r="4.7" fill="#886ec4"/><circle cx="0.6" cy="122.9" r="4" fill="#b19ad6"/><circle cx="0" cy="135.2" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(50.2 98)"><g class="cacho" style="--i:5"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-1.9" cy="0" r="11" fill="#886ec4"/><circle cx="6.9" cy="10.2" r="10.3" fill="#b19ad6"/><circle cx="3.1" cy="20.3" r="9.6" fill="#cec7e6"/><circle cx="0.7" cy="30.5" r="8.9" fill="#886ec4"/><circle cx="-0.8" cy="40.7" r="8.2" fill="#b19ad6"/><circle cx="-1" cy="50.8" r="7.5" fill="#cec7e6"/><circle cx="-1.6" cy="61" r="6.8" fill="#886ec4"/><circle cx="-1.2" cy="71.2" r="6.1" fill="#b19ad6"/><circle cx="0.2" cy="81.3" r="5.4" fill="#cec7e6"/><circle cx="0.6" cy="91.5" r="4.7" fill="#886ec4"/><circle cx="0.7" cy="101.7" r="4" fill="#b19ad6"/><circle cx="0" cy="111.8" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(353.8 118)"><g class="cacho" style="--i:6"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-0.9" cy="0" r="11" fill="#886ec4"/><circle cx="-5.3" cy="10.5" r="10.3" fill="#b19ad6"/><circle cx="7.2" cy="21" r="9.6" fill="#cec7e6"/><circle cx="-0.8" cy="31.4" r="8.9" fill="#886ec4"/><circle cx="5.1" cy="41.9" r="8.2" fill="#b19ad6"/><circle cx="0.5" cy="52.4" r="7.5" fill="#cec7e6"/><circle cx="-1.7" cy="62.9" r="6.8" fill="#886ec4"/><circle cx="0.1" cy="73.4" r="6.1" fill="#b19ad6"/><circle cx="1" cy="83.8" r="5.4" fill="#cec7e6"/><circle cx="0.7" cy="94.3" r="4.7" fill="#886ec4"/><circle cx="0.7" cy="104.8" r="4" fill="#b19ad6"/><circle cx="0" cy="115.3" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(289.9 124)"><g class="cacho" style="--i:7"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="4.9" cy="0" r="11" fill="#886ec4"/><circle cx="-4.1" cy="7.6" r="10.3" fill="#b19ad6"/><circle cx="1.4" cy="15.2" r="9.6" fill="#cec7e6"/><circle cx="5.3" cy="22.8" r="8.9" fill="#886ec4"/><circle cx="-1.1" cy="30.4" r="8.2" fill="#b19ad6"/><circle cx="4.3" cy="38" r="7.5" fill="#cec7e6"/><circle cx="1.9" cy="45.6" r="6.8" fill="#886ec4"/><circle cx="-1.5" cy="53.2" r="6.1" fill="#b19ad6"/><circle cx="-2.4" cy="60.8" r="5.4" fill="#cec7e6"/><circle cx="1.2" cy="68.4" r="4.7" fill="#886ec4"/><circle cx="-0.3" cy="76" r="4" fill="#b19ad6"/><circle cx="0" cy="83.6" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(229.2 130)"><g class="cacho" style="--i:8"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-7.2" cy="0" r="11" fill="#886ec4"/><circle cx="0.4" cy="7.1" r="10.3" fill="#b19ad6"/><circle cx="-1.9" cy="14.3" r="9.6" fill="#cec7e6"/><circle cx="-0.9" cy="21.4" r="8.9" fill="#886ec4"/><circle cx="1.8" cy="28.5" r="8.2" fill="#b19ad6"/><circle cx="-4.3" cy="35.6" r="7.5" fill="#cec7e6"/><circle cx="3.2" cy="42.8" r="6.8" fill="#886ec4"/><circle cx="-1.6" cy="49.9" r="6.1" fill="#b19ad6"/><circle cx="-0.8" cy="57" r="5.4" fill="#cec7e6"/><circle cx="0.8" cy="64.2" r="4.7" fill="#886ec4"/><circle cx="0.7" cy="71.3" r="4" fill="#b19ad6"/><circle cx="0" cy="78.4" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(163.2 136)"><g class="cacho" style="--i:9"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-4.4" cy="0" r="11" fill="#886ec4"/><circle cx="-4.5" cy="11.7" r="10.3" fill="#b19ad6"/><circle cx="4.5" cy="23.5" r="9.6" fill="#cec7e6"/><circle cx="-3.2" cy="35.2" r="8.9" fill="#886ec4"/><circle cx="0.7" cy="47" r="8.2" fill="#b19ad6"/><circle cx="-3.9" cy="58.7" r="7.5" fill="#cec7e6"/><circle cx="-2.1" cy="70.4" r="6.8" fill="#886ec4"/><circle cx="-2" cy="82.2" r="6.1" fill="#b19ad6"/><circle cx="1.8" cy="93.9" r="5.4" fill="#cec7e6"/><circle cx="0.4" cy="105.7" r="4.7" fill="#886ec4"/><circle cx="-0.3" cy="117.4" r="4" fill="#b19ad6"/><circle cx="0" cy="129.1" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(95.8 142)"><g class="cacho" style="--i:10"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="6.3" cy="0" r="11" fill="#886ec4"/><circle cx="-0.4" cy="7.2" r="10.3" fill="#b19ad6"/><circle cx="2.9" cy="14.3" r="9.6" fill="#cec7e6"/><circle cx="-4" cy="21.5" r="8.9" fill="#886ec4"/><circle cx="-3.8" cy="28.6" r="8.2" fill="#b19ad6"/><circle cx="1.2" cy="35.8" r="7.5" fill="#cec7e6"/><circle cx="1.9" cy="43" r="6.8" fill="#886ec4"/><circle cx="-2.1" cy="50.1" r="6.1" fill="#b19ad6"/><circle cx="-0.8" cy="57.3" r="5.4" fill="#cec7e6"/><circle cx="-1.6" cy="64.4" r="4.7" fill="#886ec4"/><circle cx="0.3" cy="71.6" r="4" fill="#b19ad6"/><circle cx="0" cy="78.7" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(55.3 148)"><g class="cacho" style="--i:11"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-2.1" cy="0" r="11" fill="#886ec4"/><circle cx="7" cy="9.1" r="10.3" fill="#b19ad6"/><circle cx="3.7" cy="18.2" r="9.6" fill="#cec7e6"/><circle cx="5.9" cy="27.2" r="8.9" fill="#886ec4"/><circle cx="2.8" cy="36.3" r="8.2" fill="#b19ad6"/><circle cx="2.9" cy="45.4" r="7.5" fill="#cec7e6"/><circle cx="3.1" cy="54.5" r="6.8" fill="#886ec4"/><circle cx="2.1" cy="63.6" r="6.1" fill="#b19ad6"/><circle cx="1.2" cy="72.6" r="5.4" fill="#cec7e6"/><circle cx="1.1" cy="81.7" r="4.7" fill="#886ec4"/><circle cx="-0.3" cy="90.8" r="4" fill="#b19ad6"/><circle cx="0" cy="99.9" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(337.1 168)"><g class="cacho" style="--i:12"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-0.3" cy="0" r="11" fill="#886ec4"/><circle cx="-4" cy="6.7" r="10.3" fill="#b19ad6"/><circle cx="-6.7" cy="13.4" r="9.6" fill="#cec7e6"/><circle cx="1.8" cy="20" r="8.9" fill="#886ec4"/><circle cx="-0.7" cy="26.7" r="8.2" fill="#b19ad6"/><circle cx="2" cy="33.4" r="7.5" fill="#cec7e6"/><circle cx="2.1" cy="40.1" r="6.8" fill="#886ec4"/><circle cx="-0.4" cy="46.7" r="6.1" fill="#b19ad6"/><circle cx="2.2" cy="53.4" r="5.4" fill="#cec7e6"/><circle cx="-1.5" cy="60.1" r="4.7" fill="#886ec4"/><circle cx="-0.2" cy="66.8" r="4" fill="#b19ad6"/><circle cx="0" cy="73.4" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(298.7 174)"><g class="cacho" style="--i:13"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-1.7" cy="0" r="11" fill="#886ec4"/><circle cx="-5.4" cy="7.4" r="10.3" fill="#b19ad6"/><circle cx="4.2" cy="14.8" r="9.6" fill="#cec7e6"/><circle cx="-3.2" cy="22.2" r="8.9" fill="#886ec4"/><circle cx="-2.9" cy="29.6" r="8.2" fill="#b19ad6"/><circle cx="-0.8" cy="36.9" r="7.5" fill="#cec7e6"/><circle cx="0.2" cy="44.3" r="6.8" fill="#886ec4"/><circle cx="0.6" cy="51.7" r="6.1" fill="#b19ad6"/><circle cx="1.8" cy="59.1" r="5.4" fill="#cec7e6"/><circle cx="-0.8" cy="66.5" r="4.7" fill="#886ec4"/><circle cx="-0.5" cy="73.9" r="4" fill="#b19ad6"/><circle cx="0" cy="81.3" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(223.8 180)"><g class="cacho" style="--i:14"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-1.7" cy="0" r="11" fill="#886ec4"/><circle cx="6.5" cy="11.5" r="10.3" fill="#b19ad6"/><circle cx="4.2" cy="23" r="9.6" fill="#cec7e6"/><circle cx="3.7" cy="34.5" r="8.9" fill="#886ec4"/><circle cx="-0.9" cy="45.9" r="8.2" fill="#b19ad6"/><circle cx="2.2" cy="57.4" r="7.5" fill="#cec7e6"/><circle cx="0.5" cy="68.9" r="6.8" fill="#886ec4"/><circle cx="0" cy="80.4" r="6.1" fill="#b19ad6"/><circle cx="1" cy="91.9" r="5.4" fill="#cec7e6"/><circle cx="0.7" cy="103.4" r="4.7" fill="#886ec4"/><circle cx="0.8" cy="114.9" r="4" fill="#b19ad6"/><circle cx="0" cy="126.4" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(165.1 186)"><g class="cacho" style="--i:15"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="1.5" cy="0" r="11" fill="#886ec4"/><circle cx="7.8" cy="6.9" r="10.3" fill="#b19ad6"/><circle cx="-6.4" cy="13.7" r="9.6" fill="#cec7e6"/><circle cx="5.8" cy="20.6" r="8.9" fill="#886ec4"/><circle cx="2.7" cy="27.5" r="8.2" fill="#b19ad6"/><circle cx="-1.4" cy="34.4" r="7.5" fill="#cec7e6"/><circle cx="2.8" cy="41.2" r="6.8" fill="#886ec4"/><circle cx="1.7" cy="48.1" r="6.1" fill="#b19ad6"/><circle cx="-0.6" cy="55" r="5.4" fill="#cec7e6"/><circle cx="-0.9" cy="61.9" r="4.7" fill="#886ec4"/><circle cx="-0.4" cy="68.7" r="4" fill="#b19ad6"/><circle cx="0" cy="75.6" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(118.8 192)"><g class="cacho" style="--i:16"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="3.2" cy="0" r="11" fill="#886ec4"/><circle cx="-5.9" cy="7.3" r="10.3" fill="#b19ad6"/><circle cx="-6.9" cy="14.6" r="9.6" fill="#cec7e6"/><circle cx="4.3" cy="21.8" r="8.9" fill="#886ec4"/><circle cx="-4.6" cy="29.1" r="8.2" fill="#b19ad6"/><circle cx="2.6" cy="36.4" r="7.5" fill="#cec7e6"/><circle cx="-0.1" cy="43.7" r="6.8" fill="#886ec4"/><circle cx="-1.1" cy="50.9" r="6.1" fill="#b19ad6"/><circle cx="1.2" cy="58.2" r="5.4" fill="#cec7e6"/><circle cx="0.6" cy="65.5" r="4.7" fill="#886ec4"/><circle cx="-0.5" cy="72.8" r="4" fill="#b19ad6"/><circle cx="0" cy="80" r="3.3" fill="#cec7e6"/></g></g><g transform="translate(49.6 198)"><g class="cacho" style="--i:17"><path d="M0 -8V4" stroke="#568b4b" stroke-width="2"/><circle cx="-8.1" cy="0" r="11" fill="#886ec4"/><circle cx="8.1" cy="10.6" r="10.3" fill="#b19ad6"/><circle cx="5.1" cy="21.3" r="9.6" fill="#cec7e6"/><circle cx="0.8" cy="31.9" r="8.9" fill="#886ec4"/><circle cx="4.4" cy="42.5" r="8.2" fill="#b19ad6"/><circle cx="4" cy="53.2" r="7.5" fill="#cec7e6"/><circle cx="1.2" cy="63.8" r="6.8" fill="#886ec4"/><circle cx="-1.8" cy="74.4" r="6.1" fill="#b19ad6"/><circle cx="0.9" cy="85.1" r="5.4" fill="#cec7e6"/><circle cx="0.6" cy="95.7" r="4.7" fill="#886ec4"/><circle cx="-0.3" cy="106.3" r="4" fill="#b19ad6"/><circle cx="0" cy="116.9" r="3.3" fill="#cec7e6"/></g></g></svg></div>
+          <div class="queda" aria-hidden="true"></div>
+        </div>
       </figure></div>
     </div>
   </section>
@@ -344,8 +374,8 @@
       var w = img.naturalWidth, h = img.naturalHeight;
       if (!w || !h) return;
       var r = Math.min(Math.max(w / h, 0.75), 1.5);
-      img.parentNode.style.setProperty("--proporcao", String(r));
       var figura = img.closest("figure");
+      (figura || img.parentNode).style.setProperty("--proporcao", String(r));
       if (!figura) return;
       figura.classList.toggle("deitada", r > 1.15);
       figura.classList.toggle("pequena", w < 200);
@@ -354,6 +384,53 @@
     if (img.complete) medir(); else img.addEventListener("load", medir);
   });
   window.addEventListener("scroll", rolou, { passive: true });
+
+  // Árvore do topo: pende de leve para o lado do cursor e solta pétalas (ou folhas) quando o mouse passa por ela ou
+  // pela foto, e quando o dedo toca. No máximo 28 caindo ao mesmo tempo.
+  var arvore = document.querySelector(".arvore"), queda = document.querySelector(".queda"), area = document.querySelector(".topo-foto");
+  if (arvore && queda && area && !reduz) {
+    var cores = (arvore.getAttribute("data-cores") || "").split(","), forma = arvore.getAttribute("data-queda") || "petala";
+    var caindo = 0, ultima = 0;
+    function solta(x, y) {
+      if (caindo >= 28) return;
+      var p = document.createElement("span");
+      p.className = "cai " + forma;
+      var w = queda.clientWidth, h = queda.clientHeight;
+      var px = x == null ? w * (0.35 + Math.random() * 0.6) : x, py = y == null ? h * (0.05 + Math.random() * 0.3) : y;
+      p.style.left = px + "px";
+      p.style.top = py + "px";
+      p.style.setProperty("--cor", cores[Math.floor(Math.random() * cores.length)] || "#ccc");
+      p.style.setProperty("--miolo", cores[0] || "#fff");
+      p.style.setProperty("--dx", (Math.random() * 120 - 70).toFixed(0) + "px");
+      p.style.setProperty("--dy", (h - py + 40 + Math.random() * 80).toFixed(0) + "px");
+      p.style.setProperty("--giro", (Math.random() * 720 - 360).toFixed(0) + "deg");
+      p.style.setProperty("--t", (2.6 + Math.random() * 1.8).toFixed(2) + "s");
+      caindo++;
+      p.addEventListener("animationend", function () { caindo--; p.remove(); });
+      queda.appendChild(p);
+    }
+    function perto(e) {
+      var r = queda.getBoundingClientRect();
+      return { x: e.clientX - r.left, y: Math.max(0, e.clientY - r.top - 40 - Math.random() * 60) };
+    }
+    area.addEventListener("pointermove", function (e) {
+      var agora = Date.now();
+      if (agora - ultima < 70) return;
+      ultima = agora;
+      var q = perto(e);
+      solta(q.x + (Math.random() * 60 - 30), q.y);
+      if (e.pointerType === "mouse") arvore.style.setProperty("--balanco", ((e.clientX / window.innerWidth - 0.5) * 4).toFixed(2) + "deg");
+    }, { passive: true });
+    area.addEventListener("pointerdown", function (e) {
+      var q = perto(e);
+      for (var i = 0; i < 8; i++) solta(q.x + (Math.random() * 120 - 60), q.y * Math.random());
+    }, { passive: true });
+    // Depois da abertura, algumas caem sozinhas de vez em quando, para mostrar que a árvore está viva.
+    setTimeout(function () {
+      for (var i = 0; i < 3; i++) setTimeout(solta, i * 500);
+      setInterval(function () { if (window.scrollY < window.innerHeight && !document.hidden) solta(); }, 2600);
+    }, 3400);
+  }
 
   var links = todos(".menu a");
   if (window.IntersectionObserver && links.length) {
