@@ -586,13 +586,13 @@
         <li data-revela><figure><div class="quadro"><img src="fotos/marmitas-mesa.jpg" alt="Marmitas com arroz, peixe, carne moída e legumes sobre a mesa" loading="lazy"></div><figcaption><b>Porcionado com carinho</b>Arroz, proteína e legumes na medida.</figcaption></figure></li>
         <li data-revela><figure><div class="quadro"><img src="fotos/geladeira.jpg" alt="Geladeira cheia de marmitas prontas" loading="lazy" style="object-position:center 70%"></div><figcaption><b>A semana inteira pronta</b>É só abrir a geladeira e esquentar.</figcaption></figure></li>
       </ul>
-      <!-- VÍDEOS: salve os arquivos como videos/cozinhando-1.mp4, -2.mp4, -3.mp4 (verticais). Sem arquivo, aparece um quadro sinalizado. -->
+      <!-- VÍDEOS: videos/cozinhando-1.mp4 (com som), -2.mp4 e -3.mp4 (sem áudio), com capas capa-N.jpg. Sem arquivo, aparece um quadro sinalizado. -->
       <div class="videos">
         <p class="videos-titulo" data-revela>Ela na cozinha</p>
         <ul class="videos-lista">
-          <li data-revela><div class="video"><video src="videos/cozinhando-1.mp4" muted loop playsinline preload="metadata" data-video="VÍDEO 1"></video><button type="button" class="som" aria-label="Ativar som">Som</button></div></li>
-          <li data-revela><div class="video"><video src="videos/cozinhando-2.mp4" muted loop playsinline preload="metadata" data-video="VÍDEO 2"></video><button type="button" class="som" aria-label="Ativar som">Som</button></div></li>
-          <li data-revela><div class="video"><video src="videos/cozinhando-3.mp4" muted loop playsinline preload="metadata" data-video="VÍDEO 3"></video><button type="button" class="som" aria-label="Ativar som">Som</button></div></li>
+          <li data-revela><div class="video"><video src="videos/cozinhando-1.mp4" poster="videos/capa-1.jpg" muted loop playsinline preload="metadata" data-video="VÍDEO 1" aria-label="Eduarda de avental cozinhando como personal chef"></video><button type="button" class="som" aria-label="Ativar som">Som</button></div></li>
+          <li data-revela><div class="video"><video src="videos/cozinhando-2.mp4" poster="videos/capa-2.jpg" muted loop playsinline preload="metadata" data-video="VÍDEO 2" aria-label="Preparo de caldo de mandioca com carne moída"></video></div></li>
+          <li data-revela><div class="video"><video src="videos/cozinhando-3.mp4" poster="videos/capa-3.jpg" muted loop playsinline preload="metadata" data-video="VÍDEO 3" aria-label="Marmitas finalizadas e prontas"></video></div></li>
         </ul>
       </div>
     </div>
@@ -934,7 +934,7 @@
     function vazio() { caixa.classList.add("vazio"); caixa.setAttribute("data-rotulo", v.getAttribute("data-video")); }
     v.addEventListener("error", vazio);
     if (v.error) vazio();
-    botao.addEventListener("click", function () {
+    if (botao) botao.addEventListener("click", function () {
       v.muted = !v.muted;
       botao.setAttribute("aria-pressed", String(!v.muted));
       botao.textContent = v.muted ? "Som" : "Sem som";
