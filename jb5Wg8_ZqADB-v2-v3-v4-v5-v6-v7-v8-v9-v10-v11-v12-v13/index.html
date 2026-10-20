@@ -63,8 +63,9 @@
   .abertura.sai { clip-path: inset(0 0 100% 0); visibility: hidden; }
   .abertura-centro { display: grid; justify-items: center; gap: 18px; text-align: center; }
   .abertura svg { width: 150px; }
-  .abertura .nome { font-family: var(--titulo); font-size: 26px; }
-  .abertura .por { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; opacity: .7; }
+  .abertura-centro { padding: 0 24px; }
+  .abertura .nome { text-wrap: balance; font-family: var(--titulo); font-size: clamp(26px, 1rem + 2vw, 40px); line-height: 1.15; }
+  .abertura .por { font-size: clamp(15px, .9rem + .3vw, 18px); max-width: 34ch; opacity: .82; margin-top: -6px; }
   .abertura .pct { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 14px; color: var(--caramelo-claro); }
   .ab-comida { transform-box: fill-box; transform-origin: bottom; transform: scaleY(0); }
   .ab-tampa { transform: translateY(-34px); opacity: 0; transition: transform .45s cubic-bezier(.3,1.5,.5,1), opacity .2s; }
@@ -108,6 +109,9 @@
   .focos { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; font-size: 14px; font-weight: 700; color: var(--cafe-2); }
   .focos li { display: flex; align-items: center; gap: 8px; }
   .focos li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--musgo-2); }
+  .convenio-mini { display: flex; width: fit-content; align-items: center; gap: 10px; margin-top: 14px; padding: 9px 16px 9px 10px; border-radius: 99px; background: var(--salvia-clara); color: var(--musgo); font-size: 14px; text-decoration: none; transition: background .2s; }
+  .convenio-mini:hover { background: var(--salvia); }
+  .convenio-mini .ic { width: 22px; height: 22px; }
   .google { display: inline-flex; gap: 8px; align-items: center; margin-top: 26px; font-size: 14px; color: var(--suave); text-decoration: none; }
   .google strong { color: var(--tinta); }
   .estrelas { color: var(--caramelo); letter-spacing: 2px; }
@@ -175,6 +179,20 @@
   .incluso h3 { font-family: var(--texto); font-weight: 700; font-size: 17px; margin-bottom: 2px; }
   .incluso p { color: rgba(244,238,227,.7); font-size: 15px; }
   @media (min-width: 920px) { .solucao { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 72px; align-items: start; } .incluso { grid-template-columns: 1fr 1fr; } .solucao .sec-topo { position: sticky; top: 110px; } }
+
+  /* Galeria de fotos reais */
+  .galeria { margin-top: 110px; }
+  .galeria-topo { max-width: 680px; margin-bottom: 40px; }
+  .galeria-topo .aparte { margin-top: 18px; }
+  .galeria-fotos { display: grid; grid-auto-flow: column; grid-auto-columns: 78%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 10px; scrollbar-width: none; }
+  .galeria-fotos::-webkit-scrollbar { display: none; }
+  .galeria-fotos li { scroll-snap-align: start; }
+  .galeria-fotos .quadro { aspect-ratio: 3 / 4; border-radius: var(--raio); }
+  .galeria-fotos .quadro img { object-position: center; transition: transform .8s ease; }
+  .galeria-fotos li:hover .quadro img { transform: scale(1.04); }
+  .galeria-fotos figcaption { margin-top: 14px; font-size: 14px; color: rgba(244,238,227,.68); }
+  .galeria-fotos figcaption b { display: block; font-size: 16px; color: var(--linho); }
+  @media (min-width: 820px) { .galeria-fotos { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; } .galeria-fotos li:nth-child(2) { margin-top: 48px; } }
 
   /* Com ou sem dieta */
   .dieta { margin-top: 110px; padding: clamp(28px, 4vw, 56px); border-radius: 30px; background: var(--musgo); }
@@ -287,6 +305,17 @@
   .link-zap:hover .ic { transform: translateX(3px); }
   @media (min-width: 900px) { .servicos { grid-template-columns: repeat(3, 1fr); } }
 
+  .convenios { display: grid; gap: 32px; margin-top: 56px; padding: clamp(28px, 4vw, 56px); border-radius: 30px; background: var(--musgo); color: var(--linho); }
+  .convenios .rotulo { color: var(--salvia-clara); }
+  .convenios h2 em { color: var(--caramelo-claro); }
+  .convenios .aparte { color: rgba(244,238,227,.78); margin: 18px 0 28px; }
+  .planos { display: grid; gap: 14px; align-content: center; }
+  .planos li { display: flex; align-items: center; gap: 18px; padding: 24px 26px; border-radius: 22px; background: var(--linho); color: var(--musgo); }
+  .planos .ic { width: 44px; height: 44px; color: var(--musgo-2); }
+  .planos b { display: block; font-family: var(--titulo); font-weight: 400; font-size: 30px; line-height: 1.1; }
+  .planos span { font-size: 14px; color: var(--suave); }
+  @media (min-width: 920px) { .convenios { grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; } }
+
   /* ============ SOBRE ============ */
   .sobre { background: var(--linho); }
   .sobre-grade { display: grid; gap: 56px; align-items: start; }
@@ -390,6 +419,7 @@
     <symbol id="lista" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></g></symbol>
     <symbol id="coracao" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></symbol>
     <symbol id="tela" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></g></symbol>
+    <symbol id="escudo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></g></symbol>
     <symbol id="ciclo" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></g></symbol>
   </defs>
 </svg>
@@ -404,8 +434,8 @@
       <path class="ab-comida" d="M52 50h34v10a6 6 0 0 1-6 6H52z" fill="#B0703F"/>
       <g class="ab-tampa"><rect x="2" y="10" width="96" height="14" rx="7" fill="#C48A4C"/><rect x="40" y="5" width="20" height="8" rx="4" fill="#C48A4C"/></g>
     </svg>
-    <p class="nome">Eduarda Castro</p>
-    <p class="por">Nutricionista · Personal Chef</p>
+    <p class="nome">Comida de verdade na sua mesa.</p>
+    <p class="por">Planejo como nutricionista e preparo tudo com carinho na sua cozinha.</p>
     <p class="pct" data-pct>0%</p>
   </div>
 </div>
@@ -416,7 +446,7 @@
   <div class="largura cabeca-dentro">
     <!-- LOGO: troque o monograma por <img src="./logo.png" alt="Eduarda Castro"> quando houver arquivo. -->
     <a class="marca" href="#inicio"><span class="logo" aria-hidden="true">EC<svg viewBox="0 0 24 24"><use href="#folha"/></svg></span><span><strong>Eduarda Castro</strong><small>Nutricionista · Personal Chef</small></span></a>
-    <nav class="menu" aria-label="Seções"><a class="destaque" href="#personal-chef">Personal Chef</a><a href="#pacotes">Pacotes</a><a href="#nutricao">Consultas</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
+    <nav class="menu" aria-label="Seções"><a class="destaque" href="#personal-chef">Personal Chef</a><a href="#pacotes">Pacotes</a><a href="#nutricao">Consultas</a><a href="#convenios">Convênios</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></nav>
     <a class="botao pequeno" href="https://wa.me/5512992591994?text=Ol%C3%A1%2C%20Eduarda!%20Vi%20seu%20site%20e%20queria%20conversar." aria-label="Falar pelo WhatsApp"><svg class="ic"><use href="#zap"/></svg><span>WhatsApp</span></a>
   </div>
 </header>
@@ -435,6 +465,7 @@
           <a class="botao contorno" href="https://wa.me/5512992591994?text=Ol%C3%A1%2C%20Eduarda!%20Gostaria%20de%20agendar%20uma%20consulta%20nutricional."><svg class="ic"><use href="#zap"/></svg><span>Agendar consulta</span></a>
         </div>
         <a class="google entra" href="https://www.google.com/maps/place/Nutricionista+Taubate+EduardaCastro/data=!4m7!3m6!1s0x94ccf9833d0d5cb1:0x4572f1c8a53692f9!8m2!3d-23.0341965!4d-45.5753664!16s%2Fg%2F11zkwfhgkb!19sChIJsVwNPYP5zJQR-ZI2pcjxckU?hl=pt-BR"><span class="estrelas" aria-hidden="true">★★★★★</span><span><strong>4,7</strong> no Google · 13 avaliações</span></a>
+        <a class="convenio-mini entra" href="#convenios"><svg class="ic"><use href="#escudo"/></svg><span>Atendo pelos convênios <strong>Unimed</strong> e <strong>FUSEx</strong></span></a>
       </div>
       <figure class="topo-foto entra">
         <!-- FOTO 1 (topo): retrato da Eduarda. Salve como fotos/hero.jpg -->
@@ -476,7 +507,7 @@
       </div>
       <figure class="chef-foto" data-revela>
         <!-- FOTO 3 (personal chef): Eduarda de dólmã verde/marrom, cozinhando. Salve como fotos/chef.jpg -->
-        <div class="quadro"><img src="fotos/chef.jpg" alt="Eduarda Castro de dólmã, cozinhando como personal chef" data-placeholder="FOTO 3 · CHEF"></div>
+        <div class="quadro"><img src="fotos/chef.jpg" alt="Eduarda Castro, nutricionista e personal chef" data-placeholder="FOTO 3 · CHEF"></div>
         <p class="chef-frase">“Você só precisa abrir a porta. O resto é comigo.”</p>
         <!-- Panela com vapor: o vapor se inclina para o lado do mouse. -->
         <svg class="panela" viewBox="0 0 200 190" aria-hidden="true">
@@ -524,6 +555,20 @@
         <li data-revela><span class="bola"><svg class="ic"><use href="#folha"/></svg></span><div><h3>Temperos naturais por minha conta</h3><p>Levo alho, cebola e todos os condimentos naturais necessários para o preparo.</p></div></li>
         <li data-revela><span class="bola"><svg class="ic"><use href="#etiqueta"/></svg></span><div><h3>Lista de compras enviada antes</h3><p>Você só precisa comprar os ingredientes da lista que eu envio previamente.</p></div></li>
         <li data-revela><span class="bola"><svg class="ic"><use href="#coracao"/></svg></span><div><h3>Tudo organizado e pronto</h3><p>Deixo as refeições organizadas e prontas para o seu consumo. É só esquentar e comer.</p></div></li>
+      </ul>
+    </div>
+
+    <!-- Fotos reais do trabalho -->
+    <div class="largura galeria">
+      <header class="galeria-topo">
+        <p class="rotulo" data-revela>Portfólio · Personal Chef</p>
+        <h2 data-revela>Da panela <em>para a sua geladeira.</em></h2>
+        <p class="aparte" data-revela>Fotos reais de um dia de preparo: comida feita na hora, porcionada com cuidado e guardada pronta para a semana.</p>
+      </header>
+      <ul class="galeria-fotos">
+        <li data-revela><figure><div class="quadro"><img src="fotos/frango.jpg" alt="Filés de frango temperados dourando na frigideira" loading="lazy"></div><figcaption><b>Preparo na hora</b>Temperos naturais, alho e cebola de verdade.</figcaption></figure></li>
+        <li data-revela><figure><div class="quadro"><img src="fotos/marmitas-mesa.jpg" alt="Marmitas com arroz, peixe, carne moída e legumes sobre a mesa" loading="lazy"></div><figcaption><b>Porcionado com carinho</b>Arroz, proteína e legumes na medida.</figcaption></figure></li>
+        <li data-revela><figure><div class="quadro"><img src="fotos/geladeira.jpg" alt="Geladeira cheia de marmitas prontas" loading="lazy" style="object-position:center 70%"></div><figcaption><b>A semana inteira pronta</b>É só abrir a geladeira e esquentar.</figcaption></figure></li>
       </ul>
     </div>
 
@@ -648,6 +693,19 @@
         <li class="servico" data-revela><span class="bola"><svg class="ic"><use href="#tela"/></svg></span><h3>Consulta online</h3><p>A mesma escuta e o mesmo cuidado, por vídeo, para quem prefere a praticidade de ser atendido de casa.</p><a class="link-zap" href="https://wa.me/5512992591994?text=Ol%C3%A1%2C%20Eduarda!%20Queria%20saber%20mais%20sobre%20a%20consulta%20online.">Perguntar no WhatsApp<svg class="ic"><use href="#seta"/></svg></a></li>
         <li class="servico" data-revela><span class="bola"><svg class="ic"><use href="#ciclo"/></svg></span><h3>Acompanhamento</h3><p>Retornos para ajustar o plano conforme a vida acontece: viagens, festas e semanas difíceis entram na conta.</p><a class="link-zap" href="https://wa.me/5512992591994?text=Ol%C3%A1%2C%20Eduarda!%20Queria%20saber%20mais%20sobre%20o%20acompanhamento.">Perguntar no WhatsApp<svg class="ic"><use href="#seta"/></svg></a></li>
       </ul>
+
+      <div class="convenios" id="convenios" data-revela>
+        <div>
+          <p class="rotulo">Convênios</p>
+          <h2>Atendimento nutricional <em>pelo seu convênio.</em></h2>
+          <p class="aparte">Você pode fazer a sua consulta comigo usando o seu plano. É só me chamar no WhatsApp com o nome do convênio para agendar.</p>
+          <a class="botao caramelo" href="https://wa.me/5512992591994?text=Ol%C3%A1%2C%20Eduarda!%20Quero%20agendar%20uma%20consulta%20pelo%20meu%20conv%C3%AAnio."><svg class="ic"><use href="#zap"/></svg><span>Agendar pelo convênio</span></a>
+        </div>
+        <ul class="planos">
+          <li><svg class="ic"><use href="#escudo"/></svg><div><b>Unimed</b><span>Exceto Unimed Taubaté</span></div></li>
+          <li><svg class="ic"><use href="#escudo"/></svg><div><b>FUSEx</b><span>Fundo de Saúde do Exército</span></div></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -673,7 +731,7 @@
         </ul>
         <dl class="ficha" data-revela>
           <div><dt>Registro</dt><dd>CRN-3 91199</dd></div>
-          <div><dt>Áreas</dt><dd>Emagrecimento · Hipertrofia · Menopausa</dd></div><div><dt>Convênios</dt><dd>Consulte pelo WhatsApp</dd></div>
+          <div><dt>Áreas</dt><dd>Emagrecimento · Hipertrofia · Menopausa</dd></div><div><dt>Convênios</dt><dd>Unimed (exceto Taubaté) · FUSEx</dd></div>
           <div><dt>Atendimento</dt><dd>Presencial em Taubaté/SP e online</dd></div>
           <div><dt>Personal chef</dt><dd>Taubaté e região</dd></div>
         </dl>
@@ -705,7 +763,7 @@
       <div class="faq colunas">
         <details data-revela><summary>Atende online?<span class="mais" aria-hidden="true"></span></summary><p>Sim, com a mesma atenção da consulta presencial.</p></details>
         <details data-revela><summary>Como faço para agendar?<span class="mais" aria-hidden="true"></span></summary><p>Pelo WhatsApp, no horário que for melhor para você.</p></details>
-        <details data-revela><summary>Atende por convênio?<span class="mais" aria-hidden="true"></span></summary><p>Sim, há atendimento por convênio. Me chame no WhatsApp com o nome do seu plano que eu confirmo se ele é aceito.</p></details>
+        <details data-revela><summary>Atende por convênio?<span class="mais" aria-hidden="true"></span></summary><p>Sim. Atendo pelos convênios Unimed (exceto Unimed Taubaté) e FUSEx. É só me chamar no WhatsApp para agendar.</p></details>
         <details data-revela><summary>Preciso levar exames?<span class="mais" aria-hidden="true"></span></summary><p>Se tiver exames recentes, traga. Se não tiver, avaliamos na consulta se são necessários.</p></details>
         <details data-revela><summary>Posso fazer a consulta e o personal chef juntos?<span class="mais" aria-hidden="true"></span></summary><p>Pode. Assim o plano alimentar e as marmitas saem da mesma pessoa, falando a mesma língua.</p></details>
       </div>
@@ -723,14 +781,14 @@
           <li><span class="k">WhatsApp</span><a href="https://wa.me/5512992591994?text=Ol%C3%A1%2C%20Eduarda!%20Vi%20seu%20site%20e%20queria%20conversar.">(12) 99259-1994</a></li>
           <li><span class="k">Consultório</span><span>R. Síria, 306 · Jardim das Nações · Taubaté/SP</span></li>
           <li><span class="k">Mapa</span><a href="https://www.google.com/maps/place/Nutricionista+Taubate+EduardaCastro/data=!4m7!3m6!1s0x94ccf9833d0d5cb1:0x4572f1c8a53692f9!8m2!3d-23.0341965!4d-45.5753664!16s%2Fg%2F11zkwfhgkb!19sChIJsVwNPYP5zJQR-ZI2pcjxckU?hl=pt-BR">Ver no Google Maps</a></li>
-          <li><span class="k">Instagram</span><a href="https://www.instagram.com/eduardanutrichef/" target="_blank" rel="noopener">@eduardanutrichef</a></li><li><span class="k">Links</span><a href="https://linktr.ee/EduardaCastro.Nutri" target="_blank" rel="noopener">linktr.ee/EduardaCastro.Nutri</a></li><li><span class="k">Registro</span><span>CRN-3 91199</span></li>
+          <li><span class="k">Instagram</span><a href="https://www.instagram.com/eduardanutrichef/" target="_blank" rel="noopener">@eduardanutrichef</a></li><li><span class="k">Links</span><a href="https://linktr.ee/EduardaCastro.Nutri" target="_blank" rel="noopener">linktr.ee/EduardaCastro.Nutri</a></li><li><span class="k">Convênios</span><span>Unimed (exceto Taubaté) · FUSEx</span></li><li><span class="k">Registro</span><span>CRN-3 91199</span></li>
         </ul>
       </div>
       <form class="formulario" data-form data-numero="5512992591994" data-revela novalidate>
         <h3>Me conte rapidinho</h3>
         <label>Seu nome<input name="nome" autocomplete="name" required></label>
         <label>Seu WhatsApp<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(12) 90000-0000" required></label>
-        <label>O que você procura?<select name="objetivo" required><option value="">Escolha uma opção</option><option>Personal chef · pacote de 15 marmitas</option><option>Personal chef · pacote de 30 marmitas</option><option>Consulta nutricional presencial</option><option>Consulta nutricional online</option><option>Consulta + personal chef</option></select></label>
+        <label>O que você procura?<select name="objetivo" required><option value="">Escolha uma opção</option><option>Personal chef · pacote de 15 marmitas</option><option>Personal chef · pacote de 30 marmitas</option><option>Consulta nutricional presencial</option><option>Consulta nutricional online</option><option>Consulta pelo convênio (Unimed ou FUSEx)</option><option>Consulta + personal chef</option></select></label>
         <button class="botao" type="submit"><svg class="ic"><use href="#zap"/></svg><span>Continuar no WhatsApp</span></button>
         <p class="form-nota">Abre o WhatsApp com a mensagem pronta. Nada fica salvo neste site.</p>
         <p class="form-aviso" role="status" data-aviso></p>
@@ -742,7 +800,7 @@
 <footer class="rodape">
   <div class="largura rodape-dentro">
     <p><strong>Eduarda Castro</strong> · Nutricionista · CRN-3 91199 · Personal Chef</p>
-    <p>Taubaté/SP · consultas presenciais e online · personal chef em Taubaté e região · <a href="https://www.instagram.com/eduardanutrichef/" target="_blank" rel="noopener">@eduardanutrichef</a></p>
+    <p>Taubaté/SP · consultas presenciais, online e pelos convênios Unimed e FUSEx · personal chef em Taubaté e região · <a href="https://www.instagram.com/eduardanutrichef/" target="_blank" rel="noopener">@eduardanutrichef</a></p>
     <p class="legal">Os conteúdos deste site são informativos e não substituem uma avaliação nutricional individual.</p>
   </div>
 </footer>
@@ -802,7 +860,7 @@
         links.forEach(function (a) { a.toggleAttribute("aria-current", a.getAttribute("href") === "#" + e.target.id); });
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
-    todos("#personal-chef, #pacotes, #nutricao, #sobre, #contato").forEach(function (s) { io.observe(s); });
+    todos("#personal-chef, #pacotes, #nutricao, #convenios, #sobre, #contato").forEach(function (s) { io.observe(s); });
   }
 
   function revelar() {
