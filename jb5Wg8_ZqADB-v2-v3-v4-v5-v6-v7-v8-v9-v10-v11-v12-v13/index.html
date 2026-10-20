@@ -99,8 +99,8 @@
   .topo .selos { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
   .topo h1 { margin-bottom: 22px; }
   .topo-foto { position: relative; justify-self: center; width: min(100%, 440px); }
-  .topo-foto .quadro { aspect-ratio: 4 / 5; border-radius: 220px 220px var(--raio) var(--raio); box-shadow: 0 30px 60px -36px rgba(36,24,17,.55); }
-  .topo-foto::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border-radius: 220px 220px var(--raio) var(--raio); background: var(--salvia); z-index: -1; }
+  .topo-foto .quadro { aspect-ratio: 4 / 5; border-radius: 0; box-shadow: 0 30px 60px -36px rgba(36,24,17,.55); }
+  .topo-foto::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; background: var(--salvia); z-index: -1; border-radius: 0; }
   .ficha-flutua { position: absolute; left: -14px; bottom: 34px; display: flex; align-items: center; gap: 12px; padding: 12px 16px 12px 12px; border-radius: 18px; background: var(--papel); box-shadow: 0 18px 40px -22px rgba(36,24,17,.5); font-size: 13px; line-height: 1.3; }
   .ficha-flutua b { display: block; font-size: 14px; }
   .ficha-flutua .bola { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--cafe); color: var(--caramelo-claro); }
@@ -112,6 +112,9 @@
   .convenio-mini { display: flex; width: fit-content; align-items: center; gap: 10px; margin-top: 14px; padding: 9px 16px 9px 10px; border-radius: 99px; background: var(--salvia-clara); color: var(--musgo); font-size: 14px; text-decoration: none; transition: background .2s; }
   .convenio-mini:hover { background: var(--salvia); }
   .convenio-mini .ic { width: 22px; height: 22px; }
+  .linktree { display: flex; width: fit-content; align-items: center; gap: 8px; margin-top: 12px; font-size: 14px; color: var(--cafe-2); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+  .linktree:hover { border-color: var(--cafe-2); }
+  .linktree strong { font-weight: 700; }
   .google { display: inline-flex; gap: 8px; align-items: center; margin-top: 26px; font-size: 14px; color: var(--suave); text-decoration: none; }
   .google strong { color: var(--tinta); }
   .estrelas { color: var(--caramelo); letter-spacing: 2px; }
@@ -193,6 +196,20 @@
   .galeria-fotos figcaption { margin-top: 14px; font-size: 14px; color: rgba(244,238,227,.68); }
   .galeria-fotos figcaption b { display: block; font-size: 16px; color: var(--linho); }
   @media (min-width: 820px) { .galeria-fotos { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; } .galeria-fotos li:nth-child(2) { margin-top: 48px; } }
+
+  .videos { margin-top: 64px; }
+  .videos-titulo { font-family: var(--titulo); font-size: clamp(24px, 1rem + 1vw, 32px); margin-bottom: 22px; }
+  .videos-lista { display: grid; grid-auto-flow: column; grid-auto-columns: 62%; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .videos-lista::-webkit-scrollbar { display: none; }
+  .videos-lista li { scroll-snap-align: start; }
+  .video { position: relative; aspect-ratio: 9 / 16; border-radius: var(--raio); overflow: hidden; background: var(--cafe); }
+  .video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .video.vazio { display: grid; place-items: center; border: 2px dashed rgba(244,238,227,.25); background: rgba(244,238,227,.04); }
+  .video.vazio::after { content: attr(data-rotulo); font-size: 14px; letter-spacing: .16em; color: rgba(244,238,227,.6); }
+  .video.vazio video, .video.vazio .som { display: none; }
+  .som { position: absolute; right: 12px; bottom: 12px; padding: 8px 14px; border: 0; border-radius: 99px; background: rgba(36,24,17,.7); color: var(--linho); font: 700 13px/1 var(--texto); cursor: pointer; backdrop-filter: blur(6px); }
+  .som[aria-pressed="true"] { background: var(--caramelo); color: var(--expresso); }
+  @media (min-width: 820px) { .videos-lista { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; } }
 
   /* Com ou sem dieta */
   .dieta { margin-top: 110px; padding: clamp(28px, 4vw, 56px); border-radius: 30px; background: var(--musgo); }
@@ -434,7 +451,6 @@
       <path class="ab-comida" d="M52 50h34v10a6 6 0 0 1-6 6H52z" fill="#B0703F"/>
       <g class="ab-tampa"><rect x="2" y="10" width="96" height="14" rx="7" fill="#C48A4C"/><rect x="40" y="5" width="20" height="8" rx="4" fill="#C48A4C"/></g>
     </svg>
-    <p class="nome">Comida de verdade, pensada por uma nutricionista e feita na sua cozinha.</p>
     <p class="pct" data-pct>0%</p>
   </div>
 </div>
@@ -465,6 +481,7 @@
         </div>
         <a class="google entra" href="https://www.google.com/maps/place/Nutricionista+Taubate+EduardaCastro/data=!4m7!3m6!1s0x94ccf9833d0d5cb1:0x4572f1c8a53692f9!8m2!3d-23.0341965!4d-45.5753664!16s%2Fg%2F11zkwfhgkb!19sChIJsVwNPYP5zJQR-ZI2pcjxckU?hl=pt-BR"><span class="estrelas" aria-hidden="true">★★★★★</span><span><strong>4,7</strong> no Google · 13 avaliações</span></a>
         <a class="convenio-mini entra" href="#convenios"><svg class="ic"><use href="#escudo"/></svg><span>Atendo pelos convênios <strong>Unimed</strong> e <strong>FUSEx</strong></span></a>
+        <a class="linktree entra" href="https://linktr.ee/EduardaCastro.Nutri" target="_blank" rel="noopener"><svg class="ic"><use href="#seta"/></svg><span>Todos os meus links: <strong>linktr.ee/EduardaCastro.Nutri</strong></span></a>
       </div>
       <figure class="topo-foto entra">
         <!-- FOTO 1 (topo): retrato da Eduarda. Salve como fotos/hero.jpg -->
@@ -569,6 +586,15 @@
         <li data-revela><figure><div class="quadro"><img src="fotos/marmitas-mesa.jpg" alt="Marmitas com arroz, peixe, carne moída e legumes sobre a mesa" loading="lazy"></div><figcaption><b>Porcionado com carinho</b>Arroz, proteína e legumes na medida.</figcaption></figure></li>
         <li data-revela><figure><div class="quadro"><img src="fotos/geladeira.jpg" alt="Geladeira cheia de marmitas prontas" loading="lazy" style="object-position:center 70%"></div><figcaption><b>A semana inteira pronta</b>É só abrir a geladeira e esquentar.</figcaption></figure></li>
       </ul>
+      <!-- VÍDEOS: salve os arquivos como videos/cozinhando-1.mp4, -2.mp4, -3.mp4 (verticais). Sem arquivo, aparece um quadro sinalizado. -->
+      <div class="videos">
+        <p class="videos-titulo" data-revela>Ela na cozinha</p>
+        <ul class="videos-lista">
+          <li data-revela><div class="video"><video src="videos/cozinhando-1.mp4" muted loop playsinline preload="metadata" data-video="VÍDEO 1"></video><button type="button" class="som" aria-label="Ativar som">Som</button></div></li>
+          <li data-revela><div class="video"><video src="videos/cozinhando-2.mp4" muted loop playsinline preload="metadata" data-video="VÍDEO 2"></video><button type="button" class="som" aria-label="Ativar som">Som</button></div></li>
+          <li data-revela><div class="video"><video src="videos/cozinhando-3.mp4" muted loop playsinline preload="metadata" data-video="VÍDEO 3"></video><button type="button" class="som" aria-label="Ativar som">Som</button></div></li>
+        </ul>
+      </div>
     </div>
 
     <!-- Com ou sem dieta -->
@@ -734,7 +760,7 @@
           <div><dt>Atendimento</dt><dd>Presencial em Taubaté/SP e online</dd></div>
           <div><dt>Personal chef</dt><dd>Taubaté e região</dd></div>
         </dl>
-        <div data-revela><a class="botao" href="https://wa.me/5512992591994?text=Ol%C3%A1%2C%20Eduarda!%20Vi%20seu%20site%20e%20queria%20conversar."><svg class="ic"><use href="#zap"/></svg><span>Falar comigo no WhatsApp</span></a></div>
+        <div data-revela style="display:flex;flex-wrap:wrap;gap:12px"><a class="botao" href="https://wa.me/5512992591994?text=Ol%C3%A1%2C%20Eduarda!%20Vi%20seu%20site%20e%20queria%20conversar."><svg class="ic"><use href="#zap"/></svg><span>Falar comigo no WhatsApp</span></a><a class="botao contorno" href="https://linktr.ee/EduardaCastro.Nutri" target="_blank" rel="noopener"><svg class="ic"><use href="#seta"/></svg><span>Linktree</span></a></div>
       </div>
     </div>
   </section>
@@ -901,6 +927,24 @@
       requestAnimationFrame(sopra);
     }
   }
+
+  // Vídeos: tocam mudos quando aparecem na tela; sem arquivo, viram um quadro sinalizado.
+  todos("video[data-video]").forEach(function (v) {
+    var caixa = v.parentNode, botao = caixa.querySelector(".som");
+    function vazio() { caixa.classList.add("vazio"); caixa.setAttribute("data-rotulo", v.getAttribute("data-video")); }
+    v.addEventListener("error", vazio);
+    if (v.error) vazio();
+    botao.addEventListener("click", function () {
+      v.muted = !v.muted;
+      botao.setAttribute("aria-pressed", String(!v.muted));
+      botao.textContent = v.muted ? "Som" : "Sem som";
+      if (v.paused) v.play();
+    });
+    if (window.IntersectionObserver) new IntersectionObserver(function (es) {
+      if (caixa.classList.contains("vazio")) return;
+      if (es[0].isIntersecting && !reduz) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause();
+    }, { threshold: .4 }).observe(v);
+  });
 
   // Com ou sem dieta: abas.
   var abas = todos("[data-aba]");
