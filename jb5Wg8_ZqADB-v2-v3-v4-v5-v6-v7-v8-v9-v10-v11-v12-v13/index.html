@@ -64,7 +64,7 @@
   .abertura-centro { display: grid; justify-items: center; gap: 18px; text-align: center; }
   .abertura svg { width: 150px; }
   .abertura-centro { padding: 0 24px; }
-  .abertura .nome { text-wrap: balance; font-family: var(--titulo); font-size: clamp(26px, 1rem + 2vw, 40px); line-height: 1.15; }
+  .abertura .nome { max-width: 20ch; text-wrap: balance; font-family: var(--titulo); font-size: clamp(26px, 1rem + 2vw, 40px); line-height: 1.15; }
   .abertura .por { font-size: clamp(15px, .9rem + .3vw, 18px); max-width: 34ch; opacity: .82; margin-top: -6px; }
   .abertura .pct { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 14px; color: var(--caramelo-claro); }
   .ab-comida { transform-box: fill-box; transform-origin: bottom; transform: scaleY(0); }
@@ -434,8 +434,7 @@
       <path class="ab-comida" d="M52 50h34v10a6 6 0 0 1-6 6H52z" fill="#B0703F"/>
       <g class="ab-tampa"><rect x="2" y="10" width="96" height="14" rx="7" fill="#C48A4C"/><rect x="40" y="5" width="20" height="8" rx="4" fill="#C48A4C"/></g>
     </svg>
-    <p class="nome">Comida de verdade na sua mesa.</p>
-    <p class="por">Planejo como nutricionista e preparo tudo com carinho na sua cozinha.</p>
+    <p class="nome">Comida de verdade, pensada por uma nutricionista e feita na sua cozinha.</p>
     <p class="pct" data-pct>0%</p>
   </div>
 </div>
@@ -783,6 +782,7 @@
           <li><span class="k">Mapa</span><a href="https://www.google.com/maps/place/Nutricionista+Taubate+EduardaCastro/data=!4m7!3m6!1s0x94ccf9833d0d5cb1:0x4572f1c8a53692f9!8m2!3d-23.0341965!4d-45.5753664!16s%2Fg%2F11zkwfhgkb!19sChIJsVwNPYP5zJQR-ZI2pcjxckU?hl=pt-BR">Ver no Google Maps</a></li>
           <li><span class="k">Instagram</span><a href="https://www.instagram.com/eduardanutrichef/" target="_blank" rel="noopener">@eduardanutrichef</a></li><li><span class="k">Links</span><a href="https://linktr.ee/EduardaCastro.Nutri" target="_blank" rel="noopener">linktr.ee/EduardaCastro.Nutri</a></li><li><span class="k">Convênios</span><span>Unimed (exceto Taubaté) · FUSEx</span></li><li><span class="k">Registro</span><span>CRN-3 91199</span></li>
         </ul>
+        <a class="botao caramelo" data-revela style="margin-top:28px" href="https://linktr.ee/EduardaCastro.Nutri" target="_blank" rel="noopener"><svg class="ic"><use href="#seta"/></svg><span>Todos os meus links</span></a>
       </div>
       <form class="formulario" data-form data-numero="5512992591994" data-revela novalidate>
         <h3>Me conte rapidinho</h3>
@@ -801,6 +801,7 @@
   <div class="largura rodape-dentro">
     <p><strong>Eduarda Castro</strong> · Nutricionista · CRN-3 91199 · Personal Chef</p>
     <p>Taubaté/SP · consultas presenciais, online e pelos convênios Unimed e FUSEx · personal chef em Taubaté e região · <a href="https://www.instagram.com/eduardanutrichef/" target="_blank" rel="noopener">@eduardanutrichef</a></p>
+    <p><a href="https://linktr.ee/EduardaCastro.Nutri" target="_blank" rel="noopener">linktr.ee/EduardaCastro.Nutri</a></p>
     <p class="legal">Os conteúdos deste site são informativos e não substituem uma avaliação nutricional individual.</p>
   </div>
 </footer>
